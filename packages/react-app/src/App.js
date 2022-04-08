@@ -1,82 +1,17 @@
-import { useQuery } from "@apollo/client";
-import { Contract } from "@ethersproject/contracts";
-import { shortenAddress, useCall, useEthers, useLookupAddress } from "@usedapp/core";
-import React, { useEffect, useState } from "react";
-
-import { Body, Button, Container, Header } from "./components";
-
-import { addresses, abis } from "@my-app/contracts";
-import GET_TRANSFERS from "./graphql/subgraph";
-
-function WalletButton() {
-	const [rendered, setRendered] = useState("");
-
-	const ens = useLookupAddress();
-	const { account, activateBrowserWallet, deactivate, error } = useEthers();
-
-	useEffect(() => {
-		if (ens) {
-			setRendered(ens);
-		} else if (account) {
-			setRendered(shortenAddress(account));
-		} else {
-			setRendered("");
-		}
-	}, [account, ens, setRendered]);
-
-	useEffect(() => {
-		if (error) {
-			console.error("Error while connecting wallet:", error.message);
-		}
-	}, [error]);
-
-	return (
-		<Button
-			onClick={() => {
-				if (!account) {
-					activateBrowserWallet();
-				} else {
-					deactivate();
-				}
-			}}
-		>
-			{rendered === "" && "Connect Wallet"}
-			{rendered !== "" && rendered}
-		</Button>
-	);
-}
+import * as React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { MainPage } from "./pages/MainPage";
+import { MintPage } from "./pages/MintPage";
 
 function App() {
-	// Read more about useDapp on https://usedapp.io/
-	const { error: contractCallError, value: tokenBalance } =
-		useCall({
-			contract: new Contract(addresses.ceaErc20, abis.erc20),
-			method: "balanceOf",
-			args: ["0x3f8CB69d9c0ED01923F11c829BaE4D9a4CB6c82C"],
-		}) ?? {};
-	console.log("contractCallError", contractCallError);
-	console.log("tokenBalance", tokenBalance);
-	const { loading, error: subgraphQueryError, data } = useQuery(GET_TRANSFERS);
-
-	useEffect(() => {
-		if (subgraphQueryError) {
-			console.error("Error while querying subgraph:", subgraphQueryError.message);
-			return;
-		}
-		if (!loading && data && data.transfers) {
-			console.log({ transfers: data.transfers });
-		}
-	}, [loading, subgraphQueryError, data]);
-
 	return (
-		<Container>
-			<Header>
-				<WalletButton />
-			</Header>
-			<Body>
-				<Button>Mint NFT</Button>
-			</Body>
-		</Container>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<MainPage />} />
+				<Route path="mint" element={<MintPage />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
