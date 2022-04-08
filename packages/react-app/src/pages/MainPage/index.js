@@ -1,10 +1,16 @@
-import { Link } from "react-router-dom";
 import * as React from "react";
+
+import { Body } from "../../components";
+import NavBar from "../../components/NavBar";
+import HeaderMain from "../../components/HeaderMain";
+
 export const MainPage = () => {
 	return (
-		<>
-			<h1>Main Page</h1>
-			<Link to="/mint">Link to Mint Page</Link>
-		</>
+		<div className="bg-hero">
+			<NavBar />
+			<Body>
+				<HeaderMain />
+			</Body>
+		</div>
 	);
 };

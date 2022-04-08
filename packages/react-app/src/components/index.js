@@ -1,26 +1,24 @@
 import styled from "styled-components";
 
 export const Body = styled.div`
-  align-items: center;
+  height: 80vh;
   color: white;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  margin-top: 40px;
+  font-size: 10px;
 `;
 
 export const Button = styled.button`
-  background-color: white;
-  border: none;
+  width: 222px;
   border-radius: 8px;
-  color: #282c34;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0px 20px;
-  padding: 12px 24px;
+  padding: 12px 20px;
   text-align: center;
   text-decoration: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
 
 export const Container = styled.div`
@@ -31,13 +29,13 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  align-items: center;
-  background-color: #282c34;
+  width: 88vw;
   color: white;
+  padding-left: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  min-height: 70px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 `;
 
 export const Image = styled.img`
@@ -50,6 +48,14 @@ export const Link = styled.a.attrs({
   target: "_blank",
   rel: "noopener noreferrer",
 })`
-  color: #61dafb;
+  color: white;
   margin-top: 8px;
+`;
+
+export const Navbar = styled.nav`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
 `;
