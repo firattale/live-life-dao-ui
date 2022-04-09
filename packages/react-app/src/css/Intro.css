@@ -3,35 +3,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@500;700&display=swap');
 
 .bg-hero {
-    background-color: orange;
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+}
+#bg-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.intro-container {
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 .dao-heading {
-font-family: 'Audiowide';
-font-style: normal;
-font-weight: 400;
-font-size: 4.6rem;
-line-height: 92.99%;
-display: flex;
-align-items: center;
-letter-spacing: 0.005em;
-text-transform:capitalize;
+    font-family: 'Audiowide';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.6em;
+    line-height: 92.99%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    text-transform:capitalize;
 }
 .subheading {
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 1.6rem;
-line-height: 22px;
-display: flex;
-align-items: center;
-letter-spacing: 0.005em;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6em;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
 }
 .intro-text {
-font-family: 'Montserrat';
-font-style: normal;
-font-weight: 500;
-font-size: 1.4rem;
-line-height: 93.9%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 93.9%;
+}
+.btn-main-container {
+    margin-top: 30px;
 }
 .btn-style-orange {
     color: white;
@@ -49,14 +69,16 @@ line-height: 93.9%;
     border: 1px solid #4C6E9D;
 }
 .btn {
-    width: 322px;
+    width: 222px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 1.4rem;
-    padding: 12px 34px;
+    font-size: 16px;
+    line-height: 16.9px;
+    letter-spacing: 0.5%;
+    padding: 12px;
     text-align: center;
     text-decoration: none;
     margin: 5px;
@@ -64,4 +86,20 @@ line-height: 93.9%;
 .link {
     color: white;
     text-decoration: none;
+}
+ @media screen and (min-width: 1000px) {
+    .btn {
+        width: 420px;
+        font-size: 25px;
+        padding: 20px;
+        margin-right: 25px;
+    }
+    .intro-container {
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-top: 30vh;
+    }
+    .btn-main-container {
+        margin-left: 10vw;
+    }
 }

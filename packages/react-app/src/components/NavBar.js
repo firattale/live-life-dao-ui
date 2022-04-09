@@ -7,13 +7,13 @@ export default function NavBar() {
   return (
     <Navbar>
         <div>
-            <Link className="home-link" to="/"><img src="icons/Logo.svg" alt="LL-Logo"/></Link>  
+            <Link to="/"><img className="nav-logo" src="icons/Logo.svg" alt="LL-Logo"/></Link>  
         </div>
-        <div>
-            <a className="nav-icon" href='https://twitter.com/LifeLiveDAO'><img src="icons/Twitter.svg" alt="Twitter-Icon"/></a>  
-            <a className="nav-icon" href='/medium'><img src="icons/Medium.svg" alt="Medium-Icon"/></a>  
-            <a className="nav-icon" href='https://www.instagram.com/lifelivedao/'><img src="icons/Insta.svg" alt="Insta-Icon"/></a>  
-            <button className='nav-icon btn-style-orange'>connect wallet</button>
+        <div className='icon-container'>
+          <a href='https://twitter.com/LifeLiveDAO'><img className="nav-icon" src="icons/Twitter.svg" alt="Twitter-Icon"/></a>  
+          <a href='/medium'><img className="nav-icon" src="icons/Medium.svg" alt="Medium-Icon"/></a>  
+          <a href='https://www.instagram.com/lifelivedao/'><img className="nav-icon" src="icons/Insta.svg" alt="Insta-Icon"/></a>  
+          <button className='btn-style-orange'>connect wallet</button>
         </div>
     </Navbar>
   )
