@@ -5,6 +5,11 @@
 .btn-main-container {
     margin-top: 30px;
 }
+.overlapping-hero {
+    position:absolute;
+    width: 100vw;
+    margin-top: 92vh;
+}
  @media screen and (min-width: 1000px) {
     .intro-container {
         margin-left: 10vw;

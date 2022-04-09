@@ -8,6 +8,9 @@ import './css/Styles.css'
 import './css/NavBar.css'
 import './css/Intro.css'
 import './css/Project.css'
+import	'./css/Feature.css'
+import './css/InvestorNfts.css'
+import './css/Impressum.css'
 
 function App() {
 	return (

@@ -4,7 +4,8 @@ import Footer from './Footer'
 
 export default function Impressum() {
   return (
-    <div className='bg-dark'>
+    <div className='bg-dark container'>
+    <img className='footer-img' src='background/footer-bg.png' alt='rakete'/>
       <div id='faq'>
         <div className='heading'>FAQ</div>
         <p className='text'>

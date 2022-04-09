@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Body = styled.div`
-  height: 100vh;
   color: white;
   display: flex;
   flex-direction: column;
@@ -10,7 +9,6 @@ export const Body = styled.div`
     font-size: 25px;
   }
 `;
-
 
 export const Button = styled.button`
   width: 222px;

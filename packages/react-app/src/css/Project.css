@@ -1,0 +1,14 @@
+.img-astronaut {
+    position: absolute;
+    width: 200vw;
+    margin-top: 50vh;
+    size: cover;
+}
+.project-container {
+    padding-top: 20vh;
+}
+.text-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 2vh;
+}

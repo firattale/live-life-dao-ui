@@ -16,8 +16,8 @@ export const MainPage = () => {
 		{/* <video id="bg-video-hero" autoPlay loop muted >
 			<source src="../../../public/background/Krypto-WEBfront-pre6.mp4" type="video/mp4"/>
 		</video> */}
-			<NavBar />
 			<Body>
+				<NavBar />
 				<HeaderMain />
 				<Project />
 				<Features />

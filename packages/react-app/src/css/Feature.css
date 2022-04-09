@@ -1,0 +1,10 @@
+.feature {
+    display: flex;
+    flex-direction: row;
+}
+.img-robot {
+    position: absolute;
+    width: 200vw;
+    margin-top: 60vh;
+    size: cover;
+}
