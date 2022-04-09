@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import { MainPage } from "./pages/MainPage";
 import { MintPage } from "./pages/MintPage";
 
+import './css/Styles.css'
 import './css/NavBar.css'
 import './css/Intro.css'
 import './css/Project.css'

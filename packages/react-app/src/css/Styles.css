@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@500;700&display=swap');
+
+/* Text */
+.heading {
+    font-family: 'Audiowide';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4.6em;
+    line-height: 92.99%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    text-transform:capitalize;
+}
+.subheading {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6em;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+}
+.text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 93.9%;
+}
+
+/* Buttons */
+.btn {
+    width: 222px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 16.9px;
+    letter-spacing: 0.5%;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+}
+.btn-style-orange {
+    color: white;
+    background-color: #F0A4504D;
+    border: 1px solid #F0A450;
+}
+.btn-style-blue-light {
+    color: white;
+    background-color: #4c6e9d4d;
+    border: 1px solid #4C6E9D;
+}
+.btn-style-blue-solid {
+    color: white;
+    background-color: #4C6E9D;
+    border: 1px solid #4C6E9D;
+}
+/* Link */
+.link {
+    color: white;
+    text-decoration: none;
+}
+/* Background */
+.bg-hero {
+    width: 100vw;
+    height: 100vh;
+    background-color: pink;
+}
+.bg-dark {
+    width: 100vw;
+    height: 100vh;
+    background-color: #E5E5E5;
+}
+/* #bg-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+} */
+
+/* Responsiveness */
+@media screen and (min-width: 1000px) {
+    .btn {
+        width: 420px;
+        font-size: 25px;
+        padding: 20px;
+        margin-right: 25px;
+    }
+}

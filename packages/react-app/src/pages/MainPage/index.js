@@ -7,7 +7,6 @@ import Project from "../../components/Project";
 import Features from "../../components/Features";
 import InvestorNfts from "../../components/InvestorNfts";
 import Impressum from "../../components/Impressum";
-import Footer from "../../components/Footer";
 
 
 export const MainPage = () => {
@@ -24,7 +23,6 @@ export const MainPage = () => {
 				<Features />
 				<InvestorNfts />
 				<Impressum />
-				<Footer />
 			</Body>
 		</>
 	);

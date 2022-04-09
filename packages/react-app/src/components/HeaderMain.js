@@ -8,9 +8,9 @@ export default function HeaderMain() {
     <div className='bg-hero'>
       <Header>
         <div className='intro-container'>
-          <h1 className='dao-heading'>LifeLive DAO</h1>
+          <h1 className='heading'>LifeLive DAO</h1>
           <h2 className='subheading'>the nightlife metaverse</h2>
-          <p className='intro-text'>Access virtual and hybrid music events and Dance2Earn with people from all over the world.</p>
+          <p className='text'>Access virtual and hybrid music events and Dance2Earn with people from all over the world.</p>
         </div>
         <div className='btn-main-container'>
           <button className="btn btn-style-blue-solid">

@@ -1,7 +1,26 @@
 import React from 'react'
 
+import Footer from './Footer'
+
 export default function Impressum() {
   return (
-    <div className='bg-dark'>Impressum</div>
+    <div className='bg-dark'>
+      <div id='faq'>
+        <div className='heading'>FAQ</div>
+        <p className='text'>
+          For further questions check our 
+          <a>FAQ</a> on medium.
+        </p>
+      </div>
+      <div id='contact'>
+        <div className='heading'>Get In Touch</div>
+        <p>
+          If you want to get in touch dont hesitate to 
+          <a>write us</a> or 
+          <a>schedule a call</a>.
+        </p>
+      </div>
+      <Footer />
+    </div>
   )
 }
