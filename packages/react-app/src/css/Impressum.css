@@ -1,5 +1,5 @@
 .impressum-container {
-    width: 60vw;
+    width: 100vw;
     height: 100vh;
     color: white;
     padding-left: 5vw;
@@ -11,6 +11,9 @@
 .in-txt-link {
     color: white;
     font-weight: 1000;
+}
+.impressum-width {
+    width: 60vw;
 }
 .heading-impressum {
     margin-top: 3vh;

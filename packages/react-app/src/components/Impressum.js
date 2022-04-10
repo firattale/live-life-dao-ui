@@ -12,13 +12,13 @@ export default function Impressum() {
       </div> */}
         <div>
           <div className='heading'>FAQ</div>
-          <p className='text'>For further questions check our 
+          <p className='text impressum-width'>For further questions check our 
             <a className='in-txt-link' href='FAQ'> FAQ</a> on medium.
           </p>
         </div>
         <div>
           <div className='heading heading-impressum'>Get In Touch</div>
-          <p className='text'>If you want to get in touch dont hesitate to 
+          <p className='text impressum-width'>If you want to get in touch dont hesitate to 
             <a className='in-txt-link' href='Mail'> write us</a> or  
             <a className='in-txt-link' href='Call'> schedule a call</a>.
           </p>
