@@ -1,10 +1,23 @@
 .feature {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding-top: 3vh;
+}
+.feature-title {
+    font-weight: 1000;
+}
+.feature-text {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.feature-icon {
+    height: 5vh;
+    padding-left: 3vw;
 }
 .img-robot {
-    position: absolute;
-    width: 200vw;
-    margin-top: 60vh;
-    size: cover;
+    height: 700px;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
 }

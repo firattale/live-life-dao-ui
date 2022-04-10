@@ -5,6 +5,7 @@ export const Body = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 10px;
+  background-color: #121212;
   @media (min-width: 1000px) {
     font-size: 25px;
   }
@@ -23,11 +24,18 @@ export const Button = styled.button`
   margin-bottom: 5px;
 `;
 
+export const Background = styled.div`
+    width: 100vw;
+    height: 100vh;
+    background-color: orange;
+`;
+
 export const Container = styled.div`
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh);
+    width: calc(100vw);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const Header = styled.header`
@@ -55,7 +63,6 @@ export const Link = styled.a.attrs({
 `;
 
 export const Navbar = styled.nav`
-  background-color: hotpink;
   height: 10vh;
   display: flex;
   flex-direction: row;

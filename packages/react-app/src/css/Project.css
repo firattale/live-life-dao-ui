@@ -1,14 +1,19 @@
-.img-astronaut {
+.overlapping-hero {
+    position:absolute;
+    width: 100vw;
+    margin-top: 10vh;
+}
+.overlapping-hero-bg {
+    position:absolute;
+    width: 100vw;
+}
+.img-overl-container {
     position: absolute;
-    width: 200vw;
-    margin-top: 50vh;
-    size: cover;
+    margin-top: 83vh;
 }
-.project-container {
-    padding-top: 20vh;
-}
-.text-container {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 2vh;
+.img-astronaut {
+    height: 500px;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
 }

@@ -8,7 +8,20 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+}
+.img-container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+.text-container {
+    margin-bottom: 2vh;
+}
+.padding {
+    padding-left: 6vw;
+    padding-right: 6vw;
 }
 
 /* Text */
@@ -17,11 +30,14 @@
     font-style: normal;
     font-weight: 400;
     font-size: 4.6em;
-    line-height: 92.99%;
+    line-height: 115%;
     display: flex;
     align-items: center;
     letter-spacing: 0.005em;
     text-transform:capitalize;
+}
+.heading-padding {
+    padding-top: 25vh;
 }
 .subheading {
     font-family: 'Montserrat';
@@ -43,11 +59,11 @@
 
 /* Buttons */
 .btn {
-    width: 222px;
+    width: 260px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     line-height: 16.9px;
@@ -56,6 +72,9 @@
     text-align: center;
     text-decoration: none;
     margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
 }
 .btn-style-orange {
     color: white;
@@ -84,26 +103,30 @@
 }
 /* Background */
 .bg-hero {
-    width: 100vw;
-    height: 90vh;
-    background-color: pink;
-}
-.bg-dark {
-    width: 100vw;
     height: 100vh;
-    background-color: #E5E5E5;
-}
-/* #bg-video {
     width: 100vw;
-    height: 100vh;
+    background-image: url('../background/bg-hero.png');
+    background-size:cover;
+    background-position: center;
+}
+video {
     object-fit: cover;
-    position: fixed;
-    left: 0;
-    right: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
     top: 0;
-    bottom: 0;
-    z-index: -1;
-} */
+    left: 0;    
+}
+.video-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Responsiveness */
 @media screen and (min-width: 1000px) {
@@ -113,16 +136,4 @@
         padding: 20px;
         margin-right: 25px;
     }
-}
-
-/* Footer */
-footer {
-    padding-left: 3vw;
-    padding-right: 3vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.footer-bg {
 }

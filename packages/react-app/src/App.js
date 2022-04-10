@@ -11,6 +11,7 @@ import './css/Project.css'
 import	'./css/Feature.css'
 import './css/InvestorNfts.css'
 import './css/Impressum.css'
+import './css/Footer.css'
 
 function App() {
 	return (

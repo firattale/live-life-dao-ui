@@ -1,0 +1,19 @@
+footer {
+    padding-left: 8vw;
+    padding-right: 5vw;
+    padding-bottom: 10vh;
+    margin-top: 25vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-link {
+    color: white;
+    text-decoration: none;
+    padding-right: 3vw;
+}
+.footer-icon {
+    padding-right: 3vw;
+    height: 2vh; 
+}

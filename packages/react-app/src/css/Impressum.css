@@ -1,4 +1,17 @@
-.footer-img {
-    width: 200vw;
-    position: absolute;
+.impressum-container {
+    width: 60vw;
+    height: 100vh;
+    color: white;
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.in-txt-link {
+    color: white;
+    font-weight: 1000;
+}
+.heading-impressum {
+    margin-top: 3vh;
 }

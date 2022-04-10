@@ -5,7 +5,6 @@ import { Header } from ".";
 
 export default function HeaderMain() {
   return (
-    <div className='bg-hero'>
       <Header>
         <div className='intro-container'>
           <h1 className='heading'>LifeLive DAO</h1>
@@ -19,6 +18,5 @@ export default function HeaderMain() {
           <button className="btn btn-style-blue-light">Download Litepaper</button>
         </div>
       </Header>
-    </div>
   )
 }
