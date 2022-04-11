@@ -12,14 +12,22 @@
     margin-top: 83vh;
 }
 .img-astronaut {
-    /* height: 500px;
-    width: 100vw; */
-    /* object-fit: cover;
-    object-position: center; */
-    width: 100vw;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    /* width: 100vw;
     position: absolute;
 	clip: rect(20px 300px 159px 28px);
 	overflow: hidden;
     position: center;
-    object-position: center;
+    object-position: center; */
+}
+
+@media screen and (min-width: 1000px) {
+    .img-overl-container {
+        margin-top: 66vh;
+    }
+    .img-astronaut {
+        height: auto;
+    }
 }

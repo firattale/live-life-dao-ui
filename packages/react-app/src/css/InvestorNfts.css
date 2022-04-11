@@ -28,3 +28,11 @@
     margin-top: 8vh;
     margin-bottom: 1vh;
 }
+@media screen and (min-width: 1000px) {
+    .img-nft {
+        width: 47vw;
+    }
+    .btn-nft {
+        width: 440px;
+    }
+}

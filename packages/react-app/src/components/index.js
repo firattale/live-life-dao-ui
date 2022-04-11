@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const Body = styled.div`
-  color: white;
+  padding: 0px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
+  color: white;
   font-size: 10px;
   background-color: #121212;
   @media (min-width: 1000px) {
-    font-size: 25px;
+    font-size: 17px;
   }
 `;
 
@@ -46,6 +48,13 @@ export const Header = styled.header`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+
+  @media (min-width: 1000px) {
+    align-items: flex-start;
+    margin-top: 25vh;
+    margin-left: 10vw;
+    padding-left: 0px;
+  }
 `;
 
 export const Image = styled.img`
@@ -69,9 +78,9 @@ export const Navbar = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding-right: 5vw;
-  padding-left: 5vw;
   @media (min-width: 1000px) {
     padding-right: 10vw;
-    padding-left: 10vw;
+    padding-left: 1.5vw;
   }
 `;
+

@@ -28,7 +28,7 @@ export default function Features() {
         </div>
       </div>
       <div className='img-container'>
-        <img className='img-robot' src='/inbetween/robot.png' alt='Robot'/>
+        <img className='img-robot' src='/inbetween/robot.jpg' alt='Robot'/>
       </div>
     </div>
   )

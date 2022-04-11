@@ -3,7 +3,7 @@ import React from 'react'
 export default function InvestorNfts() {
   return (
     <div className='container heading-padding nft-margin'>
-      <div className='heading heading-padding padding'>Investor Nfts</div>
+      <div className='heading text-container heading-padding padding'>Investor Nfts</div>
       <div className='text text-container padding'>
         <p>Yes, we will launch a LifeLive token. There will be staking, governance and so much more. Check out the Litepaper for the details! For the seed round we’ve created Investor NFTs. </p>
         <p>The owners will get a considerable boost to their investment - and be blessed with a  Web 3.0 raver! </p>

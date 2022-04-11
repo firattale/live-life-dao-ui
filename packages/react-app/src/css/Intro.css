@@ -3,16 +3,20 @@
     margin-bottom: 10px;
 }
 .btn-main-container {
+    height: 15vh;
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
  @media screen and (min-width: 1000px) {
-    .intro-container {
-        margin-left: 10vw;
-        margin-right: 10vw;
-        margin-top: 30vh;
-    }
+     .intro-container {
+         width: 534px;
+         margin: 0px;
+     }
     .btn-main-container {
-        margin-left: 10vw;
+        width: 534px;
+        flex-direction: row;
     }
 }

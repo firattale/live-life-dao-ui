@@ -7,7 +7,7 @@ export default function HeaderMain() {
   return (
       <Header>
         <div className='intro-container'>
-          <h1 className='heading'>LifeLive DAO</h1>
+          <h1 className='title'>LifeLive DAO</h1>
           <h2 className='subheading'>the nightlife metaverse</h2>
           <p className='text'>Access virtual and hybrid music events and Dance2Earn with people from all over the world.</p>
         </div>

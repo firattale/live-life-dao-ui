@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@700&display=swap');
 
 .nav-logo {
-    height: 3vh; 
+    width: 18vw;
 }
 .nav-icon {
     padding-right: 3vw;
@@ -23,8 +23,11 @@ nav > div > button {
 }
 @media screen and (min-width: 1000px) {
     nav > div > button  {
-        font-size: 24px;
-        width: 250px;
-        height: 60px;
+        font-size: 18px;
+        width: 185px;
+        height: 43px;
+    }
+    .nav-logo {
+        height: 90px;
     }
 }
