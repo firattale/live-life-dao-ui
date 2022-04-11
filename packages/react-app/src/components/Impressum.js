@@ -23,6 +23,7 @@ export default function Impressum() {
             <a className='in-txt-link' href='Call'> schedule a call</a>.
           </p>
         </div>
+        
       </div>
       <Footer />
     </div>

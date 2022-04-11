@@ -16,7 +16,7 @@ export default function Project() {
       </div>
       <button className='btn btn-style-blue-light'>More info: Litepaper</button>
       <div className='img-container'>
-        <img className='img-astronaut' src='/inbetween/astronaut.png' alt='Astronaut'/>
+        <img className='img-astronaut' src='/mainpage/astronaut.jpg' alt='Astronaut'/>
       </div>
     </div>
     </>
