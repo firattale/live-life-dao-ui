@@ -11,7 +11,7 @@ export default function Impressum() {
         <img className='footer-img' src='background/footer-bg.png' alt='rakete'/>
       </div> */}
         <div>
-          <div className='heading'>FAQ</div>
+          <div className='heading heading-impressum'>FAQ</div>
           <p className='text impressum-width'>For further questions check our 
             <a className='in-txt-link' href='FAQ'> FAQ</a> on medium.
           </p>

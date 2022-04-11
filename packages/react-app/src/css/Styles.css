@@ -127,7 +127,7 @@
 .bg-rocket {
     background-image: url('../background/footer-bg.jpg');
     background-size: cover;
-    background-position: 65% 0%;
+    background-position: 67% 350px;
     background-repeat: no-repeat;
 }
 video {
@@ -191,5 +191,8 @@ video {
     }
     .text {
         display: inline;
+    }
+    .bg-rocket {
+        background-position: 40% 450px;
     }
 }
