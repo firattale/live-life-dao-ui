@@ -6,7 +6,6 @@
 .overlapping-hero-bg {
     position:absolute;
     width: 100vw;
-    margin-top: -25vh;
 }
 .img-overl-container {
     position: absolute;
@@ -17,17 +16,19 @@
     width: 100vw;
     object-fit: cover;
     object-position: center;
-    /* width: 100vw;
-    position: absolute;
-	clip: rect(20px 300px 159px 28px);
-	overflow: hidden;
-    position: center;
-    object-position: center; */
 }
-
+/* .line-a {
+    position: absolute;
+    width: 16vw;
+    left: 20px;
+    top: 50vh;
+} */
 @media screen and (min-width: 1000px) {
     .img-overl-container {
         margin-top: 66vh;
+    }
+    .overlapping-hero-bg {
+        margin-top: -25vh;
     }
     .img-astronaut {
         height: auto;

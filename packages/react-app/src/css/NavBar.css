@@ -7,7 +7,7 @@
     padding-right: 3vw;
     height: 3vh;
 }
-nav > div > button {
+.nav-btn {
     font-family: 'Montserrat';
     font-style: normal;
     cursor: pointer;
@@ -22,7 +22,7 @@ nav > div > button {
     align-items: center;
 }
 @media screen and (min-width: 1000px) {
-    nav > div > button  {
+    .nav-btn  {
         font-size: 18px;
         width: 185px;
         height: 43px;

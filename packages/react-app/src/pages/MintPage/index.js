@@ -4,8 +4,12 @@ import GET_TRANSFERS from "../../graphql/subgraph";
 import { useQuery } from "@apollo/client";
 import { Contract } from "@ethersproject/contracts";
 import { shortenAddress, useCall, useEthers, useLookupAddress } from "@usedapp/core";
-import { Body, Button, Container, Header } from "../../components";
 import { Link } from "react-router-dom";
+
+import { Body, Button } from "../../components";
+import NavBar from "../../components/NavBar";
+import Mint from '../../components/Mint'
+
 
 export const MintPage = () => {
 	// Read more about useDapp on https://usedapp.io/
@@ -29,18 +33,14 @@ export const MintPage = () => {
 		}
 	}, [loading, subgraphQueryError, data]);
 	return (
-		<>
-			<Container>
-				<Header>
-					<WalletButton />
-				</Header>
-				<Body>
-					<h1>Mint Page</h1>
-					<Button>Mint NFT</Button>
-					<Link to="/">Link to Home Page</Link>
-				</Body>
-			</Container>
-		</>
+		<Body>
+			<NavBar />
+			<WalletButton />
+			<Mint />
+				{/* <Button className='btn-mint btn-style-orange-solid'>Mint NFT</Button> */}
+				{/* <Button className='btn-mint btn-style-blue-solid'>Mint NFT</Button> */}	
+				<Link className="btn btn-style-blue-light btn-mp link" to="/">back to main page</Link>
+		</Body>
 	);
 };
 
@@ -67,7 +67,7 @@ function WalletButton() {
 	}, [error]);
 
 	return (
-		<Button
+		<Button className='btn-style-orange nav-btn'
 			onClick={() => {
 				if (!account) {
 					activateBrowserWallet();

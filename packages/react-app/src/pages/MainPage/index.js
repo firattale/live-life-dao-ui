@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Body, Background } from "../../components";
+import { Body } from "../../components";
 import NavBar from "../../components/NavBar";
 import Intro from "../../components/Intro";
 import Project from "../../components/Project";

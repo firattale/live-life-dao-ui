@@ -13,7 +13,7 @@ export default function NavBar() {
           <a href='https://twitter.com/LifeLiveDAO'><img className="nav-icon zoom" src="icons/Twitter.svg" alt="Twitter-Icon"/></a>  
           <a href='/medium'><img className="nav-icon zoom" src="icons/Medium.svg" alt="Medium-Icon"/></a>  
           <a href='https://www.instagram.com/lifelivedao/'><img className="nav-icon zoom" src="icons/Insta.svg" alt="Insta-Icon"/></a>  
-          <button className='btn-style-orange'>connect wallet</button>
+          <button className='btn-style-orange nav-btn'>connect wallet</button>
         </div>
     </Navbar>
   )

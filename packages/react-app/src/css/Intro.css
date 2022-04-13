@@ -3,11 +3,13 @@
     margin-bottom: 10px;
 }
 .btn-main-container {
-    height: 15vh;
+    height: 12vh;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+.btn-margin {
+    margin-top: 10px;
 }
 
  @media screen and (min-width: 1000px) {
@@ -18,5 +20,9 @@
     .btn-main-container {
         width: 534px;
         flex-direction: row;
+        justify-content: space-between;
+    }
+    .btn-margin {
+        margin-top: 0px;
     }
 }

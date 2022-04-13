@@ -6,10 +6,7 @@ export default function Impressum() {
   return (
     <>
     <div className='bg-rocket'>
-      <div className='impressum-container heading-padding'>
-      {/* <div className='img-container'>
-        <img className='footer-img' src='background/footer-bg.png' alt='rakete'/>
-      </div> */}
+      <div className='impressum-container'>
         <div>
           <div className='heading heading-impressum'>FAQ</div>
           <p className='text impressum-width'>For further questions check our 
@@ -22,8 +19,7 @@ export default function Impressum() {
             <a className='in-txt-link' href='Mail'> write us</a> or  
             <a className='in-txt-link' href='Call'> schedule a call</a>.
           </p>
-        </div>
-        
+        </div> 
       </div>
       <Footer />
     </div>

@@ -23,7 +23,7 @@
 .text-container {
     margin-bottom: 2vh;
 }
-.padding {
+.side-padding {
     padding-left: 6vw;
     padding-right: 6vw;
 }
@@ -53,16 +53,6 @@
 }
 .heading-padding {
     padding-top: 25vh;
-}
-.subheading {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.6em;
-    line-height: auto;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.005em;
 }
 .text {
     font-family: 'Montserrat';
@@ -120,8 +110,7 @@
     height: 100vh;
     width: 100vw;
     background-image: url('../background/bg-hero.png');
-    background-size:cover;
-    background-position: center;
+    background-position: 65%;
     background-repeat: no-repeat;
 }
 .bg-rocket {
@@ -158,6 +147,10 @@ video {
 
 /* Responsiveness */
 @media screen and (min-width: 1000px) {
+    .bg-hero {
+        background-position: center;
+        background-size: cover;
+    }
     .title {
         font-weight: 400;
         font-size: 72px;
@@ -194,5 +187,8 @@ video {
     }
     .bg-rocket {
         background-position: 40% 450px;
+    }
+    .heading-margin {
+        margin-top: 20vh;
     }
 }

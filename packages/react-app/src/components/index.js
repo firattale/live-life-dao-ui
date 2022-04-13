@@ -26,12 +26,6 @@ export const Button = styled.button`
   margin-bottom: 5px;
 `;
 
-export const Background = styled.div`
-    width: 100vw;
-    height: 100vh;
-    background-color: orange;
-`;
-
 export const Container = styled.div`
     width: calc(100vw);
     height: 100%;
@@ -40,8 +34,20 @@ export const Container = styled.div`
     align-items: center;
 `;
 
+export const ContainerMint = styled.div`
+    width: calc(100vw);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1000px) {
+    flex-direction: row;
+  }
+`;
+
 export const Header = styled.header`
-  width: 60vw;
+  width: 68vw;
   color: white;
   padding-left: 20px;
   display: flex;
