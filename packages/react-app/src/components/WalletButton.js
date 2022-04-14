@@ -19,6 +19,7 @@ export const WalletButton = () => {
 
 	React.useEffect(() => {
 		if (error) {
+			console.log("error", error);
 			alert("Error while connecting wallet:", error.message);
 		}
 	}, [error]);

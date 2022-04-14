@@ -22,12 +22,12 @@ export const MintPage = () => {
 	// const { loading, error: subgraphQueryError, data } = useQuery(GET_TRANSFERS);
 
 	const { account, activate, deactivate, chainId } = useEthers();
-	console.log("account", account);
+	// console.log("account", account);
 
 	const tokenBalance = useTokenBalance(MOCK_DAI_CONTRACT, account);
-	console.log("chainId", chainId);
-	console.log("tokenBalance", tokenBalance);
-	console.log("tokenBalance :>> ", tokenBalance && formatEther(tokenBalance));
+	// console.log("chainId", chainId);
+	// console.log("tokenBalance", tokenBalance);
+	// console.log("tokenBalance :>> ", tokenBalance && formatEther(tokenBalance));
 
 	// React.useEffect(() => {
 	// 	if (subgraphQueryError) {
