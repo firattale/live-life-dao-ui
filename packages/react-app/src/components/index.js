@@ -1,18 +1,23 @@
 import styled from "styled-components";
 
 export const Body = styled.div`
-  height: 80vh;
-  color: white;
+  padding: 0px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
+  color: white;
   font-size: 10px;
+  background-color: #121212;
+  @media (min-width: 1000px) {
+    font-size: 17px;
+  }
 `;
 
 export const Button = styled.button`
   width: 222px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 1em;
   margin: 0px 20px;
   padding: 12px 20px;
   text-align: center;
@@ -22,20 +27,40 @@ export const Button = styled.button`
 `;
 
 export const Container = styled.div`
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh);
+    width: calc(100vw);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const ContainerMint = styled.div`
+    width: calc(100vw);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 1000px) {
+    flex-direction: row;
+  }
 `;
 
 export const Header = styled.header`
-  width: 88vw;
+  width: 68vw;
   color: white;
   padding-left: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+
+  @media (min-width: 1000px) {
+    align-items: flex-start;
+    margin-top: 25vh;
+    margin-left: 10vw;
+    padding-left: 0px;
+  }
 `;
 
 export const Image = styled.img`
@@ -53,9 +78,15 @@ export const Link = styled.a.attrs({
 `;
 
 export const Navbar = styled.nav`
+  height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-right: 5vw;
+  @media (min-width: 1000px) {
+    padding-right: 10vw;
+    padding-left: 1.5vw;
+  }
 `;
+

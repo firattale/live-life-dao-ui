@@ -1,0 +1,164 @@
+.img-mint {
+    width: 100vw;
+    object-position: center;
+    object-fit: cover;
+}
+.btn-mint {
+    width: 320px;
+    height: 56px;
+    font-family: 'Audiowide';
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 29.94px;
+    letter-spacing: 0.5%;
+    padding: 12px;
+    text-align: center;
+}
+h1 {
+    font-family: 'Audiowide';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4em;
+    line-height: 29.94px;
+    letter-spacing: 0.005em;
+    text-transform: capitalize;
+    text-align: center;
+    margin: 0px;
+}
+h3, 
+li {
+    width: 301px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 1.4em;
+    letter-spacing: 0.005em;
+    line-height: 21px;
+}
+h2 {
+    font-size: 1.8em;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    line-height: 18.5px;
+    letter-spacing: 00.005em;
+    display: flex;
+    align-items: center;
+}
+h4 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2em;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.005em;
+}
+ul {
+    margin-bottom: 3vh;
+}
+.mint-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.div-ticket {
+    position: relative;
+    padding: 10px 30px;  
+    padding-bottom: 50px;
+    margin-bottom: 45px;
+    width: 72vw;
+    border: 3px solid #F0A450;
+    background-color:rgba(240, 164, 80, 0.15);
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blue {
+    color: #61AEDA;
+}
+.orange {
+    color: #F0A450;  
+}
+.blue-bg-border {
+    border: 2px solid #61AEDA;
+    background-color: rgba(97, 174, 218, 0.15);
+}
+.rounded {
+    position: absolute;
+    width: 50vw;
+    left: 15vw;
+    padding: 10px 8px;
+    border-radius: 50px;
+    background-color: #121212;
+    border: 3px solid #F0A450;
+    text-align: center;
+    margin-top: 80px;
+}
+.blue-border {
+    border: 3px solid #61AEDA;
+}
+.no-margin {
+    margin: 0px;
+}
+.btn-mp {
+    width: 178px;
+    height: 24px;
+    line-height: 93.9%;
+    text-align: center;
+    letter-spacing: 0.005em;
+    width: 178px;
+    font-size: 14px;
+    margin-bottom: 10vh;
+    padding-top: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+    .mint-container-desktop {
+        width: 65vw;
+        margin-top: 5vh;
+        display: flex;
+        justify-content: space-between;
+    }
+    .div-ticket {
+        width: 25vw;
+    }
+    .rounded {
+        width: 295px;
+        height: 73px;
+        left: 6vw;
+        margin-top: 100px;
+        padding: 0px;
+    }
+    .h1-desktop {
+        font-size: 36px;
+        line-height: 124.77%;
+    }
+    .h2-desktop {
+        font-size: 24px;
+        line-height: 102.77%;
+    }
+    .h4-desktop {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .li-desktop {
+        width: 448px;
+        font-size: 18px;
+        line-height: 150%;
+    }
+    .btn-mint {
+        width: 499px;
+        height: 80px;
+        font-size: 36px;
+    }
+    .nft-big-img {
+        width: 80vw;
+    }
+    .btn-mp {
+        width: 300px;
+    }
+}

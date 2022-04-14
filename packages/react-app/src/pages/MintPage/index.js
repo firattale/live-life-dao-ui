@@ -3,12 +3,15 @@ import * as React from "react";
 // import GET_TRANSFERS from "../../graphql/subgraph";
 // import { useQuery } from "@apollo/client";
 // import { Contract } from "@ethersproject/contracts";
-import { useEthers, useEtherBalance, useTokenBalance } from "@usedapp/core";
-import { Body, Button, Container, Header } from "../../components";
+import { useEthers, useTokenBalance } from "@usedapp/core";
 import { Link } from "react-router-dom";
 import { WalletButton } from "../../components/WalletButton";
-import { formatEther } from "@ethersproject/units";
 import { MOCK_DAI_CONTRACT } from "../../constants";
+
+import { Body, Button } from "../../components";
+import NavBar from "../../components/NavBar";
+import Mint from "../../components/Mint";
+
 export const MintPage = () => {
 	// Read more about useDapp on https://usedapp.io/
 	// const { error: contractCallError, value: tokenBalance } =
@@ -39,20 +42,17 @@ export const MintPage = () => {
 	// 	}
 	// }, [loading, subgraphQueryError, data]);
 	return (
-		<>
-			<Container>
-				<Header>
-					<WalletButton />
-					<Button onClick={deactivate}>{account ? "Disconnect" : "Connected"}</Button>
-				</Header>
-				<Body>
-					<h1>Mint Page</h1>
-					<h1>Account Balance:{tokenBalance ? tokenBalance.toLocaleString() : ""}</h1>
-					<Button>Mint Golder NFT</Button>
-					<Button>Mint GuestList NFT</Button>
-					<Link to="/">Link to Home Page</Link>
-				</Body>
-			</Container>
-		</>
+		<Body>
+			<NavBar />
+			<WalletButton />
+			<Button onClick={deactivate}>{account ? "Disconnect" : "Connected"}</Button>
+
+			<Mint />
+			{/* <Button className='btn-mint btn-style-orange-solid'>Mint NFT</Button> */}
+			{/* <Button className='btn-mint btn-style-blue-solid'>Mint NFT</Button> */}
+			<Link className="btn btn-style-blue-light btn-mp link" to="/">
+				back to main page
+			</Link>
+		</Body>
 	);
 };

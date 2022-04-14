@@ -4,8 +4,15 @@ import { Routes, Route } from "react-router-dom";
 import { MainPage } from "./pages/MainPage";
 import { MintPage } from "./pages/MintPage";
 
-import './css/Intro.css'
+import './css/Styles.css'
 import './css/NavBar.css'
+import './css/Intro.css'
+import './css/Project.css'
+import	'./css/Features.css'
+import './css/InvestorNfts.css'
+import './css/Impressum.css'
+import './css/Footer.css'
+import './css/MintPage.css'
 
 function App() {
 	return (
