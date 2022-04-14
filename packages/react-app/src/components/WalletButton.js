@@ -6,7 +6,11 @@ export const WalletButton = () => {
 	const [rendered, setRendered] = React.useState("");
 	const ens = useLookupAddress();
 	const { account, activateBrowserWallet, deactivate, error } = useEthers();
-
+	const [activateError, setActivateError] = React.useState("");
+	const activate = async () => {
+		setActivateError("");
+		activateBrowserWallet();
+	};
 	React.useEffect(() => {
 		if (ens) {
 			setRendered(ens);
@@ -19,8 +23,8 @@ export const WalletButton = () => {
 
 	React.useEffect(() => {
 		if (error) {
+			setActivateError(error.message);
 			console.log("error", error);
-			alert("Error while connecting wallet:", error.message);
 		}
 	}, [error]);
 
@@ -28,11 +32,12 @@ export const WalletButton = () => {
 		<Button
 			onClick={() => {
 				if (!account) {
-					activateBrowserWallet();
+					activate();
 				} else {
 					deactivate();
 				}
 			}}
+			className="btn-style-orange nav-btn"
 		>
 			{rendered === "" && "Connect Wallet"}
 			{rendered !== "" && rendered}

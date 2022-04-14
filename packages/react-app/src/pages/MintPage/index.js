@@ -5,10 +5,11 @@ import * as React from "react";
 // import { Contract } from "@ethersproject/contracts";
 import { useEthers, useTokenBalance } from "@usedapp/core";
 import { Link } from "react-router-dom";
-import { WalletButton } from "../../components/WalletButton";
-import { MOCK_DAI_CONTRACT } from "../../constants";
+import { MOCK_DAI_CONTRACT, MUMBAI_CHAIN_ID } from "../../constants";
+import { formatEther } from "@ethersproject/units";
+import toast from "react-hot-toast";
 
-import { Body, Button } from "../../components";
+import { Body } from "../../components";
 import NavBar from "../../components/NavBar";
 import Mint from "../../components/Mint";
 
@@ -24,13 +25,18 @@ export const MintPage = () => {
 	// console.log("tokenBalance", tokenBalance);
 	// const { loading, error: subgraphQueryError, data } = useQuery(GET_TRANSFERS);
 
-	const { account, activate, deactivate, chainId } = useEthers();
-	// console.log("account", account);
+	const { account, chainId } = useEthers();
+	React.useEffect(() => {
+		if (chainId !== MUMBAI_CHAIN_ID) {
+			toast.error("Please change to Mumbai Network!");
+		}
+	}, [chainId]);
 
 	const tokenBalance = useTokenBalance(MOCK_DAI_CONTRACT, account);
-	// console.log("chainId", chainId);
-	// console.log("tokenBalance", tokenBalance);
-	// console.log("tokenBalance :>> ", tokenBalance && formatEther(tokenBalance));
+	console.log("tokenBalance", tokenBalance);
+	if (tokenBalance) {
+		console.log("tokenBalance :>> ", formatEther(tokenBalance));
+	}
 
 	// React.useEffect(() => {
 	// 	if (subgraphQueryError) {
@@ -44,12 +50,8 @@ export const MintPage = () => {
 	return (
 		<Body>
 			<NavBar />
-			<WalletButton />
-			<Button onClick={deactivate}>{account ? "Disconnect" : "Connected"}</Button>
 
 			<Mint />
-			{/* <Button className='btn-mint btn-style-orange-solid'>Mint NFT</Button> */}
-			{/* <Button className='btn-mint btn-style-blue-solid'>Mint NFT</Button> */}
 			<Link className="btn btn-style-blue-light btn-mp link" to="/">
 				back to main page
 			</Link>
