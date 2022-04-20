@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Golden() {
+export default function Golden({ onGoldenClick }) {
 	return (
 		<div className="mint-container">
 			<div className="div-ticket">
@@ -18,7 +18,9 @@ export default function Golden() {
 				<li>Access to all other private lounges;</li>
 				<li>A large boost to your gamification supplies.</li>
 			</ul>
-			<button className="btn-mint btn-style-orange-solid">Mint NFT</button>
+			<button className="btn-mint btn-style-orange-solid" onClick={onGoldenClick}>
+				Mint NFT
+			</button>
 			<img className="img-mint" src="/nft/nft-mint-2.jpg" alt="nft2" />
 		</div>
 	);

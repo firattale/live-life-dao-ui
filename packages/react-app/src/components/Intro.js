@@ -14,11 +14,9 @@ export default function Intro() {
 				</p>
 			</div>
 			<div className="btn-main-container">
-				<button className="btn btn-style-blue-solid">
-					<Link className="link" to="/mint">
-						Buy Investor NFTs
-					</Link>
-				</button>
+				<Link className="link" to="/mint">
+					<button className="btn btn-style-blue-solid">Buy Investor NFTs</button>
+				</Link>
 				<button className="btn btn-style-blue-light btn-margin">Download Litepaper</button>
 			</div>
 		</Header>

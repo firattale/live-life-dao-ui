@@ -8,6 +8,7 @@ export const WalletButton = () => {
 	const { account, activateBrowserWallet, deactivate, error, chainId } = useEthers();
 
 	const [activateError, setActivateError] = React.useState("");
+	console.log("activateError", activateError);
 	const activate = async () => {
 		setActivateError("");
 		activateBrowserWallet();

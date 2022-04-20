@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Guestlist() {
+export default function Guestlist({ onGuestListClick }) {
 	return (
 		<div className="mint-container">
 			<div className="div-ticket blue-bg-border">
@@ -18,7 +18,9 @@ export default function Guestlist() {
 				<li>Access to all other private lounges;</li>
 				<li>A large boost to your gamification supplies.</li>
 			</ul>
-			<button className="btn-mint btn-style-blue-solid">Mint NFT</button>
+			<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
+				Mint NFT
+			</button>
 			<img className="img-mint" src="/nft/nft-mint-3.jpg" alt="nft3" />
 		</div>
 	);

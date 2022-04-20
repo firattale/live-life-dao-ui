@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function GuestlistDesktop() {
+export default function GuestlistDesktop({ onGuestListClick }) {
 	return (
 		<div className="mint-container">
 			<div className="div-ticket blue-bg-border">
@@ -18,7 +18,9 @@ export default function GuestlistDesktop() {
 				<li className="li-desktop">Access to all other private lounges;</li>
 				<li className="li-desktop">A large boost to your gamification supplies.</li>
 			</ul>
-			<button className="btn-mint btn-style-blue-solid">Mint NFT</button>
+			<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
+				Mint NFT
+			</button>
 		</div>
 	);
 }

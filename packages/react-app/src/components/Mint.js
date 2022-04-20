@@ -9,7 +9,7 @@ import GoldenDesktop from "./MintPage/GoldenDesktop";
 import GuestlistDesktop from "./MintPage/GuestlistDesktop";
 import NftImage from "./MintPage/NftImage";
 
-export default function MintPage() {
+export default function MintPage({ onGuestListClick, onGoldenClick }) {
 	const [width, setWidth] = useState(window.innerWidth);
 	const breakpoint = 1000;
 
@@ -26,8 +26,8 @@ export default function MintPage() {
 		return (
 			<Container>
 				<div className="mint-container-desktop">
-					<GoldenDesktop />
-					<GuestlistDesktop />
+					<GoldenDesktop onGoldenClick={onGoldenClick} />
+					<GuestlistDesktop onGuestListClick={onGuestListClick} />
 				</div>
 				<NftImage />
 			</Container>
@@ -37,8 +37,8 @@ export default function MintPage() {
 	return (
 		<ContainerMint>
 			<MintIntro />
-			<Golden />
-			<Guestlist />
+			<Golden onGoldenClick={onGoldenClick} />
+			<Guestlist onGuestListClick={onGuestListClick} />
 		</ContainerMint>
 	);
 }
