@@ -1,25 +1,27 @@
 import * as React from "react";
-import { shortenAddress, useEthers, useLookupAddress } from "@usedapp/core";
+import { useEthers } from "@usedapp/core";
 import { Button } from "./";
+import { MUMBAI_CHAIN_ID } from "../constants";
 
 export const WalletButton = () => {
 	const [rendered, setRendered] = React.useState("");
-	const ens = useLookupAddress();
-	const { account, activateBrowserWallet, deactivate, error } = useEthers();
+	const { account, activateBrowserWallet, deactivate, error, chainId } = useEthers();
+
 	const [activateError, setActivateError] = React.useState("");
 	const activate = async () => {
 		setActivateError("");
 		activateBrowserWallet();
 	};
 	React.useEffect(() => {
-		if (ens) {
-			setRendered(ens);
-		} else if (account) {
-			setRendered(shortenAddress(account));
+		if (account) {
+			setRendered("disconnect");
 		} else {
-			setRendered("");
+			setRendered("connect wallet");
 		}
-	}, [account, ens, setRendered]);
+		if (chainId !== MUMBAI_CHAIN_ID) {
+			setRendered("wrong network");
+		}
+	}, [account, setRendered, chainId]);
 
 	React.useEffect(() => {
 		if (error) {
@@ -30,6 +32,7 @@ export const WalletButton = () => {
 
 	return (
 		<Button
+			error={chainId !== MUMBAI_CHAIN_ID}
 			onClick={() => {
 				if (!account) {
 					activate();
@@ -39,8 +42,7 @@ export const WalletButton = () => {
 			}}
 			className="btn-style-orange nav-btn"
 		>
-			{rendered === "" && "Connect Wallet"}
-			{rendered !== "" && rendered}
+			{rendered}
 		</Button>
 	);
 };
