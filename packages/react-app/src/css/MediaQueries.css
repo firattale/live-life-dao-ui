@@ -133,4 +133,19 @@
 	.btn-mp {
 		width: 300px;
 	}
+    .on-board {
+        font-family: "Montserrat";
+        font-style: normal;
+        width: 463px;
+        height: 80px;
+        margin-bottom: 2vh;
+        font-size: 18px;
+        line-height: 25px;
+        background-color: rgb(65, 65, 65);
+        color: rgba(108, 239, 215, 1);
+    }
+    .on-board-img {
+        padding-left: 13px;
+        width: 60px;
+    }
 }
