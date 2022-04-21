@@ -1,0 +1,36 @@
+.overlapping-hero {
+    position:absolute;
+    width: 100vw;
+    margin-top: 10vh;
+}
+.overlapping-hero-bg {
+    position:absolute;
+    width: 100vw;
+}
+.img-overl-container {
+    position: absolute;
+    margin-top: 83vh;
+}
+.img-astronaut {
+    height: 450px;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+}
+/* .line-a {
+    position: absolute;
+    width: 16vw;
+    left: 20px;
+    top: 50vh;
+} */
+@media screen and (min-width: 1000px) {
+    .img-overl-container {
+        margin-top: 66vh;
+    }
+    .overlapping-hero-bg {
+        margin-top: -25vh;
+    }
+    .img-astronaut {
+        height: auto;
+    }
+}
