@@ -93,7 +93,7 @@
 
     /* Mintpage */
 	.div-ticket {
-		width: 25vw;
+		width: 463px;
 	}
 	.rounded {
 		width: 295px;
@@ -147,5 +147,8 @@
     .on-board-img {
         padding-left: 13px;
         width: 60px;
+    }
+    .mint-container {
+        margin: 0px 3vw;
     }
 }

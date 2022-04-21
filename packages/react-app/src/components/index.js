@@ -78,11 +78,11 @@ export const ContainerMint = styled.div`
 	align-items: center;
 
 	@media (min-width: 1000px) {
-		width: 65vw;
 		margin-top: 5vh;
 		padding-top: 50px;
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: center;
+		align-items: flex-start;
 	}
 `;
 
