@@ -3,15 +3,12 @@ import { addresses, abis } from "@my-app/contracts";
 // import GET_TRANSFERS from "../../graphql/subgraph";
 // import { useQuery } from "@apollo/client";
 import {
+	ChainId,
 	useEthers,
 	// useTokenBalance,
 	useContractFunction,
 } from "@usedapp/core";
 import { Link } from "react-router-dom";
-import {
-	//  MOCK_DAI_CONTRACT,
-	MUMBAI_CHAIN_ID,
-} from "../../constants";
 // import { formatEther } from "@ethersproject/units";
 import toast from "react-hot-toast";
 import { Contract } from "@ethersproject/contracts";
@@ -30,8 +27,8 @@ export const MintPage = () => {
 
 	React.useEffect(() => {
 		const changeNetwork = async () => {
-			if (chainId !== MUMBAI_CHAIN_ID) {
-				await switchNetwork(MUMBAI_CHAIN_ID);
+			if (chainId !== ChainId.Mumbai) {
+				await switchNetwork(ChainId.Mumbai);
 			}
 		};
 		changeNetwork();
@@ -47,7 +44,7 @@ export const MintPage = () => {
 	}, [buyGoldenNFTState, buyGuestlistNFTState]);
 
 	const onGoldenClick = () => {
-		void buyGoldenNFT();
+		buyGoldenNFT();
 	};
 	console.log("state", buyGoldenNFTState);
 	const onGuestListClick = () => {

@@ -1,7 +1,6 @@
 import * as React from "react";
-import { useEthers } from "@usedapp/core";
+import { useEthers, ChainId } from "@usedapp/core";
 import { Button } from "./";
-import { MUMBAI_CHAIN_ID } from "../constants";
 
 export const WalletButton = () => {
 	const [rendered, setRendered] = React.useState("");
@@ -16,14 +15,14 @@ export const WalletButton = () => {
 		} else {
 			setRendered("connect wallet");
 		}
-		if (account && chainId !== MUMBAI_CHAIN_ID) {
+		if (account && chainId !== ChainId.Mumbai) {
 			setRendered("wrong network");
 		}
 	}, [account, setRendered, chainId]);
 
 	return (
 		<Button
-			error={account && chainId !== MUMBAI_CHAIN_ID}
+			error={account && chainId !== ChainId.Mumbai}
 			onClick={() => {
 				if (!account) {
 					activate();
