@@ -8,6 +8,8 @@
     height: 3vh;
 }
 .nav-btn {
+    width: 128px;
+    height: 37px;
     font-family: 'Montserrat';
     font-style: normal;
     cursor: pointer;
@@ -20,14 +22,4 @@
 .icon-container {
     display: flex;
     align-items: center;
-}
-@media screen and (min-width: 1000px) {
-    .nav-btn  {
-        font-size: 18px;
-        width: 185px;
-        height: 43px;
-    }
-    .nav-logo {
-        height: 90px;
-    }
 }

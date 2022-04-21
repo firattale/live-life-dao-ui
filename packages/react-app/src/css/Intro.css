@@ -1,5 +1,5 @@
 .intro-container {
-    margin-top: 30px;
+    margin-top: 80px;
     margin-bottom: 10px;
 }
 .btn-main-container {
@@ -10,19 +10,4 @@
 }
 .btn-margin {
     margin-top: 10px;
-}
-
- @media screen and (min-width: 1000px) {
-     .intro-container {
-         width: 534px;
-         margin: 0px;
-     }
-    .btn-main-container {
-        width: 534px;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .btn-margin {
-        margin-top: 0px;
-    }
 }

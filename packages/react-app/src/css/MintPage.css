@@ -1,3 +1,6 @@
+.padding-nft-heading {
+	padding-top: 50px;
+}
 .img-mint {
 	width: 100vw;
 	object-position: center;
@@ -116,49 +119,3 @@ ul {
 	padding-top: 20px;
 }
 
-@media screen and (min-width: 1000px) {
-	.mint-container-desktop {
-		width: 65vw;
-		margin-top: 5vh;
-		display: flex;
-		justify-content: space-between;
-	}
-	.div-ticket {
-		width: 25vw;
-	}
-	.rounded {
-		width: 295px;
-		height: 73px;
-		left: 6vw;
-		margin-top: 100px;
-		padding: 0px;
-	}
-	.h1-desktop {
-		font-size: 34px;
-		line-height: 124.77%;
-	}
-	.h2-desktop {
-		font-size: 24px;
-		line-height: 102.77%;
-	}
-	.h4-desktop {
-		font-size: 18px;
-		line-height: 22px;
-	}
-	.li-desktop {
-		width: 448px;
-		font-size: 18px;
-		line-height: 150%;
-	}
-	.btn-mint {
-		width: 499px;
-		height: 80px;
-		font-size: 36px;
-	}
-	.nft-big-img {
-		width: 80vw;
-	}
-	.btn-mp {
-		width: 300px;
-	}
-}

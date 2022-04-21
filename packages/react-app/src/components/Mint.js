@@ -25,7 +25,7 @@ export default function MintPage({ onGuestListClick, onGoldenClick }) {
 	if (width > breakpoint) {
 		return (
 			<Container>
-				<div className="mint-container-desktop">
+				<div className="mint-container-desktop padding-nft-heading">
 					<GoldenDesktop onGoldenClick={onGoldenClick} />
 					<GuestlistDesktop onGuestListClick={onGuestListClick} />
 				</div>

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useEthers } from "@usedapp/core";
-import { Button } from "./";
+import { NavButton } from "./";
 import { MUMBAI_CHAIN_ID } from "../constants";
 
 export const WalletButton = () => {
@@ -32,7 +32,7 @@ export const WalletButton = () => {
 	}, [error]);
 
 	return (
-		<Button
+		<NavButton
 			error={chainId !== MUMBAI_CHAIN_ID}
 			onClick={() => {
 				if (!account) {
@@ -44,6 +44,6 @@ export const WalletButton = () => {
 			className="btn-style-orange nav-btn"
 		>
 			{rendered}
-		</Button>
+		</NavButton>
 	);
 };

@@ -23,14 +23,3 @@
     left: 20px;
     top: 50vh;
 } */
-@media screen and (min-width: 1000px) {
-    .img-overl-container {
-        margin-top: 66vh;
-    }
-    .overlapping-hero-bg {
-        margin-top: -25vh;
-    }
-    .img-astronaut {
-        height: auto;
-    }
-}
