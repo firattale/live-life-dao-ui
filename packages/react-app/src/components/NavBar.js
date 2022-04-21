@@ -12,6 +12,7 @@ export default function NavBar() {
 				</Link>
 			</div>
 			<div className="icon-container">
+			<h1>test</h1>
 				<a href="https://twitter.com/LifeLiveDAO">
 					<img className="nav-icon zoom" src="icons/Twitter.svg" alt="Twitter-Icon" />
 				</a>
