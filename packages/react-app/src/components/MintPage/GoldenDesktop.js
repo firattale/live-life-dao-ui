@@ -22,6 +22,7 @@ export default function GoldenDesktop({ onGoldenClick }) {
 				<button className="btn-mint btn-style-orange-solid" onClick={onGoldenClick}>
 					Mint NFT
 				</button>
+				<p>0/20 minted</p>
 			</div>
 		</div>
 	);

@@ -22,45 +22,29 @@ import NavBar from "../../components/NavBar";
 import Mint from "../../components/Mint";
 
 export const MintPage = () => {
-	// Read more about useDapp on https://usedapp.io/
-
 	const sellerInterface = new utils.Interface(abis.seller.abi);
 	const contract = new Contract(addresses.sellerContract, sellerInterface);
-
 	const { state: buyGoldenNFTState, send: buyGoldenNFT } = useContractFunction(contract, "buyGoldenNFT");
 	const { state: buyGuestlistNFTState, send: buyGuestlistNFT } = useContractFunction(contract, "buyGuestlistNFT");
+	const { chainId, switchNetwork } = useEthers();
 
-	// const { loading, error: subgraphQueryError, data } = useQuery(GET_TRANSFERS);
-
-	const { chainId } = useEthers();
 	React.useEffect(() => {
-		if (chainId !== MUMBAI_CHAIN_ID) {
-			toast.error("Please change to Mumbai Network!");
-		}
-	}, [chainId]);
+		const changeNetwork = async () => {
+			if (chainId !== MUMBAI_CHAIN_ID) {
+				await switchNetwork(MUMBAI_CHAIN_ID);
+			}
+		};
+		changeNetwork();
+	}, [chainId, switchNetwork]);
 	React.useEffect(() => {
 		if (buyGoldenNFTState.status === "PendingSignature" || buyGuestlistNFTState.status === "PendingSignature") {
 			toast.loading("Waiting...");
 		}
 		if (buyGoldenNFTState.status === "Exception" || buyGuestlistNFTState.status === "Exception") {
+			toast.dismiss();
 			toast.error(buyGoldenNFTState.errorMessage);
 		}
 	}, [buyGoldenNFTState, buyGuestlistNFTState]);
-	// const tokenBalance = useTokenBalance(MOCK_DAI_CONTRACT, account);
-	// console.log("tokenBalance", tokenBalance);
-	// if (tokenBalance) {
-	// 	console.log("tokenBalance :>> ", formatEther(tokenBalance));
-	// }
-
-	// React.useEffect(() => {
-	// 	if (subgraphQueryError) {
-	// 		console.error("Error while querying subgraph:", subgraphQueryError.message);
-	// 		return;
-	// 	}
-	// 	if (!loading && data && data.transfers) {
-	// 		console.log({ transfers: data.transfers });
-	// 	}
-	// }, [loading, subgraphQueryError, data]);
 
 	const onGoldenClick = () => {
 		void buyGoldenNFT();
@@ -69,6 +53,12 @@ export const MintPage = () => {
 	const onGuestListClick = () => {
 		void buyGuestlistNFT();
 	};
+
+	// toast.promise(goldenPromise, {
+	// 	loading: "Loading",
+	// 	success: (data) => `Successfully minted ${data.name}`,
+	// 	error: (err) => `This just happened: ${err.error}`,
+	// });
 	return (
 		<Body>
 			<NavBar />
@@ -79,3 +69,21 @@ export const MintPage = () => {
 		</Body>
 	);
 };
+
+// const tokenBalance = useTokenBalance(MOCK_DAI_CONTRACT, account);
+// console.log("tokenBalance", tokenBalance);
+// if (tokenBalance) {
+// 	console.log("tokenBalance :>> ", formatEther(tokenBalance));
+// }
+
+// React.useEffect(() => {
+// 	if (subgraphQueryError) {
+// 		console.error("Error while querying subgraph:", subgraphQueryError.message);
+// 		return;
+// 	}
+// 	if (!loading && data && data.transfers) {
+// 		console.log({ transfers: data.transfers });
+// 	}
+// }, [loading, subgraphQueryError, data]);
+
+// const { loading, error: subgraphQueryError, data } = useQuery(GET_TRANSFERS);

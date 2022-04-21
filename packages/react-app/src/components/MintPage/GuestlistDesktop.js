@@ -21,6 +21,7 @@ export default function GuestlistDesktop({ onGuestListClick }) {
 			<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
 				Mint NFT
 			</button>
+			<p>0/100 minted</p>
 		</div>
 	);
 }
