@@ -1,4 +1,5 @@
 import React from "react";
+import OnBoard from "./OnBoard";
 
 export default function Guestlist({ onGuestListClick }) {
 
@@ -19,6 +20,7 @@ export default function Guestlist({ onGuestListClick }) {
 				<li className="li-desktop">Access to all other private lounges;</li>
 				<li className="li-desktop">A large boost to your gamification supplies.</li>
 			</ul>
+			<OnBoard />
 			<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
 				Mint NFT
 			</button>
