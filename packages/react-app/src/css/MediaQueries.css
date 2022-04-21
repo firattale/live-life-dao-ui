@@ -28,7 +28,7 @@
         margin: 0;
         padding: 0;
         width: 60vw;
-        height: 100vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-self: center;
@@ -90,14 +90,8 @@
     .heading-impressum {
         padding-top: 5vw;
     }
-    
+
     /* Mintpage */
-    .mint-container-desktop {
-		width: 65vw;
-		margin-top: 5vh;
-		display: flex;
-		justify-content: space-between;
-	}
 	.div-ticket {
 		width: 25vw;
 	}
@@ -125,6 +119,9 @@
 		font-size: 18px;
 		line-height: 150%;
 	}
+    .img-mint {
+        display: none;
+    }
 	.btn-mint {
 		width: 499px;
 		height: 80px;
