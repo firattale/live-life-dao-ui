@@ -5,6 +5,7 @@ import { addresses, abis } from "@my-app/contracts";
 import {
 	// useTokenBalance,
 	useContractFunction,
+	useEthers,
 } from "@usedapp/core";
 import { Link } from "react-router-dom";
 // import { formatEther } from "@ethersproject/units";
@@ -24,7 +25,7 @@ export const MintPage = () => {
 	const { state: buyGoldenNFTState, send: buyGoldenNFT } = useContractFunction(sellerContract, "buyGoldenNFT");
 	const { state: approveState, send: approve } = useContractFunction(mockDAIContract, "approve");
 	const { state: buyGuestlistNFTState, send: buyGuestlistNFT } = useContractFunction(sellerContract, "buyGuestlistNFT");
-
+	const { account } = useEthers();
 	React.useEffect(() => {
 		if (approveState.status === "PendingSignature") {
 			toast.loading("Waiting...");
@@ -72,11 +73,19 @@ export const MintPage = () => {
 	}, [buyGuestlistNFTState]);
 
 	const onGoldenClick = async () => {
+		if (!account) {
+			toast.error("Please connect to your wallet to mint an NFT.");
+			return;
+		}
 		await approve(addresses.sellerContract, utils.parseEther("50000"));
 		await buyGoldenNFT();
 	};
 	const onGuestListClick = async () => {
-		await approve(addresses.sellerContract, utils.parseEther("20000"));
+		if (!account) {
+			toast.error("Please connect to your wallet to mint an NFT.");
+			return;
+		}
+		await approve(addresses.sellerContract, utils.parseEther("2000"));
 		await buyGuestlistNFT();
 	};
 
