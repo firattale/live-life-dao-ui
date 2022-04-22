@@ -3,8 +3,6 @@ import { addresses, abis } from "@my-app/contracts";
 // import GET_TRANSFERS from "../../graphql/subgraph";
 // import { useQuery } from "@apollo/client";
 import {
-	ChainId,
-	useEthers,
 	// useTokenBalance,
 	useContractFunction,
 } from "@usedapp/core";
@@ -20,42 +18,72 @@ import Mint from "../../components/Mint";
 
 export const MintPage = () => {
 	const sellerInterface = new utils.Interface(abis.seller.abi);
-	const contract = new Contract(addresses.sellerContract, sellerInterface);
-	const { state: buyGoldenNFTState, send: buyGoldenNFT } = useContractFunction(contract, "buyGoldenNFT");
-	const { state: buyGuestlistNFTState, send: buyGuestlistNFT } = useContractFunction(contract, "buyGuestlistNFT");
-	const { chainId, switchNetwork } = useEthers();
+	const mockDAIInterface = new utils.Interface(abis.mockDai.abi);
+	const sellerContract = new Contract(addresses.sellerContract, sellerInterface);
+	const mockDAIContract = new Contract(addresses.mockDaiContract, mockDAIInterface);
+	const { state: buyGoldenNFTState, send: buyGoldenNFT } = useContractFunction(sellerContract, "buyGoldenNFT");
+	const { state: approveState, send: approve } = useContractFunction(mockDAIContract, "approve");
+	const { state: buyGuestlistNFTState, send: buyGuestlistNFT } = useContractFunction(sellerContract, "buyGuestlistNFT");
 
 	React.useEffect(() => {
-		const changeNetwork = async () => {
-			if (chainId !== ChainId.Mumbai) {
-				await switchNetwork(ChainId.Mumbai);
-			}
-		};
-		changeNetwork();
-	}, [chainId, switchNetwork]);
-	React.useEffect(() => {
-		if (buyGoldenNFTState.status === "PendingSignature" || buyGuestlistNFTState.status === "PendingSignature") {
+		if (approveState.status === "PendingSignature") {
 			toast.loading("Waiting...");
 		}
-		if (buyGoldenNFTState.status === "Exception" || buyGuestlistNFTState.status === "Exception") {
+		if (approveState.status === "Exception" || approveState.status === "Fail") {
+			toast.dismiss();
+			toast.error(approveState.errorMessage);
+		}
+		if (approveState.status === "Success") {
+			console.log("approveState", approveState);
+			toast.dismiss();
+			toast.success("You have successfully approved allowance for DAI spending.");
+		}
+	}, [approveState]);
+
+	React.useEffect(() => {
+		if (buyGoldenNFTState.status === "PendingSignature") {
+			toast.loading("Waiting...");
+		}
+		if (buyGoldenNFTState.status === "Exception" || buyGoldenNFTState.status === "Fail") {
 			toast.dismiss();
 			toast.error(buyGoldenNFTState.errorMessage);
 		}
-	}, [buyGoldenNFTState, buyGuestlistNFTState]);
+		if (buyGoldenNFTState.status === "Success") {
+			console.log("buyGoldenNFTState", buyGoldenNFTState);
+			toast.dismiss();
+			toast.success("You have successfully minted your Golden NFT!");
+			console.log(
+				`You can view your NFT here https://mumbai.polygonscan.com/tx/${buyGuestlistNFTState.transaction.hash}`
+			);
+		}
+	}, [buyGoldenNFTState]);
+	React.useEffect(() => {
+		if (buyGuestlistNFTState.status === "PendingSignature") {
+			toast.loading("Waiting...");
+		}
+		if (buyGuestlistNFTState.status === "Exception" || buyGuestlistNFTState.status === "Fail") {
+			toast.dismiss();
+			toast.error(buyGuestlistNFTState.errorMessage);
+		}
+		if (buyGuestlistNFTState.status === "Success") {
+			console.log("buyGuestlistNFTState", buyGuestlistNFTState);
+			toast.dismiss();
+			toast.success("You have successfully minted your Guestlist NFT!");
+			console.log(
+				`You can view your NFT here https://mumbai.polygonscan.com/tx/${buyGuestlistNFTState.transaction.hash}`
+			);
+		}
+	}, [buyGuestlistNFTState]);
 
-	const onGoldenClick = () => {
-		buyGoldenNFT();
+	const onGoldenClick = async () => {
+		await approve(addresses.sellerContract, utils.parseEther("50000"));
+		await buyGoldenNFT();
 	};
-	console.log("state", buyGoldenNFTState);
-	const onGuestListClick = () => {
-		void buyGuestlistNFT();
+	const onGuestListClick = async () => {
+		await approve(addresses.sellerContract, utils.parseEther("20000"));
+		await buyGuestlistNFT();
 	};
 
-	// toast.promise(goldenPromise, {
-	// 	loading: "Loading",
-	// 	success: (data) => `Successfully minted ${data.name}`,
-	// 	error: (err) => `This just happened: ${err.error}`,
-	// });
 	return (
 		<Body>
 			<NavBar />

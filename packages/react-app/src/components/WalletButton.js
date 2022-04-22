@@ -4,11 +4,14 @@ import { Button } from "./";
 
 export const WalletButton = () => {
 	const [rendered, setRendered] = React.useState("");
-	const { account, activateBrowserWallet, deactivate, chainId } = useEthers();
+	const { account, activateBrowserWallet, deactivate, chainId, switchNetwork } = useEthers();
 
-	const activate = async () => {
-		await activateBrowserWallet();
-	};
+	React.useEffect(() => {
+		if (chainId !== ChainId.Mumbai) {
+			switchNetwork(ChainId.Mumbai);
+		}
+	}, [chainId, switchNetwork]);
+
 	React.useEffect(() => {
 		if (account) {
 			setRendered("disconnect");
@@ -25,7 +28,7 @@ export const WalletButton = () => {
 			error={account && chainId !== ChainId.Mumbai}
 			onClick={() => {
 				if (!account) {
-					activate();
+					activateBrowserWallet();
 				} else {
 					deactivate();
 				}
