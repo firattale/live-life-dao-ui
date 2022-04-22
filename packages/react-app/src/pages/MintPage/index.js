@@ -52,9 +52,7 @@ export const MintPage = () => {
 			console.log("buyGoldenNFTState", buyGoldenNFTState);
 			toast.dismiss();
 			toast.success("You have successfully minted your Golden NFT!");
-			console.log(
-				`You can view your NFT here https://mumbai.polygonscan.com/tx/${buyGuestlistNFTState.transaction.hash}`
-			);
+			console.log(`View your NFT on https://testnets.opensea.io/account`);
 		}
 	}, [buyGoldenNFTState]);
 	React.useEffect(() => {
@@ -69,9 +67,7 @@ export const MintPage = () => {
 			console.log("buyGuestlistNFTState", buyGuestlistNFTState);
 			toast.dismiss();
 			toast.success("You have successfully minted your Guestlist NFT!");
-			console.log(
-				`You can view your NFT here https://mumbai.polygonscan.com/tx/${buyGuestlistNFTState.transaction.hash}`
-			);
+			console.log(`View your NFT on https://testnets.opensea.io/account`);
 		}
 	}, [buyGuestlistNFTState]);
 
