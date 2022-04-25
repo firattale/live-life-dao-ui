@@ -1,0 +1,28 @@
+.feature {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 3vh;
+}
+.feature-title {
+    font-weight: 1000;
+}
+.feature-text {
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+.feature-icon {
+    height: 5vh;
+    padding-left: 3vw;
+}
+.img-robot {
+    height: 700px;
+    width: 100vw;
+    object-fit: cover;
+    object-position: center;
+}
+@media screen and (min-width: 1000px) {
+    .img-robot {
+        height: auto;
+    }
+}

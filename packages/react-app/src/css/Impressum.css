@@ -1,0 +1,31 @@
+.impressum-container {
+    height: 100vh;
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.in-txt-link {
+    color: white;
+    font-weight: 1000;
+}
+.impressum-width {
+    width: 60vw;
+}
+.heading-impressum {
+    margin-top: 3vh;
+    font-size: 40px;
+    line-height: auto;
+    letter-spacing: -3.5%;
+    white-space: nowrap;
+}
+
+@media screen and (min-width: 1000px) {
+    .impressum-container {
+        padding-left: 8vw;
+    }
+    .heading-impressum {
+        padding-top: 5vw;
+    }
+}

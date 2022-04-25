@@ -1,9 +1,11 @@
-import erc20Abi from "./abis/erc20.json";
-import ownableAbi from "./abis/ownable.json";
+import sellerAbi from "./abis/Seller.json";
+import mockDaiAbi from "./abis/MockDai.json";
+import ticketNFTAbi from "./abis/TicketNFT.json";
 
 const abis = {
-  erc20: erc20Abi,
-  ownable: ownableAbi,
+	seller: sellerAbi,
+	mockDai: mockDaiAbi,
+	ticketNFT: ticketNFTAbi,
 };
 
 export default abis;
