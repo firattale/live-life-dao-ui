@@ -1,42 +1,34 @@
 import * as React from "react";
-import { useEthers } from "@usedapp/core";
+import { useEthers, ChainId } from "@usedapp/core";
 import { Button } from "./";
-import { MUMBAI_CHAIN_ID } from "../constants";
 
 export const WalletButton = () => {
 	const [rendered, setRendered] = React.useState("");
-	const { account, activateBrowserWallet, deactivate, error, chainId } = useEthers();
+	const { account, activateBrowserWallet, deactivate, chainId, switchNetwork } = useEthers();
 
-	const [activateError, setActivateError] = React.useState("");
-	console.log("activateError", activateError);
-	const activate = async () => {
-		setActivateError("");
-		activateBrowserWallet();
-	};
+	React.useEffect(() => {
+		if (chainId !== ChainId.Mumbai) {
+			switchNetwork(ChainId.Mumbai);
+		}
+	}, [chainId, switchNetwork]);
+
 	React.useEffect(() => {
 		if (account) {
 			setRendered("disconnect");
 		} else {
 			setRendered("connect wallet");
 		}
-		if (chainId !== MUMBAI_CHAIN_ID) {
+		if (account && chainId !== ChainId.Mumbai) {
 			setRendered("wrong network");
 		}
 	}, [account, setRendered, chainId]);
 
-	React.useEffect(() => {
-		if (error) {
-			setActivateError(error.message);
-			console.log("error", error);
-		}
-	}, [error]);
-
 	return (
 		<Button
-			error={chainId !== MUMBAI_CHAIN_ID}
+			error={account && chainId !== ChainId.Mumbai}
 			onClick={() => {
 				if (!account) {
-					activate();
+					activateBrowserWallet();
 				} else {
 					deactivate();
 				}
