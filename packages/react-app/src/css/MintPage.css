@@ -155,6 +155,15 @@ ul {
 		height: 80px;
 		font-size: 36px;
 	}
+	.btn-mint-soldout {
+		background: #383838;
+		color: #ee796a;
+	}
+	.btn-mint-soldout span {
+		font-size: 18px;
+		padding: 2px;
+	}
+
 	.nft-big-img {
 		width: 80vw;
 	}

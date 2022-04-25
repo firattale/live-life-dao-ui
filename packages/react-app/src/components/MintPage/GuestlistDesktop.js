@@ -18,9 +18,17 @@ export default function GuestlistDesktop({ onGuestListClick, availableGuestListN
 				<li className="li-desktop">Access to all other private lounges;</li>
 				<li className="li-desktop">A large boost to your gamification supplies.</li>
 			</ul>
-			<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
-				Mint NFT
-			</button>
+
+			{availableGuestListNFT !== totalSupplyGuestListNFT ? (
+				<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
+					Mint NFT
+				</button>
+			) : (
+				<button className="btn-mint btn-mint-soldout">
+					<div>Sold Out</div>
+					<span>Follow us on Twitter for the next drop</span>
+				</button>
+			)}
 			<p>
 				{availableGuestListNFT}/{totalSupplyGuestListNFT} minted
 			</p>

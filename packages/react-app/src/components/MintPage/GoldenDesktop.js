@@ -19,9 +19,16 @@ export default function GoldenDesktop({ onGoldenClick, availableGoldenNFT, total
 					<li className="li-desktop">Access to all other private lounges;</li>
 					<li className="li-desktop">A large boost to your gamification supplies.</li>
 				</ul>
-				<button className="btn-mint btn-style-orange-solid" onClick={onGoldenClick}>
-					Mint NFT
-				</button>
+				{availableGoldenNFT !== totalSupplyGoldenNFT ? (
+					<button className="btn-mint btn-style-orange-solid" onClick={onGoldenClick}>
+						Mint NFT
+					</button>
+				) : (
+					<button className="btn-mint btn-mint-soldout">
+						<div>Sold Out</div>
+						<span>Follow us on Twitter for the next drop</span>
+					</button>
+				)}
 				<p>
 					{availableGoldenNFT}/{totalSupplyGoldenNFT} minted
 				</p>
