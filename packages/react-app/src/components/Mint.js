@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-import { Container, ContainerMint } from ".";
+import { ContainerMint, Container } from ".";
 import MintIntro from "./MintPage/MintIntro";
 import Golden from "./MintPage/Golden";
 import Guestlist from "./MintPage/Guestlist";
-
-import GoldenDesktop from "./MintPage/GoldenDesktop";
-import GuestlistDesktop from "./MintPage/GuestlistDesktop";
 import NftImage from "./MintPage/NftImage";
 
 export default function MintPage({
@@ -16,6 +13,8 @@ export default function MintPage({
 	totalSupplyGoldenNFT,
 	availableGuestListNFT,
 	totalSupplyGuestListNFT,
+	buyGoldenNFTState,
+	buyGuestlistNFTState,
 }) {
 	const [width, setWidth] = useState(window.innerWidth);
 	const breakpoint = 1000;
@@ -29,31 +28,24 @@ export default function MintPage({
 		return () => window.removeEventListener("resize", updateWidth);
 	}, []);
 
-	if (width > breakpoint) {
-		return (
-			<Container>
-				<div className="mint-container-desktop">
-					<GoldenDesktop
-						onGoldenClick={onGoldenClick}
-						availableGoldenNFT={availableGoldenNFT}
-						totalSupplyGoldenNFT={totalSupplyGoldenNFT}
-					/>
-					<GuestlistDesktop
-						onGuestListClick={onGuestListClick}
-						availableGuestListNFT={availableGuestListNFT}
-						totalSupplyGuestListNFT={totalSupplyGuestListNFT}
-					/>
-				</div>
-				<NftImage />
-			</Container>
-		);
-	}
-
 	return (
-		<ContainerMint>
-			<MintIntro />
-			<Golden onGoldenClick={onGoldenClick} availableGoldenNFT={availableGoldenNFT} />
-			<Guestlist onGuestListClick={onGuestListClick} />
-		</ContainerMint>
+		<Container>
+			<ContainerMint>
+				{width < breakpoint && <MintIntro />}
+				<Golden
+					onGoldenClick={onGoldenClick}
+					availableGoldenNFT={availableGoldenNFT}
+					totalSupplyGoldenNFT={totalSupplyGoldenNFT}
+					buyGoldenNFTState={buyGoldenNFTState}
+				/>
+				<Guestlist
+					onGuestListClick={onGuestListClick}
+					availableGuestListNFT={availableGuestListNFT}
+					totalSupplyGuestListNFT={totalSupplyGuestListNFT}
+					buyGuestlistNFTState={buyGuestlistNFTState}
+				/>
+			</ContainerMint>
+			{width > breakpoint && <NftImage />}
+		</Container>
 	);
 }

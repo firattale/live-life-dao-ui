@@ -13,6 +13,34 @@ export const Body = styled.div`
 	}
 `;
 
+export const NavButton = styled.button`
+	width: 130px;
+    height: 37px;
+    font-family: 'Montserrat';
+    font-style: normal;
+	font-weight: bold;
+    font-size: 1.4em;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px;
+	cursor: pointer;
+	border: 2px solid #f0a450;
+
+	@media (min-width: 1000px) {
+		font-size: 18px;
+        width: 185px;
+        height: 43px;
+	}
+
+	${(props) =>
+		props.error &&
+		css`
+			color: #ee796a;
+			border: 2px solid #ee796a;
+		`};
+`;
+
 export const Button = styled.button`
 	width: 222px;
 	border-radius: 8px;
@@ -50,7 +78,11 @@ export const ContainerMint = styled.div`
 	align-items: center;
 
 	@media (min-width: 1000px) {
+		margin-top: 5vh;
+		padding-top: 50px;
 		flex-direction: row;
+		justify-content: center;
+		align-items: flex-start;
 	}
 `;
 
@@ -65,8 +97,8 @@ export const Header = styled.header`
 
 	@media (min-width: 1000px) {
 		align-items: flex-start;
-		margin-top: 25vh;
-		margin-left: 10vw;
+		margin-top: 35vh;
+		margin-left: 4vw;
 		padding-left: 0px;
 	}
 `;

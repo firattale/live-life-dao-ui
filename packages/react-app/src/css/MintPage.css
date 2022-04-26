@@ -4,7 +4,7 @@
 	object-fit: cover;
 }
 .btn-mint {
-	width: 320px;
+	width: 86vw;
 	height: 56px;
 	font-family: "Audiowide";
 	font-style: normal;
@@ -16,6 +16,15 @@
 	letter-spacing: 0.5%;
 	padding: 12px;
 	text-align: center;
+	pointer-events: cursor;
+}
+.btn-mint-soldout {
+	background: #383838;
+	color: #ee796a;
+}
+.btn-mint-soldout span {
+	font-size: 18px;
+	padding: 2px;
 }
 h1 {
 	font-family: "Audiowide";
@@ -115,50 +124,28 @@ ul {
 	margin-bottom: 10vh;
 	padding-top: 20px;
 }
-
-@media screen and (min-width: 1000px) {
-	.mint-container-desktop {
-		width: 65vw;
-		margin-top: 5vh;
-		display: flex;
-		justify-content: space-between;
-	}
-	.div-ticket {
-		width: 25vw;
-	}
-	.rounded {
-		width: 295px;
-		height: 73px;
-		left: 6vw;
-		margin-top: 100px;
-		padding: 0px;
-	}
-	.h1-desktop {
-		font-size: 34px;
-		line-height: 124.77%;
-	}
-	.h2-desktop {
-		font-size: 24px;
-		line-height: 102.77%;
-	}
-	.h4-desktop {
-		font-size: 18px;
-		line-height: 22px;
-	}
-	.li-desktop {
-		width: 448px;
-		font-size: 18px;
-		line-height: 150%;
-	}
-	.btn-mint {
-		width: 499px;
-		height: 80px;
-		font-size: 36px;
-	}
-	.nft-big-img {
-		width: 80vw;
-	}
-	.btn-mp {
-		width: 300px;
-	}
+.on-board {
+	display: flex;
+	width: 77vw;
+	height: 70px;
+	margin-bottom: 2vh;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-size: 14px;
+	border-radius: 8px;
+	letter-spacing: 0.5%;
+	padding: 10px 18px;
+	background-color: rgb(65, 65, 65);
+	color: rgba(108, 239, 215, 1);
+}
+.on-board-img {
+	width: 40px;
+}
+.on-board-link {
+	color: rgba(108, 239, 215, 1);
+	font-family: Montserrat;
+	font-weight: 700;
+}
+span {
+	font-weight: 700;
 }

@@ -20,12 +20,3 @@
     letter-spacing: -3.5%;
     white-space: nowrap;
 }
-
-@media screen and (min-width: 1000px) {
-    .impressum-container {
-        padding-left: 8vw;
-    }
-    .heading-impressum {
-        padding-top: 5vw;
-    }
-}
