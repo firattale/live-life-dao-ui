@@ -25,19 +25,23 @@ export default function Guestlist({
 				<li className="li-desktop">A large boost to your gamification supplies.</li>
 			</ul>
 			{buyGuestlistNFTState.state === "Success" && <OnBoard />}
-			{availableGuestListNFT !== totalSupplyGuestListNFT ? (
-				<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
-					{buyGuestlistNFTState.state === "Success" ? "Mint another NFT" : "Mint NFT"}
-				</button>
-			) : (
-				<button className="btn-mint btn-mint-soldout">
-					<div>Sold Out</div>
-					<span>Follow us on Twitter for the next drop</span>
-				</button>
+			{totalSupplyGuestListNFT !== 0 && (
+				<>
+					{availableGuestListNFT !== totalSupplyGuestListNFT ? (
+						<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
+							{buyGuestlistNFTState.state === "Success" ? "Mint another NFT" : "Mint NFT"}
+						</button>
+					) : (
+						<button className="btn-mint btn-mint-soldout">
+							<div>Sold Out</div>
+							<span>Follow us on Twitter for the next drop</span>
+						</button>
+					)}
+					<p>
+						{availableGuestListNFT}/{totalSupplyGuestListNFT} minted
+					</p>
+				</>
 			)}
-			<p>
-				{availableGuestListNFT}/{totalSupplyGuestListNFT} minted
-			</p>
 			<img className="img-mint" src="nft/nft-mint-3.jpg" alt="nft3" />
 		</div>
 	);

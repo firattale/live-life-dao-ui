@@ -20,19 +20,24 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 				<li className="li-desktop">A large boost to your gamification supplies.</li>
 			</ul>
 			{buyGoldenNFTState.status === "Success" && <OnBoard />}
-			{availableGoldenNFT !== totalSupplyGoldenNFT ? (
-				<button className="btn-mint btn-style-orange-solid" onClick={onGoldenClick}>
-					{buyGoldenNFTState.state === "Success" ? "Mint another NFT" : "Mint NFT"}
-				</button>
-			) : (
-				<button className="btn-mint btn-mint-soldout">
-					<div>Sold Out</div>
-					<span>Follow us on Twitter for the next drop</span>
-				</button>
+			{totalSupplyGoldenNFT !== 0 && (
+				<>
+					{availableGoldenNFT !== totalSupplyGoldenNFT ? (
+						<button className="btn-mint btn-style-orange-solid" onClick={onGoldenClick}>
+							{buyGoldenNFTState.state === "Success" ? "Mint another NFT" : "Mint NFT"}
+						</button>
+					) : (
+						<button className="btn-mint btn-mint-soldout">
+							<div>Sold Out</div>
+							<span>Follow us on Twitter for the next drop</span>
+						</button>
+					)}
+					<p>
+						{availableGoldenNFT}/{totalSupplyGoldenNFT} minted
+					</p>
+				</>
 			)}
-			<p>
-				{availableGoldenNFT}/{totalSupplyGoldenNFT} minted
-			</p>
+
 			<img className="img-mint" src="nft/nft-mint-2.jpg" alt="nft2" />
 		</div>
 	);

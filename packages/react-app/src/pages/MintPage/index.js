@@ -1,7 +1,6 @@
 import * as React from "react";
 import { addresses, abis } from "@my-app/contracts";
 import { useContractFunction, useEthers, useCall } from "@usedapp/core";
-import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
 import { Contract } from "@ethersproject/contracts";
 import { utils } from "ethers";
