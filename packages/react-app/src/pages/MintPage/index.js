@@ -1,78 +1,123 @@
 import * as React from "react";
 import { addresses, abis } from "@my-app/contracts";
-// import GET_TRANSFERS from "../../graphql/subgraph";
-// import { useQuery } from "@apollo/client";
-import {
-	useEthers,
-	// useTokenBalance,
-	useContractFunction,
-} from "@usedapp/core";
+import { useContractFunction, useEthers, useCall } from "@usedapp/core";
 import { Link } from "react-router-dom";
-import {
-	//  MOCK_DAI_CONTRACT,
-	MUMBAI_CHAIN_ID,
-} from "../../constants";
-// import { formatEther } from "@ethersproject/units";
 import toast from "react-hot-toast";
 import { Contract } from "@ethersproject/contracts";
 import { utils } from "ethers";
-
 import { Body } from "../../components";
 import NavBar from "../../components/NavBar";
 import Mint from "../../components/Mint";
 
+const sellerInterface = new utils.Interface(abis.seller.abi);
+const mockDAIInterface = new utils.Interface(abis.mockDai.abi);
+const ticketNFTInterface = new utils.Interface(abis.ticketNFT.abi);
+const sellerContract = new Contract(addresses.sellerContract, sellerInterface);
+const mockDAIContract = new Contract(addresses.mockDaiContract, mockDAIInterface);
+const goldenNFTContract = new Contract(addresses.goldenNFTContract, ticketNFTInterface);
+const guestLiftNFTContract = new Contract(addresses.guestLiftNFTContract, ticketNFTInterface);
+
 export const MintPage = () => {
-	// Read more about useDapp on https://usedapp.io/
+	const [availableGoldenNFT, setAvailableGoldenNFT] = React.useState(0);
+	const [totalSupplyGoldenNFT, setTotalSupplyGoldenNFT] = React.useState(0);
+	const [availableGuestListNFT, setAvailableGuestListNFT] = React.useState(0);
+	const [totalSupplyGuestListNFT, setTotalSupplyGuestListNFT] = React.useState(0);
+	const { state: buyGoldenNFTState, send: buyGoldenNFT } = useContractFunction(sellerContract, "buyGoldenNFT");
+	const { state: approveState, send: approve } = useContractFunction(mockDAIContract, "approve");
+	const { state: buyGuestlistNFTState, send: buyGuestlistNFT } = useContractFunction(sellerContract, "buyGuestlistNFT");
+	const { value: balanceOfGolden } =
+		useCall({ contract: goldenNFTContract, method: "balanceOf", args: [addresses.sellerContract] }) ?? {};
+	const { value: totalSupplyGolden } = useCall({ contract: goldenNFTContract, method: "totalSupply", args: [] }) ?? {};
+	const { value: balanceOfGuest } =
+		useCall({ contract: guestLiftNFTContract, method: "balanceOf", args: [addresses.sellerContract] }) ?? {};
+	const { value: totalSupplyGuest } =
+		useCall({ contract: guestLiftNFTContract, method: "totalSupply", args: [] }) ?? {};
 
-	const sellerInterface = new utils.Interface(abis.seller.abi);
-	const contract = new Contract(addresses.sellerContract, sellerInterface);
-
-	const { state: buyGoldenNFTState, send: buyGoldenNFT } = useContractFunction(contract, "buyGoldenNFT");
-	const { state: buyGuestlistNFTState, send: buyGuestlistNFT } = useContractFunction(contract, "buyGuestlistNFT");
-
-	// const { loading, error: subgraphQueryError, data } = useQuery(GET_TRANSFERS);
-
-	const { chainId } = useEthers();
+	const { account } = useEthers();
 	React.useEffect(() => {
-		if (chainId !== MUMBAI_CHAIN_ID) {
-			toast.error("Please change to Mumbai Network!");
+		if (balanceOfGolden) {
+			const formattedBalanceGolden = utils.formatEther(balanceOfGolden[0]);
+			const formattedTotalSupplyGolden = utils.formatEther(totalSupplyGolden[0]);
+			const formattedBalanceOfGuest = utils.formatEther(balanceOfGuest[0]);
+			const formattedTotalSupplyGuest = utils.formatEther(totalSupplyGuest[0]);
+			setAvailableGoldenNFT(formattedTotalSupplyGolden * 10 ** 18 - formattedBalanceGolden * 10 ** 18);
+			setTotalSupplyGoldenNFT(formattedTotalSupplyGolden * 10 ** 18);
+			setAvailableGuestListNFT(formattedTotalSupplyGuest * 10 ** 18 - formattedBalanceOfGuest * 10 ** 18);
+			setTotalSupplyGuestListNFT(formattedTotalSupplyGuest * 10 ** 18);
 		}
-	}, [chainId]);
+	}, [balanceOfGolden]);
+
 	React.useEffect(() => {
-		if (buyGoldenNFTState.status === "PendingSignature" || buyGuestlistNFTState.status === "PendingSignature") {
+		if (approveState.status === "PendingSignature") {
 			toast.loading("Waiting...");
 		}
-		if (buyGoldenNFTState.status === "Exception" || buyGuestlistNFTState.status === "Exception") {
+		if (approveState.status === "Exception" || approveState.status === "Fail") {
+			toast.dismiss();
+			toast.error(approveState.errorMessage);
+		}
+		if (approveState.status === "Success") {
+			toast.dismiss();
+			toast.success("You have successfully approved allowance for DAI spending.");
+		}
+	}, [approveState]);
+
+	React.useEffect(() => {
+		if (buyGoldenNFTState.status === "PendingSignature") {
+			toast.loading("Waiting...");
+		}
+		if (buyGoldenNFTState.status === "Exception" || buyGoldenNFTState.status === "Fail") {
+			toast.dismiss();
 			toast.error(buyGoldenNFTState.errorMessage);
 		}
-	}, [buyGoldenNFTState, buyGuestlistNFTState]);
-	// const tokenBalance = useTokenBalance(MOCK_DAI_CONTRACT, account);
-	// console.log("tokenBalance", tokenBalance);
-	// if (tokenBalance) {
-	// 	console.log("tokenBalance :>> ", formatEther(tokenBalance));
-	// }
+		if (buyGoldenNFTState.status === "Success") {
+			toast.dismiss();
+			toast.success("You have successfully minted your Golden NFT!");
+			console.log(`View your NFT on https://testnets.opensea.io/account`);
+		}
+	}, [buyGoldenNFTState]);
+	React.useEffect(() => {
+		if (buyGuestlistNFTState.status === "PendingSignature") {
+			toast.loading("Waiting...");
+		}
+		if (buyGuestlistNFTState.status === "Exception" || buyGuestlistNFTState.status === "Fail") {
+			toast.dismiss();
+			toast.error(buyGuestlistNFTState.errorMessage);
+		}
+		if (buyGuestlistNFTState.status === "Success") {
+			toast.dismiss();
+			toast.success("You have successfully minted your Guestlist NFT!");
+			console.log(`View your NFT on https://testnets.opensea.io/account`);
+		}
+	}, [buyGuestlistNFTState]);
 
-	// React.useEffect(() => {
-	// 	if (subgraphQueryError) {
-	// 		console.error("Error while querying subgraph:", subgraphQueryError.message);
-	// 		return;
-	// 	}
-	// 	if (!loading && data && data.transfers) {
-	// 		console.log({ transfers: data.transfers });
-	// 	}
-	// }, [loading, subgraphQueryError, data]);
+	const onGoldenClick = async () => {
+		if (!account) {
+			toast.error("Please connect to your wallet to mint an NFT.");
+			return;
+		}
+		await approve(addresses.sellerContract, utils.parseEther("50000"));
+		await buyGoldenNFT();
+	};
+	const onGuestListClick = async () => {
+		if (!account) {
+			toast.error("Please connect to your wallet to mint an NFT.");
+			return;
+		}
+		await approve(addresses.sellerContract, utils.parseEther("2000"));
+		await buyGuestlistNFT();
+	};
 
-	const onGoldenClick = () => {
-		void buyGoldenNFT();
-	};
-	console.log("state", buyGoldenNFTState);
-	const onGuestListClick = () => {
-		void buyGuestlistNFT();
-	};
 	return (
 		<Body>
 			<NavBar />
-			<Mint onGoldenClick={onGoldenClick} onGuestListClick={onGuestListClick} />
+			<Mint
+				onGoldenClick={onGoldenClick}
+				onGuestListClick={onGuestListClick}
+				availableGoldenNFT={availableGoldenNFT}
+				totalSupplyGoldenNFT={totalSupplyGoldenNFT}
+				availableGuestListNFT={availableGuestListNFT}
+				totalSupplyGuestListNFT={totalSupplyGuestListNFT}
+			/>
 			<Link className="btn btn-style-blue-light btn-mp link" to="/">
 				back to main page
 			</Link>

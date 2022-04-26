@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { MainPage } from "./pages/MainPage";
 import { MintPage } from "./pages/MintPage";
+import { Page404 } from "./pages/404Page";
 
 import "./css/Styles.css";
 import "./css/NavBar.css";
@@ -23,6 +24,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<MainPage />} />
 					<Route path="mint" element={<MintPage />} />
+					<Route path="*" element={<Page404 />} />
 				</Routes>
 			</BrowserRouter>
 			<Toaster />

@@ -6,8 +6,14 @@ import Golden from "./MintPage/Golden";
 import Guestlist from "./MintPage/Guestlist";
 import NftImage from "./MintPage/NftImage";
 
-export default function MintPage({ onGuestListClick, onGoldenClick }) {
-
+export default function MintPage({
+	onGuestListClick,
+	onGoldenClick,
+	availableGoldenNFT,
+	totalSupplyGoldenNFT,
+	availableGuestListNFT,
+	totalSupplyGuestListNFT,
+}) {
 	const [width, setWidth] = useState(window.innerWidth);
 	const breakpoint = 1000;
 
@@ -23,15 +29,11 @@ export default function MintPage({ onGuestListClick, onGoldenClick }) {
 	return (
 		<Container>
 			<ContainerMint>
-				{width < breakpoint
-				&&  <MintIntro />
-				}
-				<Golden onGoldenClick={onGoldenClick}/>
-				<Guestlist onGuestListClick={onGuestListClick}/>
-			</ContainerMint>	
-			{width > breakpoint
-				&&  <NftImage />
-			}
+				{width < breakpoint && <MintIntro />}
+				<Golden onGoldenClick={onGoldenClick} />
+				<Guestlist onGuestListClick={onGuestListClick} />
+			</ContainerMint>
+			{width > breakpoint && <NftImage />}
 		</Container>
 	);
 }
