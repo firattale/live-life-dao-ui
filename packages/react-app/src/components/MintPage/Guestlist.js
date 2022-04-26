@@ -24,12 +24,12 @@ export default function Guestlist({
 				<li className="li-desktop">Access to all other private lounges;</li>
 				<li className="li-desktop">A large boost to your gamification supplies.</li>
 			</ul>
-			{buyGuestlistNFTState.state === "Success" && <OnBoard />}
+			{buyGuestlistNFTState.status === "Success" && <OnBoard />}
 			{totalSupplyGuestListNFT !== 0 && (
 				<>
 					{availableGuestListNFT !== totalSupplyGuestListNFT ? (
 						<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
-							{buyGuestlistNFTState.state === "Success" ? "Mint another NFT" : "Mint NFT"}
+							{buyGuestlistNFTState.status === "Success" ? "Mint another NFT" : "Mint NFT"}
 						</button>
 					) : (
 						<button className="btn-mint btn-mint-soldout">
