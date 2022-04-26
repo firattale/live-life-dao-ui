@@ -30,8 +30,16 @@ export default function MintPage({
 		<Container>
 			<ContainerMint>
 				{width < breakpoint && <MintIntro />}
-				<Golden onGoldenClick={onGoldenClick} />
-				<Guestlist onGuestListClick={onGuestListClick} />
+				<Golden
+					onGoldenClick={onGoldenClick}
+					availableGoldenNFT={availableGoldenNFT}
+					totalSupplyGoldenNFT={totalSupplyGoldenNFT}
+				/>
+				<Guestlist
+					onGuestListClick={onGuestListClick}
+					availableGuestListNFT={availableGuestListNFT}
+					totalSupplyGuestListNFT={totalSupplyGuestListNFT}
+				/>
 			</ContainerMint>
 			{width > breakpoint && <NftImage />}
 		</Container>

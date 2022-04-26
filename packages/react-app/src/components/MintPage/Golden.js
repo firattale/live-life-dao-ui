@@ -1,8 +1,7 @@
 import React from "react";
 import OnBoard from "./OnBoard";
 
-export default function Golden({ onGoldenClick }) {
-	
+export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyGoldenNFT }) {
 	return (
 		<div className="mint-container">
 			<div className="div-ticket">
@@ -21,9 +20,19 @@ export default function Golden({ onGoldenClick }) {
 				<li className="li-desktop">A large boost to your gamification supplies.</li>
 			</ul>
 			<OnBoard />
-			<button className="btn-mint btn-style-orange-solid" onClick={onGoldenClick}>
-				Mint NFT
-			</button>
+			{availableGoldenNFT !== totalSupplyGoldenNFT ? (
+				<button className="btn-mint btn-style-orange-solid" onClick={onGoldenClick}>
+					Mint NFT
+				</button>
+			) : (
+				<button className="btn-mint btn-mint-soldout">
+					<div>Sold Out</div>
+					<span>Follow us on Twitter for the next drop</span>
+				</button>
+			)}
+			<p>
+				{availableGoldenNFT}/{totalSupplyGoldenNFT} minted
+			</p>
 			<img className="img-mint" src="/nft/nft-mint-2.jpg" alt="nft2" />
 		</div>
 	);

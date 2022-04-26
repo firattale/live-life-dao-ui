@@ -1,8 +1,7 @@
 import React from "react";
 import OnBoard from "./OnBoard";
 
-export default function Guestlist({ onGuestListClick }) {
-
+export default function Guestlist({ onGuestListClick, availableGuestListNFT, totalSupplyGuestListNFT }) {
 	return (
 		<div className="mint-container">
 			<div className="div-ticket blue-bg-border">
@@ -21,9 +20,19 @@ export default function Guestlist({ onGuestListClick }) {
 				<li className="li-desktop">A large boost to your gamification supplies.</li>
 			</ul>
 			<OnBoard />
-			<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
-				Mint NFT
-			</button>
+			{availableGuestListNFT !== totalSupplyGuestListNFT ? (
+				<button className="btn-mint btn-style-blue-solid" onClick={onGuestListClick}>
+					Mint NFT
+				</button>
+			) : (
+				<button className="btn-mint btn-mint-soldout">
+					<div>Sold Out</div>
+					<span>Follow us on Twitter for the next drop</span>
+				</button>
+			)}
+			<p>
+				{availableGuestListNFT}/{totalSupplyGuestListNFT} minted
+			</p>
 			<img className="img-mint" src="/nft/nft-mint-3.jpg" alt="nft3" />
 		</div>
 	);

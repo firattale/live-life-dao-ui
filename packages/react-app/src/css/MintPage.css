@@ -16,6 +16,15 @@
 	letter-spacing: 0.5%;
 	padding: 12px;
 	text-align: center;
+	pointer-events: cursor;
+}
+.btn-mint-soldout {
+	background: #383838;
+	color: #ee796a;
+}
+.btn-mint-soldout span {
+	font-size: 18px;
+	padding: 2px;
 }
 h1 {
 	font-family: "Audiowide";
