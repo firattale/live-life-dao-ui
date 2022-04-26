@@ -33,7 +33,7 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 			<p>
 				{availableGoldenNFT}/{totalSupplyGoldenNFT} minted
 			</p>
-			<img className="img-mint" src="/nft/nft-mint-2.jpg" alt="nft2" />
+			<img className="img-mint" src="nft/nft-mint-2.jpg" alt="nft2" />
 		</div>
 	);
 }

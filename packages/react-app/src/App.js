@@ -20,7 +20,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
 	return (
 		<>
-			<BrowserRouter>
+			<BrowserRouter basename="live-life-dao-ui">
 				<Routes>
 					<Route path="/" element={<MainPage />} />
 					<Route path="mint" element={<MintPage />} />

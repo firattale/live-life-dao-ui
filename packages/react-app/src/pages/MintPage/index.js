@@ -120,9 +120,9 @@ export const MintPage = () => {
 				totalSupplyGuestListNFT={totalSupplyGuestListNFT}
 				buyGuestlistNFTState={buyGuestlistNFTState}
 			/>
-			<Link className="btn btn-style-blue-light btn-mp link" to="/">
+			{/* <Link className="btn btn-style-blue-light btn-mp link" to="/">
 				back to main page
-			</Link>
+			</Link> */}
 		</Body>
 	);
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function InvestorNfts() {
 	return (
@@ -15,8 +16,10 @@ export default function InvestorNfts() {
 					current owners at the time of the TGE.
 				</p>
 			</div>
-			<img className="img-nft side-padding" src="/nft/nft-7.png" alt="NFT" />
-			<button className="btn-style-orange-solid btn-nft">Get your NFT</button>
+			<img className="img-nft side-padding" src="nft/nft-7.png" alt="NFT" />
+			<Link to="mint">
+				<button className="btn-style-orange-solid btn-nft">Get your NFT</button>
+			</Link>
 			<button className="btn btn-style-blue-light">More info: Litepaper</button>
 		</div>
 	);

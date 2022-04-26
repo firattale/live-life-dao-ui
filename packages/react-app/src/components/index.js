@@ -15,22 +15,22 @@ export const Body = styled.div`
 
 export const NavButton = styled.button`
 	width: 130px;
-    height: 37px;
-    font-family: 'Montserrat';
-    font-style: normal;
+	height: 37px;
+	font-family: "Montserrat";
+	font-style: normal;
 	font-weight: bold;
-    font-size: 1.4em;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    padding: 8px;
+	font-size: 1.4em;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 10px;
+	padding: 8px;
 	cursor: pointer;
 	border: 2px solid #f0a450;
 
 	@media (min-width: 1000px) {
 		font-size: 18px;
-        width: 185px;
-        height: 43px;
+		width: 185px;
+		height: 43px;
 	}
 
 	${(props) =>
@@ -64,7 +64,6 @@ export const Button = styled.button`
 
 export const Container = styled.div`
 	width: calc(100vw);
-	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

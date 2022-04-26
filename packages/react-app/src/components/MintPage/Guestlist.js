@@ -38,7 +38,7 @@ export default function Guestlist({
 			<p>
 				{availableGuestListNFT}/{totalSupplyGuestListNFT} minted
 			</p>
-			<img className="img-mint" src="/nft/nft-mint-3.jpg" alt="nft3" />
+			<img className="img-mint" src="nft/nft-mint-3.jpg" alt="nft3" />
 		</div>
 	);
 }
