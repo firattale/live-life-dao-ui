@@ -13,6 +13,8 @@ export default function MintPage({
 	totalSupplyGoldenNFT,
 	availableGuestListNFT,
 	totalSupplyGuestListNFT,
+	buyGoldenNFTState,
+	buyGuestlistNFTState,
 }) {
 	const [width, setWidth] = useState(window.innerWidth);
 	const breakpoint = 1000;
@@ -34,11 +36,13 @@ export default function MintPage({
 					onGoldenClick={onGoldenClick}
 					availableGoldenNFT={availableGoldenNFT}
 					totalSupplyGoldenNFT={totalSupplyGoldenNFT}
+					buyGoldenNFTState={buyGoldenNFTState}
 				/>
 				<Guestlist
 					onGuestListClick={onGuestListClick}
 					availableGuestListNFT={availableGuestListNFT}
 					totalSupplyGuestListNFT={totalSupplyGuestListNFT}
+					buyGuestlistNFTState={buyGuestlistNFTState}
 				/>
 			</ContainerMint>
 			{width > breakpoint && <NftImage />}

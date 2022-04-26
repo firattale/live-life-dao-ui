@@ -113,10 +113,12 @@ export const MintPage = () => {
 			<Mint
 				onGoldenClick={onGoldenClick}
 				onGuestListClick={onGuestListClick}
+				buyGoldenNFTState={buyGoldenNFTState}
 				availableGoldenNFT={availableGoldenNFT}
 				totalSupplyGoldenNFT={totalSupplyGoldenNFT}
 				availableGuestListNFT={availableGuestListNFT}
 				totalSupplyGuestListNFT={totalSupplyGuestListNFT}
+				buyGuestlistNFTState={buyGuestlistNFTState}
 			/>
 			<Link className="btn btn-style-blue-light btn-mp link" to="/">
 				back to main page
