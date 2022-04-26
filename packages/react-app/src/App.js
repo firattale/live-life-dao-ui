@@ -14,6 +14,7 @@ import "./css/InvestorNfts.css";
 import "./css/Impressum.css";
 import "./css/Footer.css";
 import "./css/MintPage.css";
+import "./css/MediaQueries.css";
 import { Toaster } from "react-hot-toast";
 
 function App() {
