@@ -45,7 +45,7 @@ export default function MintPage({
 					buyGuestlistNFTState={buyGuestlistNFTState}
 				/>
 			</ContainerMint>
-			{width > breakpoint && <NftImage />}
+			<NftImage />
 		</Container>
 	);
 }

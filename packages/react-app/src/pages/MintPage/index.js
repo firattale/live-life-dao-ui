@@ -4,9 +4,8 @@ import { useContractFunction, useEthers, useCall } from "@usedapp/core";
 import toast from "react-hot-toast";
 import { Contract } from "@ethersproject/contracts";
 import { utils } from "ethers";
-import { Body } from "../../components";
-import NavBar from "../../components/NavBar";
 import Mint from "../../components/Mint";
+import { Element } from "react-scroll";
 
 const sellerInterface = new utils.Interface(abis.seller.abi);
 const mockDAIInterface = new utils.Interface(abis.mockDai.abi);
@@ -44,7 +43,7 @@ export const MintPage = () => {
 			setAvailableGuestListNFT(formattedTotalSupplyGuest * 10 ** 18 - formattedBalanceOfGuest * 10 ** 18);
 			setTotalSupplyGuestListNFT(formattedTotalSupplyGuest * 10 ** 18);
 		}
-	}, [balanceOfGolden]);
+	}, [balanceOfGolden, balanceOfGuest, totalSupplyGolden, totalSupplyGuest]);
 
 	React.useEffect(() => {
 		if (approveState.status === "PendingSignature") {
@@ -107,8 +106,7 @@ export const MintPage = () => {
 	};
 
 	return (
-		<Body>
-			<NavBar />
+		<Element name="mint">
 			<Mint
 				onGoldenClick={onGoldenClick}
 				onGuestListClick={onGuestListClick}
@@ -119,9 +117,6 @@ export const MintPage = () => {
 				totalSupplyGuestListNFT={totalSupplyGuestListNFT}
 				buyGuestlistNFTState={buyGuestlistNFTState}
 			/>
-			{/* <Link className="btn btn-style-blue-light btn-mp link" to="/">
-				back to main page
-			</Link> */}
-		</Body>
+		</Element>
 	);
 };

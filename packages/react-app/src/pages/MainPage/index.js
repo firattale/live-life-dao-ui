@@ -7,16 +7,10 @@ import Project from "../../components/Project";
 import Features from "../../components/Features";
 import InvestorNfts from "../../components/InvestorNfts";
 import Impressum from "../../components/Impressum";
-
+import { MintPage } from "../../pages/MintPage";
 
 export const MainPage = () => {
 	return (
-		<>
-		{/* <div className="video-wrapper">
-			<video autoPlay loop>
-				<source src="../../background/hero-video.mp4" type="video/mp4"/>
-			</video>
-		</div> */}
 		<Body>
 			<div className="bg-hero">
 				<NavBar />
@@ -25,8 +19,8 @@ export const MainPage = () => {
 			<Project />
 			<Features />
 			<InvestorNfts />
+			<MintPage />
 			<Impressum />
 		</Body>
-		</>
 	);
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Header } from ".";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Intro() {
 	return (
@@ -12,9 +13,9 @@ export default function Intro() {
 					Access virtual and hybrid music events and Dance2Earn with people from all over the world.
 				</p>
 				<div className="btn-main-container">
-					<Link className="link" to="/mint">
+					<ScrollLink to="mint" spy={true} smooth={true} duration={900}>
 						<button className="btn btn-style-blue-solid">Buy Investor NFTs</button>
-					</Link>
+					</ScrollLink>
 					<Link className="link" to="/">
 						<button className="btn btn-style-blue-light btn-margin">Download Litepaper</button>
 					</Link>
