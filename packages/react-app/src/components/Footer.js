@@ -5,16 +5,16 @@ export default function Footer() {
 		<footer>
 			<h5>LifeLive DAO © 2022</h5>
 			<div className="icon-container icons-footer">
-				<a className="footer-link" href="#contact">
+				<a className="footer-link zoom" href="mailto: contact@lifelivedao.com" target="_blank">
 					<h5>contact</h5>
 				</a>
-				<a href="https://twitter.com/LifeLiveDAO">
+				<a className="zoom" href="https://twitter.com/LifeLiveDAO" target="_blank">
 					<img className="footer-icon" src="icons/Twitter.svg" alt="Twitter-Icon" />
 				</a>
-				<a href="/medium">
-					<img className="footer-icon" src="icons/Medium.svg" alt="Medium-Icon" />
+				<a className="zoom" href="https://t.me/lifelivedao" target="_blank">
+					<img className="footer-icon" src="icons/Telegram.svg" alt="Telegram-Icon" />
 				</a>
-				<a href="https://www.instagram.com/lifelivedao/">
+				<a className="zoom" href="https://www.instagram.com/lifelivedao/" target="_blank">
 					<img className="footer-icon" src="icons/Insta.svg" alt="Insta-Icon" />
 				</a>
 			</div>

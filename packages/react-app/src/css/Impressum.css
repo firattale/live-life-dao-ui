@@ -1,5 +1,5 @@
 .impressum-container {
-    height: 100vh;
+    height: 60vh;
     padding-left: 5vw;
     display: flex;
     flex-direction: column;
@@ -9,12 +9,13 @@
 .in-txt-link {
     color: white;
     font-weight: 1000;
+    text-decoration: none;
 }
 .impressum-width {
     width: 60vw;
 }
 .heading-impressum {
-    margin-top: 3vh;
+    margin-top: 14vh;
     font-size: 40px;
     line-height: auto;
     letter-spacing: -3.5%;

@@ -115,7 +115,7 @@
 .bg-rocket {
     background-image: url('../background/footer-bg.jpg');
     background-size: cover;
-    background-position: 67% 350px;
+    background-position: 42% 100px;
     background-repeat: no-repeat;
 }
 video {
@@ -138,8 +138,8 @@ video {
 }
 /* Animations */
 .zoom {
-    transition: transform .9s;
+    transition: transform .1s;
 }
 .zoom:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
 }

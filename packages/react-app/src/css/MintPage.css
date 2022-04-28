@@ -149,3 +149,8 @@ ul {
 span {
 	font-weight: 700;
 }
+
+.mint-info {
+	margin-top: 10vh;
+	width: 80vw;
+}

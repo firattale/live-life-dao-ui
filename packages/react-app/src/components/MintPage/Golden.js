@@ -6,7 +6,7 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 		<div className="mint-container">
 			<div className="div-ticket">
 				<h4 className="h4-desktop no-margin">limited to 20 NFTs</h4>
-				<h1 className="h1-desktop no-margin">Golden Ticket Tier</h1>
+				<h1 className="h1-desktop no-margin">Golden Ticket</h1>
 				<h2 className="h2-desktop no-margin orange">Receive 100% more tokens</h2>
 				<div className="rounded">
 					<h1 className="h1-desktop no-margin">$ 50K</h1>
@@ -23,11 +23,11 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 			{totalSupplyGoldenNFT !== 0 && (
 				<>
 					{availableGoldenNFT !== totalSupplyGoldenNFT ? (
-						<button className="btn-mint btn-style-orange-solid" onClick={onGoldenClick}>
-							{buyGoldenNFTState.state === "Success" ? "Mint another NFT" : "Mint NFT"}
+						<button className="btn-mint btn-style-orange-solid zoom" onClick={onGoldenClick}>
+							{buyGoldenNFTState.state === "Success" ? "Buy another NFT" : "Buy NFT"}
 						</button>
 					) : (
-						<button className="btn-mint btn-mint-soldout">
+						<button className="btn-mint btn-mint-soldout zoom">
 							<div>Sold Out</div>
 							<span>Follow us on Twitter for the next drop</span>
 						</button>

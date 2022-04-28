@@ -76,7 +76,7 @@ export const ContainerMint = styled.div`
 	flex-direction: column;
 	align-items: center;
 
-	@media (min-width: 1000px) {
+	@media (min-width: 1200px) {
 		margin-top: 5vh;
 		padding-top: 50px;
 		flex-direction: row;
