@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
 }
@@ -24,6 +24,9 @@
 .side-padding {
     padding-left: 6vw;
     padding-right: 6vw;
+}
+.margin-top {
+    margin-top: 2vh;
 }
 
 /* Text */
@@ -78,6 +81,7 @@
     display: flex;
     justify-content: center;
     align-self: center;
+    z-index: 1;
 }
 .btn-style-orange {
     color: white;
@@ -115,7 +119,7 @@
 .bg-rocket {
     background-image: url('../background/footer-bg.jpg');
     background-size: cover;
-    background-position: 42% 100px;
+    background-position: 82% 90px;
     background-repeat: no-repeat;
 }
 video {

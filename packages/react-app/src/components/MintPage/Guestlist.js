@@ -42,7 +42,6 @@ export default function Guestlist({
 					</p>
 				</>
 			)}
-			<img className="img-mint" src="nft/nft-mint-3.jpg" alt="nft3" />
 		</div>
 	);
 }

@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Features() {
 	return (
-		<div className="container heading-padding">
-			<div className="heading text-container side-padding ">Core Features</div>
-			<div className="text text-container">
+		<div className="container">
+			<div className="heading text-container side-padding">Core Features</div>
+			<div className="text text-container side-padding">
 				<div className="feature">
 					<img className="feature-icon" src="features/dance.svg" alt="discoball" />
 					<div className="feature-text">

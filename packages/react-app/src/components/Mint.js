@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import { ContainerMint, Container } from ".";
-import MintIntro from "./MintPage/MintIntro";
 import Golden from "./MintPage/Golden";
 import Guestlist from "./MintPage/Guestlist";
-import NftImage from "./MintPage/NftImage";
-import MintInfo from "./MintPage/MintInfo";
 
 export default function MintPage({
 	onGuestListClick,
@@ -32,7 +29,7 @@ export default function MintPage({
 	return (
 		<Container>
 			<ContainerMint>
-				{width < breakpoint && <MintIntro />}
+				{/* {width < breakpoint && <MintIntro />} */}
 				<Golden
 					onGoldenClick={onGoldenClick}
 					availableGoldenNFT={availableGoldenNFT}
@@ -46,8 +43,6 @@ export default function MintPage({
 					buyGuestlistNFTState={buyGuestlistNFTState}
 				/>
 			</ContainerMint>
-			<MintInfo />
-			{/* <NftImage /> */}
 		</Container>
 	);
 }
