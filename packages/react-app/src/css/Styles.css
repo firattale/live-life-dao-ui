@@ -121,6 +121,7 @@
     background-size: cover;
     background-position: 82% 90px;
     background-repeat: no-repeat;
+    padding: 0px 6vw;
 }
 video {
     object-fit: cover;

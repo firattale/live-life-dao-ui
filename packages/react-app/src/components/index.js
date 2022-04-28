@@ -70,7 +70,7 @@ export const Container = styled.div`
 `;
 
 export const ContainerMint = styled.div`
-	width: calc(100vw);
+	width: 100vw;
 	height: 100%;
 	display: flex;
 	flex-direction: column;

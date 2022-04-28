@@ -18,8 +18,8 @@ export default function Impressum() {
 						</p>
 					</div> */}
 					<div>
-						<div className="heading heading-impressum side-padding">Get In Touch</div>
-						<p className="text impressum-width side-padding">
+						<div className="heading heading-impressum">Get In Touch</div>
+						<p className="text impressum-width">
 							If you want to get in touch dont hesitate to
 								{" "}
 							<a className="zoom in-txt-link" href="mailto: contact@lifelivedao.com" target="_blank">

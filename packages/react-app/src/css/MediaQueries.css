@@ -1,23 +1,9 @@
-@media screen and (min-width: 1200px) {
-    .rounded {
-        width: 295px;
-		height: 73px;
-		left: 10vw;
-		margin-top: 100px;
-		padding: 0px;
-        left: 6vw;
-    }
-}
-@media (min-width: 1000px) and (max-width: 1200px) {
-    .rounded {
-		width: 295px;
-		height: 73px;
-		left: 10vw;
-		margin-top: 100px;
-		padding: 0px;
-	}
-}
 @media screen and (min-width: 1000px) {
+    /* NavBar */
+    .nav-icon {
+        padding-right: 3vw;
+        height: 30px;
+    }
     /* General */
     .bg-hero {
         background-position: center;
@@ -35,7 +21,7 @@
     }
     .text {
         font-size: 18px;
-        line-height: 18.5px;
+        line-height: 20.5px;
     }
     .btn {
         width: 260px;
@@ -111,9 +97,11 @@
     }
 
     /* Mintpage */
-	.div-ticket {
-		width: 463px;
-	}
+ 
+    .rounded {
+        width: 64%;
+        margin-top: 105px;
+    }
 	.h1-desktop {
 		font-size: 34px;
 		line-height: 124.77%;
@@ -129,13 +117,12 @@
 	.li-desktop {
 		width: 448px;
 		font-size: 18px;
-		line-height: 150%;
+		line-height: 170%;
 	}
     .img-mint {
         display: none;
     }
 	.btn-mint {
-		width: 499px;
 		height: 80px;
 		font-size: 36px;
 	}
@@ -162,9 +149,13 @@
     }
     .mint-container {
         margin: 0px 3vw;
+        width: 25%;
     }
     .mint-info {
         width: 70vw;
         text-align: center;
+    }
+    .no-side-padding {
+        padding: 0px;
     }
 }
