@@ -4,7 +4,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-shadow: 2px 2px 4px #222;
+    text-shadow: 2px 2px 5px #222;
 }
 .footer-link {
     color: white;
