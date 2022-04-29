@@ -103,7 +103,6 @@ ul {
 .rounded {
 	position: absolute;
 	width: 50vw;
-	/* left: 15vw; */
 	padding: 10px 8px;
 	border-radius: 50px;
 	background-color: #121212;

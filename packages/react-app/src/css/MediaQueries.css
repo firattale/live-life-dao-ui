@@ -1,10 +1,8 @@
 @media screen and (min-width: 1000px) {
-    /* NavBar */
     .nav-icon {
         padding-right: 3vw;
         height: 30px;
     }
-    /* General */
     .bg-hero {
         background-position: center;
         background-size: cover;
@@ -49,8 +47,6 @@
     .heading-margin {
         margin-top: 20vh;
     }
-    
-    /* Mainpage */
     .nav-logo {
         height: 90px;
     }
@@ -92,9 +88,6 @@
     .heading-impressum {
         padding-top: 13vw;
     }
-
-    /* Mintpage */
- 
     .rounded {
         width: 64%;
         margin-top: 105px;

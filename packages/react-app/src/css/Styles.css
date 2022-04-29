@@ -2,12 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@500;700&display=swap');
 
-/* Container */
 .container {
     margin: 0;
     padding: 0;
     width: 100vw;
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
 }
@@ -28,8 +26,6 @@
 .margin-top {
     margin-top: 2vh;
 }
-
-/* Text */
 .title {
     font-family: 'Audiowide';
     font-style: normal;
@@ -63,8 +59,6 @@
     font-size: 1.4em;
     line-height: 102.8%;
 }
-
-/* Buttons */
 .btn {
     width: 222px;
     font-family: 'Montserrat';
@@ -103,12 +97,10 @@
     background-color: #4C6E9D;
     border: 1px solid #4C6E9D;
 }
-/* Link */
 .link {
     color: white;
     text-decoration: none;
 }
-/* Background */
 .bg-hero {
     height: 100vh;
     width: 100vw;
@@ -141,7 +133,6 @@ video {
     align-items: center;
     justify-content: center;
 }
-/* Animations */
 .zoom {
     transition: transform .1s;
 }

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import { ContainerMint, Container } from ".";
 import Golden from "./MintPage/Golden";
 import Guestlist from "./MintPage/Guestlist";
