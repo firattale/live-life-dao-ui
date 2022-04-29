@@ -33,7 +33,7 @@ export const WalletButton = () => {
 					deactivate();
 				}
 			}}
-			className="btn-style-orange nav-btn"
+			className="btn-style-orange nav-btn zoom"
 		>
 			{rendered}
 		</NavButton>

@@ -1,26 +1,21 @@
 import React from "react";
-import { Link } from "react-scroll";
+import MintInfo from "./MintPage/MintInfo";
+
 
 export default function InvestorNfts() {
 	return (
-		<div className="container nft-margin">
-			<div className="heading text-container heading-padding side-padding">Investor Nfts</div>
+		<div className="container">
+			<div className="heading text-container side-padding">Seed sale</div>
 			<div className="text text-container side-padding">
 				<p>
-					Yes, we will launch a LifeLive token. There will be staking, governance and so much more. Check out the
-					Litepaper for the details! For the seed round we’ve created Investor NFTs.{" "}
+					Our goal in the seed sale is to raise initial capital, start expanding our team, and build the first Web3 features. At a later point we will launch a LifeLive token to be used in the governance of the DAO, with eventual staking and more. {" "}
 				</p>
-				<p>The owners will get a considerable boost to their investment - and be blessed with a Web 3.0 raver! </p>
 				<p>
-					There is no limit to how many NFTs a single person/entity can buy. The tokens will be distributed to the
-					current owners at the time of the TGE.
+				As a token of gratitude towards our first supporters, you will receive a Web 3.0 Raver NFT, designed by one of our founders. The NFT also represents your ticket to receive your tokens during the token generation event. Read more about the seed sale in the litepaper and chat with us in our Telegram group.
 				</p>
 			</div>
-			<img className="img-nft side-padding" src="nft/nft-7.png" alt="NFT" />
-			<Link to="mint" spy={true} smooth={true} duration={900}>
-				<button className="btn-style-orange-solid btn-nft">Get your NFT</button>
-			</Link>
-			<button className="btn btn-style-blue-light">More info: Litepaper</button>
+			<MintInfo />
+			<img className="img-mint img-mint-margin" src="nft/nft1.jpg" alt="nft2" />
 		</div>
 	);
 }

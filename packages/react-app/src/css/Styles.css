@@ -2,12 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bebas+Neue&family=Montserrat:wght@500;700&display=swap');
 
-/* Container */
 .container {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -25,8 +23,9 @@
     padding-left: 6vw;
     padding-right: 6vw;
 }
-
-/* Text */
+.margin-top {
+    margin-top: 2vh;
+}
 .title {
     font-family: 'Audiowide';
     font-style: normal;
@@ -60,8 +59,6 @@
     font-size: 1.4em;
     line-height: 102.8%;
 }
-
-/* Buttons */
 .btn {
     width: 222px;
     font-family: 'Montserrat';
@@ -78,6 +75,7 @@
     display: flex;
     justify-content: center;
     align-self: center;
+    z-index: 1;
 }
 .btn-style-orange {
     color: white;
@@ -99,12 +97,10 @@
     background-color: #4C6E9D;
     border: 1px solid #4C6E9D;
 }
-/* Link */
 .link {
     color: white;
     text-decoration: none;
 }
-/* Background */
 .bg-hero {
     height: 100vh;
     width: 100vw;
@@ -115,8 +111,9 @@
 .bg-rocket {
     background-image: url('../background/footer-bg.jpg');
     background-size: cover;
-    background-position: 67% 350px;
+    background-position: 82% 90px;
     background-repeat: no-repeat;
+    padding: 0px 6vw;
 }
 video {
     object-fit: cover;
@@ -136,10 +133,9 @@ video {
     align-items: center;
     justify-content: center;
 }
-/* Animations */
 .zoom {
-    transition: transform .9s;
+    transition: transform .1s;
 }
 .zoom:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
 }

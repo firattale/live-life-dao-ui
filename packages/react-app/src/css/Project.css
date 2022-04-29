@@ -12,14 +12,9 @@
     margin-top: 83vh;
 }
 .img-astronaut {
-    height: 450px;
+    margin-top: -5vh;
+    height: 700px;
     width: 100vw;
     object-fit: cover;
-    object-position: center;
+    object-position: 48%;
 }
-/* .line-a {
-    position: absolute;
-    width: 16vw;
-    left: 20px;
-    top: 50vh;
-} */

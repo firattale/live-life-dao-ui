@@ -1,5 +1,4 @@
 import React from "react";
-
 import Footer from "./Footer";
 
 export default function Impressum() {
@@ -7,7 +6,7 @@ export default function Impressum() {
 		<>
 			<div className="bg-rocket">
 				<div className="impressum-container">
-					<div>
+					{/* <div>
 						<div className="heading heading-impressum">FAQ</div>
 						<p className="text impressum-width">
 							For further questions check our
@@ -17,17 +16,19 @@ export default function Impressum() {
 							</a>{" "}
 							on medium.
 						</p>
-					</div>
+					</div> */}
 					<div>
 						<div className="heading heading-impressum">Get In Touch</div>
 						<p className="text impressum-width">
 							If you want to get in touch dont hesitate to
-							<a className="in-txt-link" href="Mail">
+								{" "}
+							<a className="zoom in-txt-link" href="mailto: contact@lifelivedao.com" target="_blank">
 								{" "}
 								write us
 							</a>{" "}
 							or
-							<a className="in-txt-link" href="Call">
+								{" "}
+							<a className="zoom in-txt-link" href="https://calendly.com/lifelive/dao?month=2022-04" target="_blank">
 								{" "}
 								schedule a call
 							</a>

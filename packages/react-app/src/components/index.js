@@ -70,13 +70,13 @@ export const Container = styled.div`
 `;
 
 export const ContainerMint = styled.div`
-	width: calc(100vw);
+	width: 100vw;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 
-	@media (min-width: 1000px) {
+	@media (min-width: 1200px) {
 		margin-top: 5vh;
 		padding-top: 50px;
 		flex-direction: row;

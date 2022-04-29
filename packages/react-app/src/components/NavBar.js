@@ -12,11 +12,11 @@ export default function NavBar() {
 				</Link>
 			</div>
 			<div className="icon-container">
-				<a href="https://twitter.com/LifeLiveDAO">
+				<a href="https://twitter.com/LifeLiveDAO" target="_blank">
 					<img className="nav-icon zoom" src="icons/Twitter.svg" alt="Twitter-Icon" />
 				</a>
-				<a href="/medium">
-					<img className="nav-icon zoom" src="icons/Medium.svg" alt="Medium-Icon" />
+				<a href="https://t.me/lifelivedao" target="_blank">
+					<img className="nav-icon zoom" src="icons/Telegram.svg" alt="Telegram-Icon" />
 				</a>
 				<a href="https://www.instagram.com/lifelivedao/">
 					<img className="nav-icon zoom" src="icons/Insta.svg" alt="Insta-Icon" />
