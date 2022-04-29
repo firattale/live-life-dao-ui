@@ -30,7 +30,7 @@ export default function Project() {
 						We are setting up a DAO to help progressively decentralize the platform, enabling our community to design and manage their own events and to become involved in the evolution of LifeLive itself - from rewards structure to feature sets to team hiring.
 					</p>
 				</div>
-				<button className="btn btn-style-blue-light zoom margin-top">Read litepaper</button>
+				<button className="btn btn-style-blue-light zoom margin-top"><a className="link" href="https://drive.google.com/file/d/1xs-bvwmNUumlscIphOXIIbnsazDGbNrw/view" target="_blank">Read litepaper</a></button>
 				<div className="img-container">
 					<img className="img-astronaut" src="inbetween/astronaut.jpg" alt="Astronaut" />
 				</div>

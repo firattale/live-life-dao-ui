@@ -16,9 +16,9 @@ export default function Intro() {
 					<ScrollLink to="mint" spy={true} smooth={true} duration={900}>
 						<button className="btn btn-style-blue-solid zoom">Buy Investor NFTs</button>
 					</ScrollLink>
-					<Link className="link" to="/">
+					<a className="link" href="https://drive.google.com/file/d/1xs-bvwmNUumlscIphOXIIbnsazDGbNrw/view" target="_blank">
 						<button className="btn btn-style-blue-light btn-margin zoom">Download litepaper</button>
-					</Link>
+					</a>
 				</div>
 			</div>
 		</Header>
