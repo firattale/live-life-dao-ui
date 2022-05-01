@@ -1,21 +1,26 @@
 {
   "files": {
-    "main.css": "/live-life-dao-ui/static/css/main.fa663a8a.chunk.css",
-    "main.js": "/live-life-dao-ui/static/js/main.7cc7db97.chunk.js",
-    "main.js.map": "/live-life-dao-ui/static/js/main.7cc7db97.chunk.js.map",
+    "main.css": "/live-life-dao-ui/static/css/main.9f0e36b0.chunk.css",
+    "main.js": "/live-life-dao-ui/static/js/main.978944e1.chunk.js",
+    "main.js.map": "/live-life-dao-ui/static/js/main.978944e1.chunk.js.map",
     "runtime-main.js": "/live-life-dao-ui/static/js/runtime-main.27b5018b.js",
     "runtime-main.js.map": "/live-life-dao-ui/static/js/runtime-main.27b5018b.js.map",
-    "static/js/2.eabd3389.chunk.js": "/live-life-dao-ui/static/js/2.eabd3389.chunk.js",
-    "static/js/2.eabd3389.chunk.js.map": "/live-life-dao-ui/static/js/2.eabd3389.chunk.js.map",
+    "static/js/2.32f37479.chunk.js": "/live-life-dao-ui/static/js/2.32f37479.chunk.js",
+    "static/js/2.32f37479.chunk.js.map": "/live-life-dao-ui/static/js/2.32f37479.chunk.js.map",
     "index.html": "/live-life-dao-ui/index.html",
-    "static/css/main.fa663a8a.chunk.css.map": "/live-life-dao-ui/static/css/main.fa663a8a.chunk.css.map",
-    "static/js/2.eabd3389.chunk.js.LICENSE.txt": "/live-life-dao-ui/static/js/2.eabd3389.chunk.js.LICENSE.txt",
-    "static/media/Styles.css": "/live-life-dao-ui/static/media/footer-bg.5626429c.jpg"
+    "static/css/main.9f0e36b0.chunk.css.map": "/live-life-dao-ui/static/css/main.9f0e36b0.chunk.css.map",
+    "static/js/2.32f37479.chunk.js.LICENSE.txt": "/live-life-dao-ui/static/js/2.32f37479.chunk.js.LICENSE.txt",
+    "static/media/MediaQueries.css": "/live-life-dao-ui/static/media/bg-hero.5b55e4b8.png",
+    "static/media/Styles.css": "/live-life-dao-ui/static/media/footer-bg.2ba0ce7a.jpg",
+    "static/media/hero-video.b084b47b.mp4": "/live-life-dao-ui/static/media/hero-video.b084b47b.mp4",
+    "static/media/line1.4a9859a7.svg": "/live-life-dao-ui/static/media/line1.4a9859a7.svg",
+    "static/media/line2.5fb471af.svg": "/live-life-dao-ui/static/media/line2.5fb471af.svg",
+    "static/media/line3.24f4722b.svg": "/live-life-dao-ui/static/media/line3.24f4722b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.27b5018b.js",
-    "static/js/2.eabd3389.chunk.js",
-    "static/css/main.fa663a8a.chunk.css",
-    "static/js/main.7cc7db97.chunk.js"
+    "static/js/2.32f37479.chunk.js",
+    "static/css/main.9f0e36b0.chunk.css",
+    "static/js/main.978944e1.chunk.js"
   ]
 }
