@@ -13,7 +13,8 @@
 }
 .line1 {
 	position: absolute;
-	right: 100%;
+	right: 98%;
+	top: -4px;
 }
 .line2 {
 	position: absolute;
