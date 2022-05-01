@@ -1,97 +1,94 @@
 @media screen and (min-width: 1000px) {
-    .nav-icon {
-        padding-right: 3vw;
-        height: 30px;
-    }
-    .bg-hero {
-        background-position: center;
-        background-size: cover;
-    }
-    .title {
-        font-weight: 400;
-        font-size: 72px;
-        line-height: 37px;
-    }
-    .subheading {
-        font-weight: 600;
-        font-size: 30px;
-        line-height: 12px;
-    }
-    .text {
-        font-size: 18px;
-        line-height: 20.5px;
-    }
-    .btn {
-        width: 260px;
-        height: 43px;
-        font-size: 18px;
-        text-align: center;
-    }
-    .container {
-        margin: 0;
-        padding: 0;
-        width: 60vw;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        align-items: center;
-        line-height: 18.5px;
-    }
-    .text {
-        display: inline;
-    }
-    .bg-rocket {
-        background-position: 50% 20%;
-    }
-    .heading-margin {
-        margin-top: 20vh;
-    }
-    .nav-logo {
-        height: 90px;
-    }
-    .img-robot {
-        height: auto;
-    }
-    .intro-container {
-        width: 534px;
-        margin: 100px;
-        z-index: 3;
-    }
-    .btn-main-container {
-        width: 534px;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-top: 60px;
-    }
-    .btn-margin {
-        margin-top: 0px;
-    }
-    .img-overl-container {
-        margin-top: 66vh;
-    }
-    .overlapping-hero-bg {
-        margin-top: -25vh;
-    }
-    .img-astronaut {
-        height: auto;
-    }
-    .img-nft {
-        width: 47vw;
-    }
-    .btn-nft {
-        width: 440px;
-        height: 80px;
-        padding: 0px;
-        margin-bottom: 2vh;
-    }
-    .heading-impressum {
-        padding-top: 13vw;
-    }
-    .rounded {
-        width: 64%;
-        margin-top: 105px;
-    }
+	.nav-icon {
+		padding-right: 3vw;
+		height: 30px;
+	}
+
+	.title {
+		font-weight: 400;
+		font-size: 72px;
+		line-height: 37px;
+	}
+	.subheading {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 12px;
+	}
+	.text {
+		font-size: 18px;
+		line-height: 20.5px;
+	}
+	.btn {
+		width: 260px;
+		height: 43px;
+		font-size: 18px;
+		text-align: center;
+	}
+	.container {
+		margin: 0;
+		padding: 0;
+		width: 60vw;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+		align-items: center;
+		line-height: 18.5px;
+	}
+	.text {
+		display: inline;
+	}
+	.bg-rocket {
+		background-position: 50% 20%;
+	}
+	.heading-margin {
+		margin-top: 20vh;
+	}
+	.nav-logo {
+		height: 90px;
+	}
+	.img-robot {
+		height: auto;
+	}
+	.intro-container {
+		width: 534px;
+		margin: 100px;
+		z-index: 3;
+	}
+	.btn-main-container {
+		width: 534px;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 60px;
+	}
+	.btn-margin {
+		margin-top: 0px;
+	}
+	.img-overl-container {
+		margin-top: 66vh;
+	}
+	.overlapping-hero-bg {
+		margin-top: -25vh;
+	}
+	.img-astronaut {
+		height: auto;
+	}
+	.img-nft {
+		width: 47vw;
+	}
+	.btn-nft {
+		width: 440px;
+		height: 80px;
+		padding: 0px;
+		margin-bottom: 2vh;
+	}
+	.heading-impressum {
+		padding-top: 13vw;
+	}
+	.rounded {
+		width: 64%;
+		margin-top: 105px;
+	}
 	.h1-desktop {
 		font-size: 34px;
 		line-height: 124.77%;
@@ -109,9 +106,9 @@
 		font-size: 18px;
 		line-height: 170%;
 	}
-    .img-mint {
-        display: none;
-    }
+	.img-mint {
+		display: none;
+	}
 	.btn-mint {
 		height: 80px;
 		font-size: 36px;
@@ -122,30 +119,43 @@
 	.btn-mp {
 		width: 300px;
 	}
-    .on-board {
-        font-family: "Montserrat";
-        font-style: normal;
-        width: 463px;
-        height: 80px;
-        margin-bottom: 2vh;
-        font-size: 18px;
-        line-height: 25px;
-        background-color: rgb(65, 65, 65);
-        color: rgba(108, 239, 215, 1);
-    }
-    .on-board-img {
-        padding-left: 13px;
-        width: 60px;
-    }
-    .mint-container {
-        margin: 0px 3vw;
-        width: 25%;
-    }
-    .mint-info {
-        width: 70vw;
-        text-align: center;
-    }
-    .no-side-padding {
-        padding: 0px;
-    }
+	.on-board {
+		font-family: "Montserrat";
+		font-style: normal;
+		width: 463px;
+		height: 80px;
+		margin-bottom: 2vh;
+		font-size: 18px;
+		line-height: 25px;
+		background-color: rgb(65, 65, 65);
+		color: rgba(108, 239, 215, 1);
+	}
+	.on-board-img {
+		padding-left: 13px;
+		width: 60px;
+	}
+	.mint-container {
+		margin: 0px 3vw;
+		width: 25%;
+	}
+	.mint-info {
+		width: 70vw;
+		text-align: center;
+	}
+	.no-side-padding {
+		padding: 0px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	video {
+		display: none;
+	}
+	.bg-hero {
+		height: 100vh;
+		width: 100vw;
+		background-image: url("../background/bg-hero.png");
+		background-position: 65%;
+		background-repeat: no-repeat;
+	}
 }
