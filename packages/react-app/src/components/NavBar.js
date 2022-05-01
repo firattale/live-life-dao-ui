@@ -12,13 +12,13 @@ export default function NavBar() {
 				</Link>
 			</div>
 			<div className="icon-container">
-				<a href="https://twitter.com/LifeLiveDAO" target="_blank">
+				<a href="https://twitter.com/LifeLiveDAO" target="_blank" rel="noreferrer">
 					<img className="nav-icon zoom" src="icons/Twitter.svg" alt="Twitter-Icon" />
 				</a>
-				<a href="https://t.me/lifelivedao" target="_blank">
+				<a href="https://t.me/lifelivedao" target="_blank" rel="noreferrer">
 					<img className="nav-icon zoom" src="icons/Telegram.svg" alt="Telegram-Icon" />
 				</a>
-				<a href="https://www.instagram.com/lifelivedao/">
+				<a href="https://www.instagram.com/lifelivedao/" target="_blank" rel="noreferrer">
 					<img className="nav-icon zoom" src="icons/Insta.svg" alt="Insta-Icon" />
 				</a>
 				<WalletButton>Connect Wallet</WalletButton>

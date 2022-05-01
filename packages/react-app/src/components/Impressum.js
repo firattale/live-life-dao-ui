@@ -20,15 +20,18 @@ export default function Impressum() {
 					<div>
 						<div className="heading heading-impressum">Get In Touch</div>
 						<p className="text impressum-width">
-							If you want to get in touch dont hesitate to
-								{" "}
-							<a className="zoom in-txt-link" href="mailto: contact@lifelivedao.com" target="_blank">
+							If you want to get in touch dont hesitate to{" "}
+							<a className="zoom in-txt-link" href="mailto: contact@lifelivedao.com" target="_blank" rel="noreferrer">
 								{" "}
 								write us
 							</a>{" "}
-							or
-								{" "}
-							<a className="zoom in-txt-link" href="https://calendly.com/lifelive/dao?month=2022-04" target="_blank">
+							or{" "}
+							<a
+								className="zoom in-txt-link"
+								href="https://calendly.com/lifelive/dao?month=2022-04"
+								target="_blank"
+								rel="noreferrer"
+							>
 								{" "}
 								schedule a call
 							</a>

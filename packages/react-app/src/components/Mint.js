@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { ContainerMint, Container } from ".";
 import Golden from "./MintPage/Golden";
 import Guestlist from "./MintPage/Guestlist";
@@ -13,22 +13,9 @@ export default function MintPage({
 	buyGoldenNFTState,
 	buyGuestlistNFTState,
 }) {
-	const [width, setWidth] = useState(window.innerWidth);
-	const breakpoint = 1000;
-
-	const updateWidth = () => {
-		setWidth(window.innerWidth);
-	};
-
-	useEffect(() => {
-		window.addEventListener("resize", updateWidth);
-		return () => window.removeEventListener("resize", updateWidth);
-	}, []);
-
 	return (
 		<Container>
 			<ContainerMint>
-				{/* {width < breakpoint && <MintIntro />} */}
 				<Golden
 					onGoldenClick={onGoldenClick}
 					availableGoldenNFT={availableGoldenNFT}

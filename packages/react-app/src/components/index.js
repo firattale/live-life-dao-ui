@@ -26,7 +26,7 @@ export const NavButton = styled.button`
 	padding: 8px;
 	cursor: pointer;
 	border: 2px solid #f0a450;
-
+	margin-right: 10px;
 	@media (min-width: 1000px) {
 		font-size: 18px;
 		width: 185px;
@@ -117,14 +117,10 @@ export const Link = styled.a.attrs({
 `;
 
 export const Navbar = styled.nav`
-	height: 10vh;
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	padding-right: 5vw;
-	@media (min-width: 1000px) {
-		padding-right: 10vw;
-		padding-left: 1.5vw;
-	}
+	position: absolute;
+	top: 0;
+	width: 100%;
 `;

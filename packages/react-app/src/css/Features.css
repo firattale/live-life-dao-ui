@@ -1,23 +1,28 @@
-
 .feature {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 3vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 3vh;
 }
 .feature-title {
-    font-weight: 1000;
+	font-weight: 1000;
 }
 .feature-text {
-    padding-left: 4vw;
-    padding-right: 5vw;
+	padding-left: 4vw;
+	padding-right: 5vw;
 }
 .feature-icon {
-    height: 5vh;
+	height: 5vh;
 }
 .img-robot {
-    height: 700px;
-    width: 100vw;
-    object-fit: cover;
-    object-position: center;
+	height: 700px;
+	width: 100vw;
+	object-fit: cover;
+	object-position: center;
+}
+
+.line3 {
+	position: absolute;
+	right: 95%;
+	top: 36%;
 }
