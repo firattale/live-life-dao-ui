@@ -1,20 +1,30 @@
 .overlapping-hero {
-    position:absolute;
-    width: 100vw;
-    margin-top: 10vh;
+	position: absolute;
+	width: 100vw;
+	margin-top: 10vh;
 }
 .overlapping-hero-bg {
-    position:absolute;
-    width: 100vw;
+	position: absolute;
+	width: 100vw;
 }
 .img-overl-container {
-    position: absolute;
-    margin-top: 83vh;
+	position: absolute;
+	margin-top: 83vh;
 }
+.line1 {
+	position: absolute;
+	right: 100%;
+}
+.line2 {
+	position: absolute;
+	left: 90%;
+	top: 30%;
+}
+
 .img-astronaut {
-    margin-top: -5vh;
-    height: 700px;
-    width: 100vw;
-    object-fit: cover;
-    object-position: 48%;
+	margin-top: -5vh;
+	height: 700px;
+	width: 100vw;
+	object-fit: cover;
+	object-position: 48%;
 }

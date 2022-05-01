@@ -43,6 +43,7 @@ export const MintPage = () => {
 			setAvailableGuestListNFT(formattedTotalSupplyGuest * 10 ** 18 - formattedBalanceOfGuest * 10 ** 18);
 			setTotalSupplyGuestListNFT(formattedTotalSupplyGuest * 10 ** 18);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [balanceOfGolden, balanceOfGuest, totalSupplyGolden, totalSupplyGuest]);
 
 	React.useEffect(() => {

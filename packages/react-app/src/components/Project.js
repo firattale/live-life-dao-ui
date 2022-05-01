@@ -1,5 +1,6 @@
 import React from "react";
-
+import { ReactComponent as Line1 } from "../css/line1.svg";
+import { ReactComponent as Line2 } from "../css/line2.svg";
 export default function Project() {
 	return (
 		<>
@@ -8,6 +9,9 @@ export default function Project() {
 				<img className="overlapping-hero" src="inbetween/overlapping.png" alt="overlapping balls" />
 			</div>
 			<div className="container">
+				<div className="line1">
+					<Line1 />
+				</div>
 				<div className="heading heading-padding side-padding">The Project</div>
 				<div className="text-container side-padding">
 					<p className="text">
@@ -34,6 +38,9 @@ export default function Project() {
 						enabling our community to design and manage their own events and to become involved in the evolution of
 						LifeLive itself - from rewards structure to feature sets to team hiring.
 					</p>
+				</div>
+				<div className="line2">
+					<Line2 />
 				</div>
 				<button className="btn btn-style-blue-light zoom margin-top">
 					<a
