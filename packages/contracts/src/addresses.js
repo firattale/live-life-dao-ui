@@ -1,8 +1,8 @@
 // On Mumbai TestNet
 const addresses = {
-	sellerContract: "0x4773F548E0a74435466dF792BDa68F96E3fd88c0",
-	mockDaiContract: "0x620cd9Ed1F8c3cF49147562102F20A7808f1b2f1",
-	goldenNFTContract: "0x2E82e34fE53dc089A09a4B3f5a42db74AeA1FfA6",
-	guestLiftNFTContract: "0x4A0dDE6Cd8dD66B26Ec25E9338f1a3F9DEbD9094",
+	sellerContract: "0x973fE097D05D45D0f95AfCDEf4882EE4129f0F4e",
+	mockDaiContract: "0xd66F65F1a92A3A60e026969835d9a5Cd429BF934",
+	goldenNFTContract: "0x7122F1b77651DD888b15d4114D90d708da080ecE",
+	guestLiftNFTContract: "0x4c94c1a21061e67E22BFdf085e0B3E53c02D0B1e",
 };
 export default addresses;

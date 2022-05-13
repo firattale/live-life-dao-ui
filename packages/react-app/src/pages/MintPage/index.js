@@ -91,22 +91,22 @@ export const MintPage = () => {
 	}, [buyGuestlistNFTState]);
 
 	const onGoldenClick = async (amount) => {
-		const amountToBuy = amount.toString();
+		const amountToBuy = utils.parseEther(amount.toString());
 		if (!account) {
 			toast.error("Please connect to your wallet to mint an NFT.");
 			return;
 		}
-		await approve(addresses.sellerContract, utils.parseEther(amountToBuy));
-		await buyGoldenNFT();
+		await approve(addresses.sellerContract, amountToBuy);
+		await buyGoldenNFT(amountToBuy);
 	};
 	const onGuestListClick = async (amount) => {
-		const amountToBuy = amount.toString();
+		const amountToBuy = utils.parseEther(amount.toString());
 		if (!account) {
 			toast.error("Please connect to your wallet to mint an NFT.");
 			return;
 		}
-		await approve(addresses.sellerContract, utils.parseEther(amountToBuy));
-		await buyGuestlistNFT();
+		await approve(addresses.sellerContract, amountToBuy);
+		await buyGuestlistNFT(amountToBuy);
 	};
 
 	return (
