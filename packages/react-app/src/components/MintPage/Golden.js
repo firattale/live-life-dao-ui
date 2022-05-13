@@ -3,7 +3,6 @@ import OnBoard from "./OnBoard";
 import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-import { numberWithCommas } from "../../helpers";
 export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyGoldenNFT, buyGoldenNFTState }) {
 	const [sliderValue, setSliderValue] = React.useState(50000);
 	const handleChange = (event, newValue) => {
@@ -54,9 +53,7 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 							},
 						}}
 					/>
-					<Typography style={{ textAlign: "center", fontFamily: "Montserrat" }}>
-						{numberWithCommas(sliderValue)} DAI
-					</Typography>
+					<Typography style={{ textAlign: "center", fontFamily: "Montserrat" }}>{sliderValue} DAI</Typography>
 				</Stack>
 				{totalSupplyGoldenNFT !== 0 && (
 					<>
