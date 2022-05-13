@@ -5,7 +5,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import { numberWithCommas } from "../../helpers";
 
-export default function Guestlist({
+export default function GuestList({
 	onGuestListClick,
 	availableGuestListNFT,
 	totalSupplyGuestListNFT,

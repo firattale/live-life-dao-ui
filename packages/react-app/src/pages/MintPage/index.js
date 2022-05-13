@@ -4,7 +4,8 @@ import { useContractFunction, useEthers, useCall } from "@usedapp/core";
 import toast from "react-hot-toast";
 import { Contract } from "@ethersproject/contracts";
 import { utils } from "ethers";
-import Mint from "../../components/Mint";
+import { Container, ContainerMint } from "../../components";
+import { Golden, GuestList } from "../../components/MintPage";
 import { Element } from "react-scroll";
 
 const sellerInterface = new utils.Interface(abis.seller.abi);
@@ -110,16 +111,22 @@ export const MintPage = () => {
 
 	return (
 		<Element name="mint">
-			<Mint
-				onGoldenClick={onGoldenClick}
-				onGuestListClick={onGuestListClick}
-				buyGoldenNFTState={buyGoldenNFTState}
-				availableGoldenNFT={availableGoldenNFT}
-				totalSupplyGoldenNFT={totalSupplyGoldenNFT}
-				availableGuestListNFT={availableGuestListNFT}
-				totalSupplyGuestListNFT={totalSupplyGuestListNFT}
-				buyGuestlistNFTState={buyGuestlistNFTState}
-			/>
+			<Container>
+				<ContainerMint>
+					<Golden
+						onGoldenClick={onGoldenClick}
+						availableGoldenNFT={availableGoldenNFT}
+						totalSupplyGoldenNFT={totalSupplyGoldenNFT}
+						buyGoldenNFTState={buyGoldenNFTState}
+					/>
+					<GuestList
+						onGuestListClick={onGuestListClick}
+						availableGuestListNFT={availableGuestListNFT}
+						totalSupplyGuestListNFT={totalSupplyGuestListNFT}
+						buyGuestlistNFTState={buyGuestlistNFTState}
+					/>
+				</ContainerMint>
+			</Container>
 		</Element>
 	);
 };
