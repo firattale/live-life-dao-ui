@@ -13,6 +13,7 @@
 	margin-top: 12vh;
 	text-align: center;
 }
+
 .btn-mint {
 	width: 100%;
 	height: 56px;
@@ -36,6 +37,12 @@
 	font-size: 18px;
 	padding: 2px;
 }
+ul {
+	padding: 0;
+	width: 98%;
+	margin-left: 2vw;
+	margin-bottom: 3vh;
+}
 h1 {
 	font-family: "Audiowide";
 	font-style: normal;
@@ -47,8 +54,14 @@ h1 {
 	text-align: center;
 	margin: 0px;
 }
-h3,
 li {
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 1.4em;
+	letter-spacing: 0.005em;
+	line-height: 21px;
+}
+h3 {
 	width: 301px;
 	font-family: "Montserrat";
 	font-weight: 400;
@@ -73,9 +86,6 @@ h4 {
 	line-height: 15px;
 	text-align: center;
 	letter-spacing: 0.005em;
-}
-ul {
-	margin-bottom: 3vh;
 }
 .mint-container {
 	display: flex;

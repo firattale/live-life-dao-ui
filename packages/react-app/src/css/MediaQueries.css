@@ -104,7 +104,7 @@
 		line-height: 22px;
 	}
 	.li-desktop {
-		width: 448px;
+		/* width: 448px; */
 		font-size: 18px;
 		line-height: 170%;
 	}
@@ -181,9 +181,10 @@ and (max-width: 1700px) {
 	}
 	.li-desktop {
 		width: 100%;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 170%;
 		padding: 0px;
+		margin: 0px;
 	}
 }
 

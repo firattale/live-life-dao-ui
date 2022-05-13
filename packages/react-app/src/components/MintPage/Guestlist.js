@@ -30,7 +30,7 @@ export default function Guestlist({
 				<>
 					{availableGuestListNFT !== totalSupplyGuestListNFT ? (
 						<button className="btn-mint btn-style-blue-solid zoom" onClick={onGuestListClick}>
-							{buyGuestlistNFTState.status === "Success" ? "Buy another NFT" : "Buy NFT"}
+							{buyGuestlistNFTState.status === "Success" ? "Buy another" : "Buy"}
 						</button>
 					) : (
 						<button className="btn-mint btn-mint-soldout zoom">
@@ -39,7 +39,7 @@ export default function Guestlist({
 						</button>
 					)}
 					<p>
-						{availableGuestListNFT}/{totalSupplyGuestListNFT} minted
+						{availableGuestListNFT}/{totalSupplyGuestListNFT} sold
 					</p>
 				</>
 			)}
