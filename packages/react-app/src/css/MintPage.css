@@ -9,6 +9,10 @@
 .img-mint-desktop {
 	display: none;
 }
+.mint-info {
+	margin-top: 12vh;
+	text-align: center;
+}
 .btn-mint {
 	width: 100%;
 	height: 56px;

@@ -134,8 +134,9 @@
 		width: 60px;
 	}
 	.mint-info {
-		width: 70vw;
+		width: calc(50% - 3vw);
 		text-align: center;
+		margin-bottom: 6vh;
 	}
 	.no-side-padding {
 		padding: 0px;

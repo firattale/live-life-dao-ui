@@ -21,7 +21,7 @@ export default function Project() {
 							digital web2 platform{" "}
 						</a>
 						in Berlin, connecting nightlife connoisseurs, ravers, and lonely hearts to their favorite artists, labels,
-						and venues. One experimental festival quickly led to a series of 6 virtual festivals that year, bringing
+						and venues. One experimental festival quickly led to a series of 10 virtual festivals that year, bringing
 						together thousands of fans with some of the biggest names in the Berlin music ecosystem and showing
 						attendees new ways to interact online.
 					</p>
@@ -30,6 +30,7 @@ export default function Project() {
 					<p className="text">
 						Think Twitch meets Tinder meets Chatroulette - but with rockets and glitter and a mutual love for music!
 					</p>
+					<br></br>
 					<br></br>
 					<p className="text">
 						Now in 2022, we’re taking LifeLive to web3. Our vision is to enable a direct connection between artists and

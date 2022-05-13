@@ -2,6 +2,7 @@ import React from "react";
 import { ContainerMint, Container } from ".";
 import Golden from "./MintPage/Golden";
 import Guestlist from "./MintPage/Guestlist";
+import MintInfo from "./MintPage/MintInfo";
 import NftImage from "./MintPage/NftImage";
 
 export default function MintPage({
@@ -30,6 +31,7 @@ export default function MintPage({
 					buyGuestlistNFTState={buyGuestlistNFTState}
 				/>
 			</ContainerMint>
+			<MintInfo />
 			<NftImage />
 		</Container>
 	);
