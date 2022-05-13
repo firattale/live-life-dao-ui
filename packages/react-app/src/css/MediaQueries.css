@@ -3,7 +3,10 @@
 		padding-right: 3vw;
 		height: 30px;
 	}
-
+	.nav-logo {
+		height: 90px;
+		padding-left: 7vw;
+	}
 	.title {
 		font-weight: 400;
 		font-size: 72px;
@@ -45,15 +48,13 @@
 	.heading-margin {
 		margin-top: 20vh;
 	}
-	.nav-logo {
-		height: 90px;
-	}
 	.img-robot {
 		height: auto;
 	}
 	.intro-container {
 		width: 534px;
 		margin: 100px;
+		margin-left: 8vw;
 		z-index: 3;
 	}
 	.btn-main-container {

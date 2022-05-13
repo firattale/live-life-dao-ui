@@ -19,7 +19,7 @@ export const MainPage = () => {
 					<source src={videoBG} type="video/mp4" />
 				</video>
 				<div>
-					<NavBar />
+					<NavBar/>
 					<Intro />
 				</div>
 			</div>
