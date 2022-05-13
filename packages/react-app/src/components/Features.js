@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as Line3 } from "../css/line3.svg";
+import { ReactComponent as Line3 } from "../background/line3.svg";
 
 export default function Features() {
 	return (
