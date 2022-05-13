@@ -111,6 +111,11 @@
 	.img-mint {
 		display: none;
 	}
+	.img-mint-desktop {
+		width: calc(50% + 6vw);
+		display:flex;
+		margin-top: 6vh;
+	}
 	.btn-mint {
 		height: 80px;
 		font-size: 36px;

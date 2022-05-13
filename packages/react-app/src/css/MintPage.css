@@ -6,6 +6,9 @@
 .img-mint-margin {
 	margin: 20px 0px;
 }
+.img-mint-desktop {
+	display: none;
+}
 .btn-mint {
 	width: 100%;
 	height: 56px;
