@@ -14,7 +14,7 @@ export default function Guestlist({
 				<h1 className="h1-desktop no-margin">Guestlist</h1>
 				<h2 className="h2-desktop no-margin blue">Receive 30% more tokens</h2>
 				<div className="rounded blue-border">
-					<h1 className="h1-desktop no-margin">min $ 0.5k</h1>
+					<h1 className="h1-desktop no-margin">min <span className="dollar-sign">$</span> 0.5k</h1>
 					<h4 className="h4-desktop no-margin">payable in DAI stablecoin</h4>
 				</div>
 			</div>

@@ -37,6 +37,10 @@
 	font-size: 18px;
 	padding: 2px;
 }
+.dollar-sign {
+	font-family: "Montserrat";
+	font-weight: 700;
+}
 ul {
 	padding: 0;
 	width: 98%;
@@ -50,7 +54,6 @@ h1 {
 	font-size: 2.4em;
 	line-height: 29.94px;
 	letter-spacing: 0.005em;
-	text-transform: capitalize;
 	text-align: center;
 	margin: 0px;
 }

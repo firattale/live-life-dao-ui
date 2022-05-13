@@ -10,7 +10,7 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 					<h1 className="h1-desktop no-margin">Golden Ticket</h1>
 					<h2 className="h2-desktop no-margin orange">Receive 100% more tokens</h2>
 					<div className="rounded">
-						<h1 className="h1-desktop no-margin">min $ 50k</h1>
+						<h1 className="h1-desktop no-margin">min <span className="dollar-sign">$</span> 50k</h1>
 						<h4 className="h4-desktop no-margin">payable in DAI stablecoin</h4>
 					</div>
 				</div>
