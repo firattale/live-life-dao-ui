@@ -3,6 +3,7 @@ import OnBoard from "./OnBoard";
 import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { numberWithCommas } from "../../helpers";
 
 export default function Guestlist({
 	onGuestListClick,
@@ -81,8 +82,4 @@ export default function Guestlist({
 			)}
 		</div>
 	);
-}
-
-function numberWithCommas(x) {
-	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }

@@ -3,7 +3,7 @@ import OnBoard from "./OnBoard";
 import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-
+import { numberWithCommas } from "../../helpers";
 export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyGoldenNFT, buyGoldenNFTState }) {
 	const [sliderValue, setSliderValue] = React.useState(50000);
 	const handleChange = (event, newValue) => {
@@ -79,8 +79,4 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 			<img className="img-mint img-mint-margin" src="nft/nft2.jpg" alt="nft2" />
 		</>
 	);
-}
-
-function numberWithCommas(x) {
-	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
