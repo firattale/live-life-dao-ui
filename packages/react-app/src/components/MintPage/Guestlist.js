@@ -1,12 +1,19 @@
 import React from "react";
 import OnBoard from "./OnBoard";
+import Slider from "@mui/material/Slider";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 
-export default function Guestlist({
+export default function GuestList({
 	onGuestListClick,
 	availableGuestListNFT,
 	totalSupplyGuestListNFT,
 	buyGuestlistNFTState,
 }) {
+	const [sliderValue, setSliderValue] = React.useState(1000);
+	const handleChange = (event, newValue) => {
+		setSliderValue(newValue);
+	};
 	return (
 		<div className="mint-container">
 			<div className="div-ticket blue-bg-border">
@@ -26,10 +33,38 @@ export default function Guestlist({
 				<li className="li-desktop">A nice boost to your gamification supplies</li>
 			</ul>
 			{buyGuestlistNFTState.status === "Success" && <OnBoard />}
+			<Stack
+				spacing={1}
+				mb={2}
+				p={"8px 24px"}
+				style={{ textAlign: "center", border: "3px #61aeda solid", borderRadius: "8px" }}
+			>
+				<Typography style={{ fontFamily: "Montserrat" }}>
+					How much do you want to contribute in the seed sale?
+				</Typography>
+				<Slider
+					aria-label="GuestList Ticket"
+					value={sliderValue}
+					onChange={handleChange}
+					step={100}
+					size="small"
+					min={500}
+					max={40000}
+					sx={{
+						"& .MuiSlider-thumb": {
+							color: "#61aeda",
+						},
+						"&": {
+							color: "white",
+						},
+					}}
+				/>
+				<Typography style={{ textAlign: "center", fontFamily: "Montserrat" }}>{sliderValue} DAI</Typography>
+			</Stack>
 			{totalSupplyGuestListNFT !== 0 && (
 				<>
 					{availableGuestListNFT !== totalSupplyGuestListNFT ? (
-						<button className="btn-mint btn-style-blue-solid zoom" onClick={onGuestListClick}>
+						<button className="btn-mint btn-style-blue-solid zoom" onClick={() => onGuestListClick(sliderValue)}>
 							{buyGuestlistNFTState.status === "Success" ? "Buy another" : "Buy"}
 						</button>
 					) : (

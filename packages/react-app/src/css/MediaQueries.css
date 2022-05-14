@@ -152,7 +152,7 @@
 @media screen and (min-width: 1200px) {
 	.mint-container {
 		margin: 0px 3vw;
-		width: 25%;
+		width: 30%;
 	}
 	.img-mint-desktop {
 		width: calc(50% + 6vw);
@@ -189,9 +189,13 @@ and (max-width: 1700px) {
 }
 
 @media screen and (max-width: 1000px) {
-	video {
+	video,
+	.line1,
+	.line2,
+	.line3 {
 		display: none;
 	}
+
 	.bg-hero {
 		height: 100vh;
 		width: 100vw;

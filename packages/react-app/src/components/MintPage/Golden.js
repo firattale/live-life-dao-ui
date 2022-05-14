@@ -1,7 +1,13 @@
 import React from "react";
 import OnBoard from "./OnBoard";
-
+import Slider from "@mui/material/Slider";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
 export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyGoldenNFT, buyGoldenNFTState }) {
+	const [sliderValue, setSliderValue] = React.useState(50000);
+	const handleChange = (event, newValue) => {
+		setSliderValue(newValue);
+	};
 	return (
 		<>
 			<div className="mint-container">
@@ -22,10 +28,38 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 					<li className="li-desktop">A large boost to your gamification supplies</li>
 				</ul>
 				{buyGoldenNFTState.status === "Success" && <OnBoard />}
+				<Stack
+					spacing={1}
+					mb={2}
+					p={"8px 24px"}
+					style={{ textAlign: "center", border: "3px #F0A450 solid", borderRadius: "8px" }}
+				>
+					<Typography style={{ fontFamily: "Montserrat" }}>
+						How much do you want to contribute in the seed sale?
+					</Typography>
+					<Slider
+						aria-label="Golden Ticket"
+						value={sliderValue}
+						onChange={handleChange}
+						step={1000}
+						size="small"
+						min={50000}
+						max={200000}
+						sx={{
+							"& .MuiSlider-thumb": {
+								color: "#F0A450",
+							},
+							"&": {
+								color: "white",
+							},
+						}}
+					/>
+					<Typography style={{ textAlign: "center", fontFamily: "Montserrat" }}>{sliderValue} DAI</Typography>
+				</Stack>
 				{totalSupplyGoldenNFT !== 0 && (
 					<>
 						{availableGoldenNFT !== totalSupplyGoldenNFT ? (
-							<button className="btn-mint btn-style-orange-solid zoom" onClick={onGoldenClick}>
+							<button className="btn-mint btn-style-orange-solid zoom" onClick={()=>onGoldenClick(sliderValue)}>
 								{buyGoldenNFTState.state === "Success" ? "Buy another" : "Buy"}
 							</button>
 						) : (

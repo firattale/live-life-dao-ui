@@ -1,6 +1,6 @@
 import React from "react";
-import { ReactComponent as Line1 } from "../css/line1.svg";
-import { ReactComponent as Line2 } from "../css/line2.svg";
+import { ReactComponent as Line1 } from "../background/line1.svg";
+import { ReactComponent as Line2 } from "../background/line2.svg";
 export default function Project() {
 	return (
 		<>

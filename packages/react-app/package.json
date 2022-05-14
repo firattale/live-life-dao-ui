@@ -1,7 +1,7 @@
 {
 	"name": "@my-app/react-app",
 	"version": "1.0.0",
-	"homepage": "./",
+	"homepage": "https://firattale.github.io/live-life-dao-ui",
 	"browserslist": {
 		"production": [
 			">0.2%",
@@ -15,7 +15,6 @@
 		]
 	},
 	"dependencies": {
-		"@apollo/client": "^3.5.10",
 		"@emotion/react": "^11.9.0",
 		"@emotion/styled": "^11.8.1",
 		"@ethersproject/contracts": "^5.6.0",
