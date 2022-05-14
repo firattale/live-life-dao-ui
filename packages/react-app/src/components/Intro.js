@@ -9,7 +9,7 @@ export default function Intro() {
 			<p className="text">Access virtual and hybrid events and Dance2Earn with people from all over the world.</p>
 			<div className="btn-main-container">
 				<ScrollLink to="mint" spy={true} smooth={true} duration={900}>
-					<button className="btn btn-style-blue-solid zoom">Join Seed Sale</button>
+					<button className="btn btn-style-blue-solid zoom">Join seed sale</button>
 				</ScrollLink>
 				<a
 					className="link"

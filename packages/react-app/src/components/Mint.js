@@ -17,6 +17,7 @@ export default function MintPage({
 }) {
 	return (
 		<Container>
+			<NftImage />
 			<ContainerMint>
 				<Golden
 					onGoldenClick={onGoldenClick}
@@ -32,7 +33,7 @@ export default function MintPage({
 				/>
 			</ContainerMint>
 			<MintInfo />
-			<NftImage />
+			
 		</Container>
 	);
 }

@@ -77,6 +77,7 @@ export const ContainerMint = styled.div`
 	align-items: center;
 
 	@media (min-width: 1200px) {
+		height: 100%;
 		margin-top: 5vh;
 		padding-top: 50px;
 		flex-direction: row;
