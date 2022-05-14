@@ -4,7 +4,6 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-shadow: 2px 2px 5px #222;
 }
 .footer-link {
     color: white;
@@ -14,5 +13,7 @@ footer {
 .footer-icon {
     padding-right: 3vw;
     height: 2vh;
-    filter: drop-shadow(5px 5px 5px #222);
+}
+.shadow {
+    filter: drop-shadow(3px 3px 7px rgba(34, 34, 34, 0.815));
 }

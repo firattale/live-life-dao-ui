@@ -1,9 +1,12 @@
 @media screen and (min-width: 1000px) {
 	.nav-icon {
 		padding-right: 3vw;
-		height: 30px;
+		height: 25px;
 	}
-
+	.nav-logo {
+		height: 80px;
+		padding-left: 7vw;
+	}
 	.title {
 		font-weight: 400;
 		font-size: 72px;
@@ -45,15 +48,13 @@
 	.heading-margin {
 		margin-top: 20vh;
 	}
-	.nav-logo {
-		height: 90px;
-	}
 	.img-robot {
 		height: auto;
 	}
 	.intro-container {
 		width: 534px;
 		margin: 100px;
+		margin-left: 8vw;
 		z-index: 3;
 	}
 	.btn-main-container {
@@ -103,12 +104,9 @@
 		line-height: 22px;
 	}
 	.li-desktop {
-		width: 448px;
+		/* width: 448px; */
 		font-size: 18px;
 		line-height: 170%;
-	}
-	.img-mint {
-		display: none;
 	}
 	.btn-mint {
 		height: 80px;
@@ -135,16 +133,58 @@
 		padding-left: 13px;
 		width: 60px;
 	}
+	.mint-info {
+		width: calc(50% - 3vw);
+		text-align: center;
+		margin-bottom: 6vh;
+	}
+	.no-side-padding {
+		padding: 0px;
+	}
+	.mint-container {
+		width: calc(50% - 3vw);
+	}
+	.img-mint {
+		width: 80vw;
+	}
+}
+
+@media screen and (min-width: 1200px) {
 	.mint-container {
 		margin: 0px 3vw;
 		width: 30%;
 	}
-	.mint-info {
-		width: 70vw;
-		text-align: center;
+	.img-mint-desktop {
+		width: calc(50% + 6vw);
+		display:flex;
+		margin-top: 6vh;
 	}
-	.no-side-padding {
+	.img-mint {
+		display: none;
+	}
+}
+
+@media screen 
+and (min-width: 1200px) 
+and (max-width: 1700px) {
+	.h1-desktop {
+		font-size: 28px;
+		line-height: 124.77%;
+	}
+	.h2-desktop {
+		font-size: 18px;
+		line-height: 102.77%;
+	}
+	.h4-desktop {
+		font-size: 12px;
+		line-height: 22px;
+	}
+	.li-desktop {
+		width: 100%;
+		font-size: 16px;
+		line-height: 170%;
 		padding: 0px;
+		margin: 0px;
 	}
 }
 

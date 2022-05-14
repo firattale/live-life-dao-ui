@@ -9,13 +9,13 @@ export default function Footer() {
 					<h5>contact</h5>
 				</a>
 				<a className="zoom" href="https://twitter.com/LifeLiveDAO" target="_blank" rel="noreferrer">
-					<img className="footer-icon" src="icons/Twitter.svg" alt="Twitter-Icon" />
+					<img className="footer-icon shadow" src="icons/Twitter.svg" alt="Twitter-Icon" />
 				</a>
 				<a className="zoom" href="https://t.me/lifelivedao" target="_blank" rel="noreferrer">
-					<img className="footer-icon" src="icons/Telegram.svg" alt="Telegram-Icon" />
+					<img className="footer-icon shadow" src="icons/Telegram.svg" alt="Telegram-Icon" />
 				</a>
 				<a className="zoom" href="https://www.instagram.com/lifelivedao/" target="_blank" rel="noreferrer">
-					<img className="footer-icon" src="icons/Insta.svg" alt="Insta-Icon" />
+					<img className="footer-icon shadow" src="icons/Insta.svg" alt="Insta-Icon" />
 				</a>
 			</div>
 		</footer>

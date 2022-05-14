@@ -6,6 +6,16 @@
 .img-mint-margin {
 	margin: 20px 0px;
 }
+.img-mint-desktop {
+	display: none;
+}
+.mint-info {
+	margin-top: 12vh;
+	text-align: center;
+}
+.mint-weight {
+	font-weight: 700;
+}
 .btn-mint {
 	width: 100%;
 	height: 56px;
@@ -29,6 +39,16 @@
 	font-size: 18px;
 	padding: 2px;
 }
+.dollar-sign {
+	font-family: "Montserrat";
+	font-weight: 700;
+}
+ul {
+	padding: 0;
+	width: 98%;
+	margin-left: 2vw;
+	margin-bottom: 3vh;
+}
 h1 {
 	font-family: "Audiowide";
 	font-style: normal;
@@ -36,12 +56,17 @@ h1 {
 	font-size: 2.4em;
 	line-height: 29.94px;
 	letter-spacing: 0.005em;
-	text-transform: capitalize;
 	text-align: center;
 	margin: 0px;
 }
-h3,
 li {
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 1.4em;
+	letter-spacing: 0.005em;
+	line-height: 21px;
+}
+h3 {
 	width: 301px;
 	font-family: "Montserrat";
 	font-weight: 400;
@@ -83,6 +108,7 @@ ul {
 	padding-bottom: 50px;
 	margin-bottom: 45px;
 	width: 100%;
+	height: 100%;
 	border: 3px solid #f0a450;
 	background-color: rgba(240, 164, 80, 0.15);
 	border-radius: 8px;

@@ -26,7 +26,7 @@ export const NavButton = styled.button`
 	padding: 8px;
 	cursor: pointer;
 	border: 2px solid #f0a450;
-	margin-right: 10px;
+	margin-right: 9.5vw;
 	@media (min-width: 1000px) {
 		font-size: 18px;
 		width: 185px;
@@ -77,6 +77,7 @@ export const ContainerMint = styled.div`
 	align-items: center;
 
 	@media (min-width: 1200px) {
+		height: 100%;
 		margin-top: 5vh;
 		padding-top: 50px;
 		flex-direction: row;
@@ -122,5 +123,5 @@ export const Navbar = styled.nav`
 	justify-content: space-between;
 	position: absolute;
 	top: 0;
-	width: 100%;
+	width: 100vw;
 `;

@@ -1,8 +1,8 @@
 .impressum-container {
-    height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 5vh;
 }
 .in-txt-link {
     color: white;
