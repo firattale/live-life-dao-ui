@@ -109,7 +109,7 @@
 		line-height: 170%;
 	}
 	.btn-mint {
-		height: 80px;
+		height: 100%;
 		font-size: 36px;
 	}
 	.nft-big-img {
@@ -156,7 +156,7 @@
 	}
 	.img-mint-desktop {
 		width: calc(50% + 6vw);
-		display:flex;
+		display: flex;
 		margin-top: 6vh;
 	}
 	.img-mint {
@@ -164,9 +164,7 @@
 	}
 }
 
-@media screen 
-and (min-width: 1200px) 
-and (max-width: 1700px) {
+@media screen and (min-width: 1200px) and (max-width: 1700px) {
 	.h1-desktop {
 		font-size: 28px;
 		line-height: 124.77%;

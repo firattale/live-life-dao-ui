@@ -49,7 +49,7 @@ export const MintPage = () => {
 
 	React.useEffect(() => {
 		if (approveState.status === "PendingSignature") {
-			toast.loading("Waiting...");
+			toast.loading("Waiting, transactions may take a few minutes...");
 		}
 		if (approveState.status === "Exception" || approveState.status === "Fail") {
 			toast.dismiss();
@@ -63,7 +63,7 @@ export const MintPage = () => {
 
 	React.useEffect(() => {
 		if (buyGoldenNFTState.status === "PendingSignature") {
-			toast.loading("Waiting...");
+			toast.loading("Waiting, transactions may take a few minutes...");
 		}
 		if (buyGoldenNFTState.status === "Exception" || buyGoldenNFTState.status === "Fail") {
 			toast.dismiss();
@@ -77,7 +77,7 @@ export const MintPage = () => {
 	}, [buyGoldenNFTState]);
 	React.useEffect(() => {
 		if (buyGuestlistNFTState.status === "PendingSignature") {
-			toast.loading("Waiting...");
+			toast.loading("Waiting, transactions may take a few minutes...");
 		}
 		if (buyGuestlistNFTState.status === "Exception" || buyGuestlistNFTState.status === "Fail") {
 			toast.dismiss();
