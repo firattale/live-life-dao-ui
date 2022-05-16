@@ -3,7 +3,7 @@ import OnBoard from "./OnBoard";
 import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
-
+import { numberWithCommas } from "../../helpers";
 export default function GuestList({
 	onGuestListClick,
 	availableGuestListNFT,
@@ -61,7 +61,9 @@ export default function GuestList({
 						},
 					}}
 				/>
-				<Typography style={{ textAlign: "center", fontFamily: "Montserrat" }}>{sliderValue} DAI</Typography>
+				<Typography style={{ textAlign: "center", fontFamily: "Montserrat" }}>
+					{numberWithCommas(sliderValue)} DAI
+				</Typography>
 			</Stack>
 			{totalSupplyGuestListNFT !== 0 && (
 				<>

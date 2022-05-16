@@ -3,6 +3,8 @@ import OnBoard from "./OnBoard";
 import Slider from "@mui/material/Slider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
+import { numberWithCommas } from "../../helpers";
+
 export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyGoldenNFT, buyGoldenNFTState }) {
 	const [sliderValue, setSliderValue] = React.useState(50000);
 	const handleChange = (event, newValue) => {
@@ -16,12 +18,16 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 					<h1 className="h1-desktop no-margin">Golden Ticket</h1>
 					<h2 className="h2-desktop no-margin orange">Receive 100% more tokens</h2>
 					<div className="rounded">
-						<h1 className="h1-desktop no-margin">min <span className="dollar-sign">$</span> 50k</h1>
+						<h1 className="h1-desktop no-margin">
+							min <span className="dollar-sign">$</span> 50k
+						</h1>
 						<h4 className="h4-desktop no-margin">payable in DAI stablecoin</h4>
 					</div>
 				</div>
 				<ul>
-					<li className="li-desktop">100% bonus: Your seed sale contribution will be doubled in the next funding round</li>
+					<li className="li-desktop">
+						100% bonus: Your seed sale contribution will be doubled in the next funding round
+					</li>
 					<li className="li-desktop">Receive a unique Web3 Raver NFT</li>
 					<li className="li-desktop">Access to the seed round lounge</li>
 					<li className="li-desktop">Access to all other private lounges</li>
@@ -54,12 +60,14 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 							},
 						}}
 					/>
-					<Typography style={{ textAlign: "center", fontFamily: "Montserrat" }}>{sliderValue} DAI</Typography>
+					<Typography style={{ textAlign: "center", fontFamily: "Montserrat" }}>
+						{numberWithCommas(sliderValue)} DAI
+					</Typography>
 				</Stack>
 				{totalSupplyGoldenNFT !== 0 && (
 					<>
 						{availableGoldenNFT !== totalSupplyGoldenNFT ? (
-							<button className="btn-mint btn-style-orange-solid zoom" onClick={()=>onGoldenClick(sliderValue)}>
+							<button className="btn-mint btn-style-orange-solid zoom" onClick={() => onGoldenClick(sliderValue)}>
 								{buyGoldenNFTState.state === "Success" ? "Buy another" : "Buy"}
 							</button>
 						) : (
