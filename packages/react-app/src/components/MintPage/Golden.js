@@ -68,7 +68,7 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 					<>
 						{availableGoldenNFT !== totalSupplyGoldenNFT ? (
 							<button className="btn-mint btn-style-orange-solid zoom" onClick={() => onGoldenClick(sliderValue)}>
-								{buyGoldenNFTState.state === "Success" ? "Buy another" : "Buy"}
+								{buyGoldenNFTState.status === "Success" ? "Buy another" : "Buy"}
 							</button>
 						) : (
 							<button className="btn-mint btn-mint-soldout zoom">
