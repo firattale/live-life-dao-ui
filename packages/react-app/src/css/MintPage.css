@@ -35,6 +35,9 @@
 	background: #383838;
 	color: #ee796a;
 }
+.btn-mint-soldout a {
+	color: #4c6e9d;
+}
 .btn-mint-soldout span {
 	font-size: 18px;
 	padding: 2px;

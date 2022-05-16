@@ -17,7 +17,7 @@ export default function OnBoard() {
 						View your NFT on OpenSea
 					</a>
 				</div>
-				<img className="on-board-img" src="/icons/rocket-turquoise.svg" alt="turquoise rocket" />
+				<img className="on-board-img" src="icons/rocket-turquoise.svg" alt="turquoise rocket" />
 			</div>
 		</>
 	);

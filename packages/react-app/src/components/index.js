@@ -41,27 +41,6 @@ export const NavButton = styled.button`
 		`};
 `;
 
-export const Button = styled.button`
-	width: 222px;
-	border-radius: 8px;
-	cursor: pointer;
-	font-size: 1em;
-	margin: 0px 20px;
-	text-align: center;
-	text-decoration: none;
-	font-weight: bold;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	border: 2px solid #f0a450;
-
-	${(props) =>
-		props.error &&
-		css`
-			color: #ee796a;
-			border: 2px solid #ee796a;
-		`};
-`;
-
 export const Container = styled.div`
 	width: calc(100vw);
 	display: flex;
@@ -84,29 +63,6 @@ export const ContainerMint = styled.div`
 		justify-content: center;
 		align-items: flex-start;
 	}
-`;
-
-export const Header = styled.header`
-	width: 68vw;
-	color: white;
-	padding-left: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: flex-start;
-
-	@media (min-width: 1000px) {
-		align-items: flex-start;
-		margin-top: 35vh;
-		margin-left: 4vw;
-		padding-left: 0px;
-	}
-`;
-
-export const Image = styled.img`
-	height: 40vmin;
-	margin-bottom: 16px;
-	pointer-events: none;
 `;
 
 export const Link = styled.a.attrs({

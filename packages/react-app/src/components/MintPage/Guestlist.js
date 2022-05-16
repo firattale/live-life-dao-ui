@@ -74,7 +74,17 @@ export default function GuestList({
 					) : (
 						<button className="btn-mint btn-mint-soldout zoom">
 							<div>Sold Out</div>
-							<span>Follow us on Twitter for the next drop</span>
+							<span>
+								Follow us on{" "}
+								<a href="https://twitter.com/LifeLiveDAO" target="_blank" rel="noreferrer">
+									Twitter
+								</a>{" "}
+								and join our{" "}
+								<a href="https://t.me/lifelivedao" target="_blank" rel="noreferrer">
+									Telegram
+								</a>{" "}
+								to learn about the next drop
+							</span>{" "}
 						</button>
 					)}
 					<p>
