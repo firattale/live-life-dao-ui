@@ -7,6 +7,8 @@ import { utils } from "ethers";
 import { Container, ContainerMint } from "../../components";
 import { Golden, GuestList } from "../../components/MintPage";
 import { Element } from "react-scroll";
+import { DialogWarning } from "../../components/DialogWarning";
+import { dialogContentNoMetamask } from "../../constants";
 
 const sellerInterface = new utils.Interface(abis.seller.abi);
 const mockDAIInterface = new utils.Interface(abis.mockDai.abi);
@@ -17,13 +19,18 @@ const goldenNFTContract = new Contract(addresses.goldenNFTContract, ticketNFTInt
 const guestLiftNFTContract = new Contract(addresses.guestLiftNFTContract, ticketNFTInterface);
 
 export const MintPage = () => {
+	const { account } = useEthers();
+
+	const [openDialog, setOpenDialog] = React.useState(false);
 	const [availableGoldenNFT, setAvailableGoldenNFT] = React.useState(0);
 	const [totalSupplyGoldenNFT, setTotalSupplyGoldenNFT] = React.useState(0);
 	const [availableGuestListNFT, setAvailableGuestListNFT] = React.useState(0);
 	const [totalSupplyGuestListNFT, setTotalSupplyGuestListNFT] = React.useState(0);
+
 	const { state: buyGoldenNFTState, send: buyGoldenNFT } = useContractFunction(sellerContract, "buyGoldenNFT");
 	const { state: approveState, send: approve } = useContractFunction(mockDAIContract, "approve");
 	const { state: buyGuestlistNFTState, send: buyGuestlistNFT } = useContractFunction(sellerContract, "buyGuestlistNFT");
+
 	const { value: balanceOfGolden } =
 		useCall({ contract: goldenNFTContract, method: "balanceOf", args: [addresses.sellerContract] }) ?? {};
 	const { value: totalSupplyGolden } = useCall({ contract: goldenNFTContract, method: "totalSupply", args: [] }) ?? {};
@@ -32,7 +39,6 @@ export const MintPage = () => {
 	const { value: totalSupplyGuest } =
 		useCall({ contract: guestLiftNFTContract, method: "totalSupply", args: [] }) ?? {};
 
-	const { account } = useEthers();
 	React.useEffect(() => {
 		if (balanceOfGolden) {
 			const formattedBalanceGolden = utils.formatEther(balanceOfGolden[0]);
@@ -91,20 +97,31 @@ export const MintPage = () => {
 	}, [buyGuestlistNFTState]);
 
 	const onGoldenClick = async (amount) => {
-		const amountToBuy = utils.parseEther(amount.toString());
+		if (!window.ethereum) {
+			setOpenDialog(true);
+			return;
+		}
+
 		if (!account) {
 			toast.error("Please connect to your wallet to mint an NFT.");
 			return;
 		}
+
+		const amountToBuy = utils.parseEther(amount.toString());
 		await approve(addresses.sellerContract, amountToBuy);
 		await buyGoldenNFT(amountToBuy);
 	};
 	const onGuestListClick = async (amount) => {
-		const amountToBuy = utils.parseEther(amount.toString());
+		if (!window.ethereum) {
+			setOpenDialog(true);
+			return;
+		}
+
 		if (!account) {
 			toast.error("Please connect to your wallet to mint an NFT.");
 			return;
 		}
+		const amountToBuy = utils.parseEther(amount.toString());
 		await approve(addresses.sellerContract, amountToBuy);
 		await buyGuestlistNFT(amountToBuy);
 	};
@@ -113,6 +130,7 @@ export const MintPage = () => {
 		<Element name="mint">
 			<Container>
 				<ContainerMint>
+					<DialogWarning open={openDialog} handleClose={() => setOpenDialog(false)} content={dialogContentNoMetamask} />
 					<Golden
 						onGoldenClick={onGoldenClick}
 						availableGoldenNFT={availableGoldenNFT}
