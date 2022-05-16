@@ -15,3 +15,13 @@ export const dialogContentNoMetamask = (
 		</a>
 	</Typography>
 );
+
+export const dialogWrongNetwork = (
+	<Typography>
+		Please change your network to Polygon Mainnet. If you are not sure how to do that, you can get support in our
+		Telegram group:{" "}
+		<a href="https://t.me/lifelivedao" target="_blank" rel="noreferrer">
+			https://t.me/lifelivedao
+		</a>
+	</Typography>
+);
