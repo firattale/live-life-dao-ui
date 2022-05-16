@@ -1,10 +1,14 @@
 import * as React from "react";
 import { NavButton } from "./";
 import { useEthers, ChainId } from "@usedapp/core";
-
+import { DialogWarning } from "./DialogWarning";
+import { dialogContentNoMetamask, dialogWrongNetwork } from "../constants";
 export const WalletButton = () => {
-	const [rendered, setRendered] = React.useState("");
 	const { account, activateBrowserWallet, deactivate, chainId, switchNetwork } = useEthers();
+
+	const [rendered, setRendered] = React.useState("");
+	const [content, setContent] = React.useState("");
+	const [openDialog, setOpenDialog] = React.useState(false);
 
 	React.useEffect(() => {
 		if (chainId !== ChainId.Mumbai) {
@@ -22,20 +26,36 @@ export const WalletButton = () => {
 			setRendered("wrong network");
 		}
 	}, [account, setRendered, chainId]);
+	const onButtonClick = () => {
+		// no metamask
+		if (!window.ethereum) {
+			setContent(dialogContentNoMetamask);
+			setOpenDialog(true);
+			return;
+		}
+		if (account && chainId !== ChainId.Mumbai) {
+			setContent(dialogWrongNetwork);
+			setOpenDialog(true);
+			return;
+		}
 
+		if (!account) {
+			activateBrowserWallet();
+		} else {
+			deactivate();
+		}
+	};
 	return (
-		<NavButton
-			error={account && chainId !== ChainId.Mumbai}
-			onClick={() => {
-				if (!account) {
-					activateBrowserWallet();
-				} else {
-					deactivate();
-				}
-			}}
-			className="btn-style-orange nav-btn zoom"
-		>
-			{rendered}
-		</NavButton>
+		<>
+			<DialogWarning open={openDialog} handleClose={() => setOpenDialog(false)} content={content} />
+
+			<NavButton
+				error={account && chainId !== ChainId.Mumbai}
+				onClick={onButtonClick}
+				className="btn-style-orange nav-btn zoom"
+			>
+				{rendered}
+			</NavButton>
+		</>
 	);
 };
