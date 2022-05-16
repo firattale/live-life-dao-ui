@@ -27,6 +27,7 @@ export const WalletButton = () => {
 		}
 	}, [account, setRendered, chainId]);
 	const onButtonClick = () => {
+		// no metamask
 		if (!window.ethereum) {
 			setContent(dialogContentNoMetamask);
 			setOpenDialog(true);
