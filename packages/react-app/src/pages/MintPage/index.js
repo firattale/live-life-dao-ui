@@ -1,23 +1,20 @@
 import * as React from "react";
-import { addresses, abis } from "@my-app/contracts";
+import { addresses } from "@my-app/contracts";
 import { useContractFunction, useEthers, useCall } from "@usedapp/core";
 import toast from "react-hot-toast";
-import { Contract } from "@ethersproject/contracts";
 import { utils } from "ethers";
 import { Container, ContainerMint } from "../../components";
 import { NftImage, MintInfo } from "../../components/MintPage";
 import { Golden, GuestList } from "../../components/MintPage";
 import { Element } from "react-scroll";
 import { DialogWarning } from "../../components/DialogWarning";
-import { dialogContentNoMetamask } from "../../constants";
-
-const sellerInterface = new utils.Interface(abis.seller.abi);
-const mockDAIInterface = new utils.Interface(abis.mockDai.abi);
-const ticketNFTInterface = new utils.Interface(abis.ticketNFT.abi);
-const sellerContract = new Contract(addresses.sellerContract, sellerInterface);
-const mockDAIContract = new Contract(addresses.mockDaiContract, mockDAIInterface);
-const goldenNFTContract = new Contract(addresses.goldenNFTContract, ticketNFTInterface);
-const guestLiftNFTContract = new Contract(addresses.guestLiftNFTContract, ticketNFTInterface);
+import {
+	dialogContentNoMetamask,
+	mockDAIContract,
+	sellerContract,
+	goldenNFTContract,
+	guestLiftNFTContract,
+} from "../../constants";
 
 export const MintPage = () => {
 	const { account } = useEthers();
@@ -151,10 +148,10 @@ export const MintPage = () => {
 	};
 	return (
 		<Element name="mint">
+			<DialogWarning open={openDialog} handleClose={() => setOpenDialog(false)} content={dialogContentNoMetamask} />
 			<Container>
 				<NftImage />
 				<ContainerMint>
-					<DialogWarning open={openDialog} handleClose={() => setOpenDialog(false)} content={dialogContentNoMetamask} />
 					<Golden
 						onGoldenClick={onGoldenClick}
 						availableGoldenNFT={availableGoldenNFT}
