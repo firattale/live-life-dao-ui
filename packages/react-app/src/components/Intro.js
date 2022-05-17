@@ -5,7 +5,7 @@ export default function Intro() {
 	return (
 		<div className="intro-container">
 			<div className="title">LifeLive DAO</div>
-			<h2>Nightlife, reimagined</h2>
+			<h2>Nightlife, reimagined.</h2>
 			<p className="text">Access virtual and hybrid events and Dance2Earn with people from all over the world.</p>
 			<div className="btn-main-container">
 				<ScrollLink to="mint" spy={true} smooth={true} duration={900}>

@@ -19,6 +19,7 @@
 		"@emotion/styled": "^11.8.1",
 		"@ethersproject/contracts": "^5.6.0",
 		"@ethersproject/providers": "^5.6.0",
+		"@mui/icons-material": "^5.8.0",
 		"@mui/material": "^5.7.0",
 		"@my-app/contracts": "^1.0.0",
 		"@testing-library/dom": "^8.11.3",
