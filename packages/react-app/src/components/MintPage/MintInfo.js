@@ -5,7 +5,7 @@ export default function MintInfo() {
     <div className='text side-padding mint-info mint-weight'>
       Please DO NOT send funds from an exchange.
       <br></br>
-      The wallet address you use to purchase your ticket(s) will be registered as the future recipient of the LifeLive tokens.
+      The tokens will be sent to the wallet address holding the NFT at the moment of the token generation event.
     </div>
   )
 }
