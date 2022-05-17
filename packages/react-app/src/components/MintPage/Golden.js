@@ -92,7 +92,7 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 					</>
 				)}
 			</div>
-			<img className="img-mint img-mint-margin" src="nft/nft2.jpg" alt="nft2" />
+			<img className="img-mint-mobile img-mint-margin" src="nft/nft2.jpg" alt="nft2" />
 		</>
 	);
 }
