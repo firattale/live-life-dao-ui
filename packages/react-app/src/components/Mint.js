@@ -33,7 +33,6 @@ export default function MintPage({
 				/>
 			</ContainerMint>
 			<MintInfo />
-			
 		</Container>
 	);
 }
