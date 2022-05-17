@@ -3,11 +3,9 @@ import "./index.css";
 import { DAppProvider, Mumbai } from "@usedapp/core";
 import React from "react";
 import ReactDOM from "react-dom";
-import { MUMBAI_RPC_NODE } from "./constants";
+import { MUMBAI_RPC_NODE } from "@my-app/contracts";
 import App from "./App";
 
-// Change this to your own Infura project id: https://infura.io/register
-// const INFURA_PROJECT_ID = "defba93b47f748f09fcead8282b9e58e";
 const config = {
 	readOnlyChainId: Mumbai.chainId,
 	readOnlyUrls: {
