@@ -28,7 +28,9 @@ export default function GuestList({
 				</div>
 			</div>
 			<ul>
-				<li className="li-desktop">30% bonus: Your seed sale contribution will count 30% more in the next funding round</li>
+				<li className="li-desktop">
+					30% bonus: Your seed sale contribution will count 30% more in the next funding round
+				</li>
 				<li className="li-desktop">Receive a unique Web3 Raver NFT</li>
 				<li className="li-desktop">Access to the seed round lounge</li>
 				<li className="li-desktop">Access to all other private lounges</li>
