@@ -28,7 +28,7 @@ export const MintPage = () => {
 	const [totalSupplyGuestListNFT, setTotalSupplyGuestListNFT] = React.useState(0);
 
 	const { state: buyGoldenNFTState, send: buyGoldenNFT } = useContractFunction(sellerContract, "buyGoldenNFT");
-	const { state: approveState, send: approve } = useContractFunction(mockDAIContract, "approve");
+	const { state: approveAllowanceState, send: approveAllowance } = useContractFunction(mockDAIContract, "approve");
 	const { state: buyGuestlistNFTState, send: buyGuestlistNFT } = useContractFunction(sellerContract, "buyGuestlistNFT");
 
 	const { value: balanceOfGolden } =
@@ -54,21 +54,29 @@ export const MintPage = () => {
 	}, [balanceOfGolden, balanceOfGuest, totalSupplyGolden, totalSupplyGuest]);
 
 	React.useEffect(() => {
-		if (approveState.status === "PendingSignature") {
+		if (approveAllowanceState.status === "PendingSignature") {
+			toast.loading("Please confirm to approve the allowance transaction in your wallet.");
+		}
+		if (approveAllowanceState.status === "Mining") {
+			toast.dismiss();
 			toast.loading("Waiting, transactions may take a few minutes...");
 		}
-		if (approveState.status === "Exception" || approveState.status === "Fail") {
+		if (approveAllowanceState.status === "Exception" || approveAllowanceState.status === "Fail") {
 			toast.dismiss();
-			toast.error(approveState.errorMessage);
+			toast.error(approveAllowanceState.errorMessage);
 		}
-		if (approveState.status === "Success") {
+		if (approveAllowanceState.status === "Success") {
 			toast.dismiss();
 			toast.success("You have successfully approved allowance for DAI spending.");
 		}
-	}, [approveState]);
+	}, [approveAllowanceState]);
 
 	React.useEffect(() => {
 		if (buyGoldenNFTState.status === "PendingSignature") {
+			toast.loading("Please confirm to buy the Golden NFT transaction in your wallet.");
+		}
+		if (buyGoldenNFTState.status === "Mining") {
+			toast.dismiss();
 			toast.loading("Waiting, transactions may take a few minutes...");
 		}
 		if (buyGoldenNFTState.status === "Exception" || buyGoldenNFTState.status === "Fail") {
@@ -78,11 +86,14 @@ export const MintPage = () => {
 		if (buyGoldenNFTState.status === "Success") {
 			toast.dismiss();
 			toast.success("You have successfully minted your Golden NFT!");
-			console.log(`View your NFT on https://testnets.opensea.io/account`);
 		}
 	}, [buyGoldenNFTState]);
 	React.useEffect(() => {
 		if (buyGuestlistNFTState.status === "PendingSignature") {
+			toast.loading("Please confirm to buy the Guestlist NFT transaction in your wallet");
+		}
+		if (buyGuestlistNFTState.status === "Mining") {
+			toast.dismiss();
 			toast.loading("Waiting, transactions may take a few minutes...");
 		}
 		if (buyGuestlistNFTState.status === "Exception" || buyGuestlistNFTState.status === "Fail") {
@@ -92,7 +103,6 @@ export const MintPage = () => {
 		if (buyGuestlistNFTState.status === "Success") {
 			toast.dismiss();
 			toast.success("You have successfully minted your Guestlist NFT!");
-			console.log(`View your NFT on https://testnets.opensea.io/account`);
 		}
 	}, [buyGuestlistNFTState]);
 
@@ -108,7 +118,7 @@ export const MintPage = () => {
 		}
 
 		const amountToBuy = utils.parseEther(amount.toString());
-		await approve(addresses.sellerContract, amountToBuy);
+		await approveAllowance(addresses.sellerContract, amountToBuy);
 		await buyGoldenNFT(amountToBuy);
 	};
 	const onGuestListClick = async (amount) => {
@@ -122,10 +132,9 @@ export const MintPage = () => {
 			return;
 		}
 		const amountToBuy = utils.parseEther(amount.toString());
-		await approve(addresses.sellerContract, amountToBuy);
+		await approveAllowance(addresses.sellerContract, amountToBuy);
 		await buyGuestlistNFT(amountToBuy);
 	};
-
 	return (
 		<Element name="mint">
 			<Container>

@@ -3,6 +3,8 @@ import { NavButton } from "./";
 import { useEthers, ChainId } from "@usedapp/core";
 import { DialogWarning } from "./DialogWarning";
 import { dialogContentNoMetamask, dialogWrongNetwork } from "../constants";
+import toast from "react-hot-toast";
+
 export const WalletButton = () => {
 	const { account, activateBrowserWallet, deactivate, chainId, switchNetwork } = useEthers();
 
@@ -41,14 +43,19 @@ export const WalletButton = () => {
 
 		if (!account) {
 			activateBrowserWallet();
+			toast("Wallet connected", {
+				icon: "🤝",
+			});
 		} else {
 			deactivate();
+			toast("Wallet disconnected", {
+				icon: "👋 ",
+			});
 		}
 	};
 	return (
 		<>
 			<DialogWarning open={openDialog} handleClose={() => setOpenDialog(false)} content={content} />
-
 			<NavButton
 				error={account && chainId !== ChainId.Mumbai}
 				onClick={onButtonClick}
