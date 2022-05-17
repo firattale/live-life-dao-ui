@@ -40,17 +40,18 @@ export const MintPage = () => {
 		useCall({ contract: guestLiftNFTContract, method: "totalSupply", args: [] }) ?? {};
 
 	React.useEffect(() => {
-		if (balanceOfGolden) {
-			const formattedBalanceGolden = utils.formatEther(balanceOfGolden[0]);
-			const formattedTotalSupplyGolden = utils.formatEther(totalSupplyGolden[0]);
-			const formattedBalanceOfGuest = utils.formatEther(balanceOfGuest[0]);
-			const formattedTotalSupplyGuest = utils.formatEther(totalSupplyGuest[0]);
-			setAvailableGoldenNFT(formattedTotalSupplyGolden * 10 ** 18 - formattedBalanceGolden * 10 ** 18);
-			setTotalSupplyGoldenNFT(formattedTotalSupplyGolden * 10 ** 18);
-			setAvailableGuestListNFT(formattedTotalSupplyGuest * 10 ** 18 - formattedBalanceOfGuest * 10 ** 18);
-			setTotalSupplyGuestListNFT(formattedTotalSupplyGuest * 10 ** 18);
+		if (balanceOfGolden && totalSupplyGolden && balanceOfGuest && totalSupplyGuest) {
+			// from Big Number to number
+			const formattedBalanceGolden = utils.formatUnits(balanceOfGolden[0], "wei");
+			const formattedTotalSupplyGolden = utils.formatUnits(totalSupplyGolden[0], "wei");
+			const formattedBalanceOfGuest = utils.formatUnits(balanceOfGuest[0], "wei");
+			const formattedTotalSupplyGuest = utils.formatUnits(totalSupplyGuest[0], "wei");
+
+			setAvailableGoldenNFT(formattedTotalSupplyGolden - formattedBalanceGolden);
+			setTotalSupplyGoldenNFT(formattedTotalSupplyGolden);
+			setAvailableGuestListNFT(formattedTotalSupplyGuest - formattedBalanceOfGuest);
+			setTotalSupplyGuestListNFT(formattedTotalSupplyGuest);
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [balanceOfGolden, balanceOfGuest, totalSupplyGolden, totalSupplyGuest]);
 
 	React.useEffect(() => {
