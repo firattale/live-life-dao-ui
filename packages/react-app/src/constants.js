@@ -1,6 +1,16 @@
 import { Typography } from "@mui/material";
+import { Contract } from "@ethersproject/contracts";
+import { utils } from "ethers";
+import { addresses, abis } from "@my-app/contracts";
 
-export const MUMBAI_RPC_NODE = "https://rpc-mumbai.matic.today";
+const sellerInterface = new utils.Interface(abis.seller.abi);
+const mockDAIInterface = new utils.Interface(abis.mockDai.abi);
+const ticketNFTInterface = new utils.Interface(abis.ticketNFT.abi);
+
+export const sellerContract = new Contract(addresses.sellerContract, sellerInterface);
+export const mockDAIContract = new Contract(addresses.mockDaiContract, mockDAIInterface);
+export const goldenNFTContract = new Contract(addresses.goldenNFTContract, ticketNFTInterface);
+export const guestLiftNFTContract = new Contract(addresses.guestLiftNFTContract, ticketNFTInterface);
 
 export const dialogContentNoMetamask = (
 	<Typography>
