@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { Contract } from "@ethersproject/contracts";
 import { utils } from "ethers";
 import { Container, ContainerMint } from "../../components";
+import { NftImage, MintInfo } from "../../components/MintPage";
 import { Golden, GuestList } from "../../components/MintPage";
 import { Element } from "react-scroll";
 import { DialogWarning } from "../../components/DialogWarning";
@@ -151,6 +152,7 @@ export const MintPage = () => {
 	return (
 		<Element name="mint">
 			<Container>
+				<NftImage />
 				<ContainerMint>
 					<DialogWarning open={openDialog} handleClose={() => setOpenDialog(false)} content={dialogContentNoMetamask} />
 					<Golden
@@ -166,6 +168,7 @@ export const MintPage = () => {
 						buyGuestlistNFTState={buyGuestlistNFTState}
 					/>
 				</ContainerMint>
+				<MintInfo />
 			</Container>
 		</Element>
 	);
