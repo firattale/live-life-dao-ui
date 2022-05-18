@@ -21,6 +21,8 @@ export const MintPage = () => {
 	const { account, activateBrowserWallet } = useEthers();
 
 	const [openDialog, setOpenDialog] = React.useState(false);
+	const [amount, setAmount] = React.useState(0);
+	const [selection, setSelection] = React.useState("");
 	const [availableGoldenNFT, setAvailableGoldenNFT] = React.useState(0);
 	const [totalSupplyGoldenNFT, setTotalSupplyGoldenNFT] = React.useState(0);
 	const [availableGuestListNFT, setAvailableGuestListNFT] = React.useState(0);
@@ -58,7 +60,10 @@ export const MintPage = () => {
 			pendingText: "Please confirm to approve the allowance transaction in your wallet.",
 			successText: "You have successfully approved allowance for DAI spending.",
 		});
-	}, [approveAllowanceState]);
+		if (approveAllowanceState.status === "Success") {
+			selection === "golden" ? buyGoldenNFT(amount) : buyGuestlistNFT(amount);
+		}
+	}, [amount, approveAllowanceState, buyGoldenNFT, buyGuestlistNFT, selection]);
 
 	React.useEffect(() => {
 		toastCreator(buyGoldenNFTState, {
@@ -86,10 +91,10 @@ export const MintPage = () => {
 			});
 			return;
 		}
-
+		setSelection("golden");
 		const amountToBuy = utils.parseEther(amount.toString());
+		setAmount(amountToBuy);
 		await approveAllowance(addresses.sellerContract, amountToBuy);
-		await buyGoldenNFT(amountToBuy);
 	};
 	const onGuestListClick = async (amount) => {
 		if (!window.ethereum) {
@@ -104,9 +109,10 @@ export const MintPage = () => {
 			});
 			return;
 		}
+		setSelection("guestlist");
 		const amountToBuy = utils.parseEther(amount.toString());
+		setAmount(amountToBuy);
 		await approveAllowance(addresses.sellerContract, amountToBuy);
-		await buyGuestlistNFT(amountToBuy);
 	};
 	return (
 		<Element name="mint">
