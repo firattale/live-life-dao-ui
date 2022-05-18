@@ -15,6 +15,7 @@ import {
 	goldenNFTContract,
 	guestLiftNFTContract,
 } from "../../constants";
+import { toastCreator } from "../../helpers";
 
 export const MintPage = () => {
 	const { account } = useEthers();
@@ -53,68 +54,23 @@ export const MintPage = () => {
 	}, [balanceOfGolden, balanceOfGuest, totalSupplyGolden, totalSupplyGuest]);
 
 	React.useEffect(() => {
-		const { status } = approveAllowanceState;
-		switch (status) {
-			case "PendingSignature":
-				toast.loading("Please confirm to approve the allowance transaction in your wallet.");
-				break;
-			case "Mining":
-				toast.loading("Waiting, transactions may take a few minutes...");
-				break;
-			case "Exception" || "Fail":
-				toast.dismiss();
-				toast.error(approveAllowanceState.errorMessage);
-				break;
-			case "Success":
-				toast.dismiss();
-				toast.success("You have successfully approved allowance for DAI spending.");
-				break;
-			default:
-				break;
-		}
+		toastCreator(approveAllowanceState, {
+			pendingText: "Please confirm to approve the allowance transaction in your wallet.",
+			successText: "You have successfully approved allowance for DAI spending.",
+		});
 	}, [approveAllowanceState]);
 
 	React.useEffect(() => {
-		const { status } = buyGoldenNFTState;
-		switch (status) {
-			case "PendingSignature":
-				toast.loading("Please confirm to buy the Golden NFT transaction in your wallet.");
-				break;
-			case "Mining":
-				toast.loading("Waiting, transactions may take a few minutes...");
-				break;
-			case "Exception" || "Fail":
-				toast.dismiss();
-				toast.error(buyGoldenNFTState.errorMessage);
-				break;
-			case "Success":
-				toast.dismiss();
-				toast.success("You have successfully minted your Golden NFT!");
-				break;
-			default:
-				break;
-		}
+		toastCreator(buyGoldenNFTState, {
+			pendingText: "Please confirm to buy the Golden NFT transaction in your wallet.",
+			successText: "You have successfully minted your Golden NFT!",
+		});
 	}, [buyGoldenNFTState]);
 	React.useEffect(() => {
-		const { status } = buyGuestlistNFTState;
-		switch (status) {
-			case "PendingSignature":
-				toast.loading("Please confirm to buy the Guestlist NFT transaction in your wallet");
-				break;
-			case "Mining":
-				toast.loading("Waiting, transactions may take a few minutes...");
-				break;
-			case "Exception" || "Fail":
-				toast.dismiss();
-				toast.error(buyGuestlistNFTState.errorMessage);
-				break;
-			case "Success":
-				toast.dismiss();
-				toast.success("You have successfully minted your Guestlist NFT!");
-				break;
-			default:
-				break;
-		}
+		toastCreator(buyGuestlistNFTState, {
+			pendingText: "Please confirm to buy the Guestlist NFT transaction in your wallet.",
+			successText: "You have successfully minted your Guestlist NFT!",
+		});
 	}, [buyGuestlistNFTState]);
 
 	const onGoldenClick = async (amount) => {
