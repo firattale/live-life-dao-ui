@@ -11,6 +11,7 @@ export const toastCreator = (state, { pendingText, successText }) => {
 			toast.loading(pendingText);
 			break;
 		case "Mining":
+			toast.dismiss();
 			toast.loading("Waiting, transactions may take a few minutes...");
 			break;
 		case "Exception" || "Fail":

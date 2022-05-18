@@ -18,7 +18,7 @@ import {
 import { toastCreator } from "../../helpers";
 
 export const MintPage = () => {
-	const { account } = useEthers();
+	const { account, activateBrowserWallet } = useEthers();
 
 	const [openDialog, setOpenDialog] = React.useState(false);
 	const [availableGoldenNFT, setAvailableGoldenNFT] = React.useState(0);
@@ -80,7 +80,10 @@ export const MintPage = () => {
 		}
 
 		if (!account) {
-			toast.error("Please connect to your wallet to mint an NFT.");
+			activateBrowserWallet();
+			toast("Wallet connected", {
+				icon: "🤝",
+			});
 			return;
 		}
 
@@ -95,7 +98,10 @@ export const MintPage = () => {
 		}
 
 		if (!account) {
-			toast.error("Please connect to your wallet to mint an NFT.");
+			activateBrowserWallet();
+			toast("Wallet connected", {
+				icon: "🤝",
+			});
 			return;
 		}
 		const amountToBuy = utils.parseEther(amount.toString());
