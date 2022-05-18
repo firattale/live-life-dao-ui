@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/live-life-dao-ui/static/css/main.ed98da1a.chunk.css",
-    "main.js": "/live-life-dao-ui/static/js/main.45125fe3.chunk.js",
-    "main.js.map": "/live-life-dao-ui/static/js/main.45125fe3.chunk.js.map",
+    "main.js": "/live-life-dao-ui/static/js/main.69a401a3.chunk.js",
+    "main.js.map": "/live-life-dao-ui/static/js/main.69a401a3.chunk.js.map",
     "runtime-main.js": "/live-life-dao-ui/static/js/runtime-main.27b5018b.js",
     "runtime-main.js.map": "/live-life-dao-ui/static/js/runtime-main.27b5018b.js.map",
     "static/js/2.57598906.chunk.js": "/live-life-dao-ui/static/js/2.57598906.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.27b5018b.js",
     "static/js/2.57598906.chunk.js",
     "static/css/main.ed98da1a.chunk.css",
-    "static/js/main.45125fe3.chunk.js"
+    "static/js/main.69a401a3.chunk.js"
   ]
 }
