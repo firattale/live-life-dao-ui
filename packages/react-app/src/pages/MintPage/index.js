@@ -10,7 +10,7 @@ import { Element } from "react-scroll";
 import { DialogWarning } from "../../components/DialogWarning";
 import {
 	dialogContentNoMetamask,
-	mockDAIContract,
+	DAIContract,
 	sellerContract,
 	goldenNFTContract,
 	guestLiftNFTContract,
@@ -28,7 +28,7 @@ export const MintPage = () => {
 	const [availableGuestListNFT, setAvailableGuestListNFT] = React.useState(0);
 	const [totalSupplyGuestListNFT, setTotalSupplyGuestListNFT] = React.useState(0);
 
-	const { state: approveAllowanceState, send: approveAllowance } = useContractFunction(mockDAIContract, "approve");
+	const { state: approveAllowanceState, send: approveAllowance } = useContractFunction(DAIContract, "approve");
 	const { state: buyGoldenNFTState, send: buyGoldenNFT } = useContractFunction(sellerContract, "buyGoldenNFT");
 	const { state: buyGuestlistNFTState, send: buyGuestlistNFT } = useContractFunction(sellerContract, "buyGuestlistNFT");
 
