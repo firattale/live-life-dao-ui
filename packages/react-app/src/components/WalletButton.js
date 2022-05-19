@@ -12,9 +12,6 @@ export const WalletButton = () => {
 		try {
 			const provider = new WalletConnectProvider({
 				infuraId: "7a63d05a74a34e578282178c3b0d4c9f",
-				qrcodeModalOptions: {
-					mobileLinks: ["rainbow", "metamask", "argent", "trust", "imtoken", "pillar"],
-				},
 			});
 			await provider.enable();
 			await activate(provider);
