@@ -10,7 +10,7 @@ export default function GuestList({
 	totalSupplyGuestListNFT,
 	buyGuestlistNFTState,
 }) {
-	const [sliderValue, setSliderValue] = React.useState(1000);
+	const [sliderValue, setSliderValue] = React.useState(500);
 	const handleChange = (event, newValue) => {
 		setSliderValue(newValue);
 	};
