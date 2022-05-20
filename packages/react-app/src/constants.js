@@ -3,14 +3,14 @@ import { Contract } from "@ethersproject/contracts";
 import { utils } from "ethers";
 import { addresses, abis } from "@my-app/contracts";
 
-// export const MUMBAI_RPC_NODE = "https://rpc-mumbai.maticvigil.com/";
-export const MAINNET_RPC_NODE = "https://mainnet.infura.io/v3/7a63d05a74a34e578282178c3b0d4c9f";
+export const MUMBAI_RPC_NODE = "https://matic-mumbai.chainstacklabs.com/";
+// export const MAINNET_RPC_NODE = "https://mainnet.infura.io/v3/7a63d05a74a34e578282178c3b0d4c9f";
 const sellerInterface = new utils.Interface(abis.seller.abi);
-const mockDAIInterface = new utils.Interface(abis.mockDai.abi);
+const DAIInterface = new utils.Interface(abis.Dai.abi);
 const ticketNFTInterface = new utils.Interface(abis.ticketNFT.abi);
 
 export const sellerContract = new Contract(addresses.sellerContract, sellerInterface);
-export const DAIContract = new Contract(addresses.DAIContract, mockDAIInterface);
+export const DAIContract = new Contract(addresses.DAIContract, DAIInterface);
 export const goldenNFTContract = new Contract(addresses.goldenNFTContract, ticketNFTInterface);
 export const guestLiftNFTContract = new Contract(addresses.guestLiftNFTContract, ticketNFTInterface);
 
