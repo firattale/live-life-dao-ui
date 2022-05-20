@@ -19,8 +19,8 @@ export const WalletButton = () => {
 	const [openDialog, setOpenDialog] = React.useState(false);
 
 	React.useEffect(() => {
-		if (chainId !== ChainId.Mumbai) {
-			switchNetwork(ChainId.Mumbai);
+		if (chainId !== ChainId.Mainnet) {
+			switchNetwork(ChainId.Mainnet);
 		}
 	}, [chainId, switchNetwork]);
 
@@ -30,7 +30,7 @@ export const WalletButton = () => {
 		} else {
 			setRendered("connect wallet");
 		}
-		if (account && chainId !== ChainId.Mumbai) {
+		if (account && chainId !== ChainId.Mainnet) {
 			setRendered("wrong network");
 		}
 	}, [account, setRendered, chainId]);
@@ -42,7 +42,7 @@ export const WalletButton = () => {
 			setOpenDialog(true);
 			return;
 		}
-		if (account && chainId !== ChainId.Mumbai) {
+		if (account && chainId !== ChainId.Mainnet) {
 			setContent(dialogWrongNetwork);
 			setOpenDialog(true);
 			return;
@@ -85,7 +85,7 @@ export const WalletButton = () => {
 			<WalletModal open={open} onWalletConnectClick={onWalletConnectClick} onMetaMaskClick={onMetaMaskClick} />
 			<DialogWarning open={openDialog} handleClose={() => setOpenDialog(false)} content={content} />
 			<NavButton
-				error={account && chainId !== ChainId.Mumbai}
+				error={account && chainId !== ChainId.Mainnet}
 				onClick={onButtonClick}
 				className="btn-style-orange nav-btn zoom"
 			>
