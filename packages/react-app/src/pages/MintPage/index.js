@@ -42,8 +42,6 @@ export const MintPage = () => {
 	const { value: totalAllowance } =
 		useCall({ contract: DAIContract, method: "allowance", args: [account, addresses.sellerContract] }) ?? {};
 
-	console.log("utils.formatEther(totalAllowance[0]", totalAllowance ? utils.formatEther(totalAllowance[0]) : "");
-
 	React.useEffect(() => {
 		if (balanceOfGolden && totalSupplyGolden && balanceOfGuest && totalSupplyGuest) {
 			// from Big Number to number

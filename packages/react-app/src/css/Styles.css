@@ -121,3 +121,36 @@ video {
 .zoom:hover {
 	transform: scale(1.1);
 }
+
+.wallet-button-modal {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 1rem;
+	width: 400px;
+	height: 150px;
+	padding: 2rem;
+	background: #383838;
+	color: #ee796a;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.wallet-button-modal h2 {
+	font-family: "Montserrat";
+}
+.wallet-button-modal p {
+	font-family: "Montserrat";
+}
+@media screen and (max-width: 800px) {
+	.wallet-button-modal {
+		width: 300px;
+		padding: 1rem;
+	}
+}
