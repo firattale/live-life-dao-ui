@@ -39,6 +39,10 @@ export const MintPage = () => {
 		useCall({ contract: guestLiftNFTContract, method: "balanceOf", args: [addresses.sellerContract] }) ?? {};
 	const { value: totalSupplyGuest } =
 		useCall({ contract: guestLiftNFTContract, method: "totalSupply", args: [] }) ?? {};
+	const { value: totalAllowance } =
+		useCall({ contract: DAIContract, method: "allowance", args: [account, addresses.sellerContract] }) ?? {};
+
+	console.log("utils.formatEther(totalAllowance[0]", totalAllowance ? utils.formatEther(totalAllowance[0]) : "");
 
 	React.useEffect(() => {
 		if (balanceOfGolden && totalSupplyGolden && balanceOfGuest && totalSupplyGuest) {
@@ -92,10 +96,16 @@ export const MintPage = () => {
 			return;
 		}
 		setSelection("golden");
-		const amountToBuy = utils.parseEther(amount.toString());
-		setAmount(amountToBuy);
-		await approveAllowance(addresses.sellerContract, amountToBuy);
+		const formattedTotalAllowance = utils.formatEther(totalAllowance[0]);
+		const formattedAmount = utils.parseEther(amount.toString());
+		if (amount > formattedTotalAllowance) {
+			setAmount(formattedAmount);
+			await approveAllowance(addresses.sellerContract, formattedAmount);
+		} else {
+			buyGoldenNFT(formattedAmount);
+		}
 	};
+
 	const onGuestListClick = async (amount) => {
 		if (!window.ethereum) {
 			setOpenDialog(true);
@@ -110,10 +120,16 @@ export const MintPage = () => {
 			return;
 		}
 		setSelection("guestlist");
-		const amountToBuy = utils.parseEther(amount.toString());
-		setAmount(amountToBuy);
-		await approveAllowance(addresses.sellerContract, amountToBuy);
+		const formattedTotalAllowance = utils.formatEther(totalAllowance[0]);
+		const formattedAmount = utils.parseEther(amount.toString());
+		if (amount > formattedTotalAllowance) {
+			setAmount(formattedAmount);
+			await approveAllowance(addresses.sellerContract, formattedAmount);
+		} else {
+			buyGuestlistNFT(formattedAmount);
+		}
 	};
+
 	return (
 		<Element name="mint">
 			<DialogWarning open={openDialog} handleClose={() => setOpenDialog(false)} content={dialogContentNoMetamask} />

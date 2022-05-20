@@ -1,15 +1,15 @@
 import "./index.css";
 
-import { DAppProvider, Mainnet } from "@usedapp/core";
+import { DAppProvider, Mumbai } from "@usedapp/core";
 import React from "react";
 import ReactDOM from "react-dom";
-import { MAINNET_RPC_NODE } from "./constants";
+import { MUMBAI_RPC_NODE } from "./constants";
 import App from "./App";
 
 const config = {
-	readOnlyChainId: Mainnet.chainId,
+	readOnlyChainId: Mumbai.chainId,
 	readOnlyUrls: {
-		[Mainnet.chainId]: MAINNET_RPC_NODE,
+		[Mumbai.chainId]: MUMBAI_RPC_NODE,
 	},
 };
 

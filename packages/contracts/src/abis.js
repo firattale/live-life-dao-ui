@@ -1,10 +1,10 @@
 import sellerAbi from "./abis/Seller.json";
-import mockDaiAbi from "./abis/MockDai.json";
+import DaiAbi from "./abis/Dai.json";
 import ticketNFTAbi from "./abis/TicketNFT.json";
 
 const abis = {
 	seller: sellerAbi,
-	mockDai: mockDaiAbi,
+	Dai: DaiAbi,
 	ticketNFT: ticketNFTAbi,
 };
 
