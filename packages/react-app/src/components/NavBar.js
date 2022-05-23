@@ -21,7 +21,7 @@ export default function NavBar() {
 				<a href="https://www.instagram.com/lifelivedao/" target="_blank" rel="noreferrer">
 					<img className="nav-icon zoom" src="icons/Insta.svg" alt="Insta-Icon" />
 				</a>
-				<WalletButton>Connect Wallet</WalletButton>
+				<WalletButton />
 			</div>
 		</Navbar>
 	);
