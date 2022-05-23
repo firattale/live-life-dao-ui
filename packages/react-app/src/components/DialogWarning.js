@@ -1,4 +1,4 @@
-import { IconButton, Dialog, DialogTitle, DialogContentText, DialogContent } from "@mui/material";
+import { IconButton, Dialog, DialogTitle, DialogContentText, DialogContent, Typography } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 
 export function DialogWarning({ open, handleClose, content }) {
@@ -8,6 +8,19 @@ export function DialogWarning({ open, handleClose, content }) {
 			onClose={handleClose}
 			aria-labelledby="alert-dialog-title"
 			aria-describedby="alert-dialog-description"
+			className=""
+			sx={{
+				"& .MuiDialog-paper": {
+					backgroundColor: " #383838",
+				},
+				"& .MuiTypography-root": {
+					color: "#ee796a",
+					fontFamily: "Montserrat",
+				},
+				"& a": {
+					color: "#ee796a",
+				},
+			}}
 		>
 			<DialogTitle id="alert-dialog-title">
 				<IconButton
@@ -24,7 +37,11 @@ export function DialogWarning({ open, handleClose, content }) {
 				</IconButton>
 			</DialogTitle>
 			<DialogContent>
-				<DialogContentText id="alert-dialog-description">{content}</DialogContentText>
+				<DialogContentText id="alert-dialog-description">
+					<Typography id="modal-modal-title" variant="h6" component="h2">
+						{content}
+					</Typography>
+				</DialogContentText>
 			</DialogContent>
 		</Dialog>
 	);
