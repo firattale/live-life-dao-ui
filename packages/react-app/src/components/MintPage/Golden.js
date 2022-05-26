@@ -16,7 +16,7 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 				<div className="div-ticket">
 					<h4 className="h4-desktop no-margin">limited to 20:</h4>
 					<h1 className="h1-desktop no-margin">Golden Ticket</h1>
-					<h2 className="h2-desktop no-margin orange">Receive 100% more tokens</h2>
+					<h2 className="h2-desktop no-margin orange">Receive 100% boost</h2>
 					<div className="rounded">
 						<h1 className="h1-desktop no-margin">
 							min <span className="dollar-sign">$</span> 50k
@@ -26,7 +26,7 @@ export default function Golden({ onGoldenClick, availableGoldenNFT, totalSupplyG
 				</div>
 				<ul>
 					<li className="li-desktop">
-						100% bonus: Your seed sale contribution will be doubled in the next funding round
+						You are among our strongest supporters and we will reward you with a 100% boost on top of your contribution					
 					</li>
 					<li className="li-desktop">Receive a unique Web3 Raver NFT</li>
 					<li className="li-desktop">Access to the seed round lounge</li>

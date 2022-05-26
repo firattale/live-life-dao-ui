@@ -44,13 +44,8 @@ export default function Project() {
 					<Line2 />
 				</div>
 				<button className="btn btn-style-blue-light zoom margin-top">
-					<a
-						className="link"
-						href="https://drive.google.com/file/d/1xs-bvwmNUumlscIphOXIIbnsazDGbNrw/view"
-						target="_blank"
-						rel="noreferrer"
-					>
-						Read litepaper
+					<a className="link" href="https://t.me/lifelivedao" target="_blank" rel="noreferrer">
+						Join our telegram group
 					</a>
 				</button>
 				<div className="img-container">
