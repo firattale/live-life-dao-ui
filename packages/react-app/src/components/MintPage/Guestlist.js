@@ -20,7 +20,7 @@ export default function GuestList({
 			<div className="div-ticket blue-bg-border">
 				<h4 className="h4-desktop no-margin">limited to 100:</h4>
 				<h1 className="h1-desktop no-margin">Guestlist Ticket</h1>
-				<h2 className="h2-desktop no-margin blue">Receive 30% more tokens</h2>
+				<h2 className="h2-desktop no-margin blue">Receive 30% boost</h2>
 				<div className="rounded blue-border">
 					<h1 className="h1-desktop no-margin">
 						min <span className="dollar-sign">$</span> 500
@@ -30,7 +30,7 @@ export default function GuestList({
 			</div>
 			<ul>
 				<li className="li-desktop">
-					30% bonus: Your seed sale contribution will count 30% more in the next funding round
+					You are among our earliest supporters and we will reward you with a 30% boost on top of your contribution				
 				</li>
 				<li className="li-desktop">Receive a unique Web3 Raver NFT</li>
 				<li className="li-desktop">Access to the seed round lounge</li>
