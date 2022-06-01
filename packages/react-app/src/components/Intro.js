@@ -17,7 +17,6 @@ export default function Intro() {
 					target="_blank"
 					rel="noreferrer"
 				>
-					<button className="btn btn-style-blue-light btn-margin zoom">Download litepaper</button>
 				</a>
 			</div>
 		</div>
